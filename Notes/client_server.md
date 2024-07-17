@@ -148,12 +148,12 @@ Element A ~ Element B { --> All elements are specifc
 
 ### Amazon:
 
-[Amazon footer](http://127.0.0.1:5500/Fashionstore/src/amazon_footer.html)
+[Amazon footer](http://127.0.0.1:3000/Footers/src/amazon_footer.html)
 #### Amazon footer DOM:
 ![Amazon footer dom](Amazon_footer_dom.png)
 
 ### Flipkart:
-[Flipkart footer](http://127.0.0.1:5500/Fashionstore/src/flipkart_footer.html)
+[Flipkart footer](http://127.0.0.1:3000/Footers/src/flipkart_footer.html)
 #### Flipkart footer DOM:
 ![Flipkart footer DOM](Flipkart_footer_dom.png)
 #### To display any content to the center:
