@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        body{
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        header{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            font-family: sans-serif;
+        }
+        .shade{
+            background-color: rgba(0, 0, 0, 0.3);
+            height: 100vh;
+            width: 100vw;
+            margin: -8px;
+            color: white;
+        }
+        .brand-name{
+            color: red;
+            font-family: poppins;
+            font-size: 30px;
+            margin-left: 40px;
+            margin-top:5px ;
+        }
+        .right-col{
+            margin-left: 32vw;
+            margin-top: 20px;
+        }
+        #sign-in{
+            background-color: red;
+            /* padding-right: 5px;
+            padding-left: 5px; */
+            padding: 4px;
+            border-radius: 3px;
+        }
+        main{
+            margin-top: 25vh;
+            font-family: sans-serif;
+        }
+
+        main div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 10px;    
+        }
+        #main-1{
+            font-family: poppins;
+            font-size: 32px;
+        }
+        #main-2{
+            font-size: 20px;
+        }
+        #main-3{
+            font-size: 15px;
+        }
+        #email{
+            background-color: rgba(0, 0, 0,0.5);
+            width: 20vw;
+            height: 4vh;
+            /* margin-left:-4vw; */
+            padding: 10px;
+            font-size: 12px;
+            color: rgb(205, 201, 201);
+            border-radius: 5px;
+        }
+        #get{
+            background-color: rgb(226, 11, 11);
+            width: 11vw;
+            height: 4vh;
+            font-size: 17px;
+            padding: 10px;
+            margin-left: 10px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-around;
+        }
+        .email-get{
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body background="/Netflix/public/images/banner.jpg">
+    <div class="shade">
+        <header>
+            <div>
+                <div class="brand-name">NETFLIX</div>
+            </div>
+            <div class="right-col">
+                <span class="bi bi-globe"></span>
+                <span>Language</span>
+                <span class="bi bi-chevron-down"></span>
+                <span id="sign-in">Sign in</span>
+
+            </div>
+        </header>
+        <main>
+            <div id="main-1">Unlimited movies, TV shows and more</div>
+            <div id="main-2">Watch anywhere. Cancel anytime.</div>
+            <div id="main-3">Ready to watch? Enter your email to create or restart your membership.</div>
+            <div class="email-get">
+                <span id="email">Email address</span>
+                <span id="get">
+                    <span>Get started</span>
+                    <span class="bi bi-chevron-right"></span>
+                </span>
+            </div>
+
+
+        </main>
+    </div>
+    
+</body>
+</html>
