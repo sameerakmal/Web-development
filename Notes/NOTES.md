@@ -2,14 +2,14 @@
 * Client is a computer which is capable of sending request to other computers present in internet.
 * We say client as a computer but in reality browser software is termed as a client.
 
-![alt text](images/client_server.png)
+![alt text](client_server.png)
 ## Server:
 * It is a computer which has the capability to provide output to any number of clients.
 * Normally, a server computer woud be referred as high configuration computer.
 * Inside the server computer we install a server software called web server.
 * Eg : Tomcat, wildfly, glassfish.
 
-![alt text](images/engine.png)
+![alt text](engine.png)
 ### Note:
 * Installing nodejs wil promote a build tool through which we can automate the process of taking third party libraries from different websites to our projects with the help of a command called "npm".
 
@@ -18,7 +18,7 @@
 * To markup the content on the browser we need a language called __html__(hyper text markup language).
 
 ### HTML PARSING:
-![HTML Parsing](images/HTML_parsing.png)
+![HTML Parsing](HTML_parsing.png)
 
 ### Evolution of HTML language
 * __GML__ : Generic makrup language.
@@ -73,7 +73,7 @@ Eg :  1. Temperature 25C 4500/- 2. Temperature 25&deg;C &#8377;4500/-
 <script>
 ```
 
-![alt text](images/html_structure.png)
+![alt text](html_structure.png)
 
 ```html
 <!DOCTYPE html>
@@ -115,17 +115,17 @@ background-attachment : fixed|scroll|
 9. Aside
 10. Div
 11. Span 
-![alt text](images/semantics.png)
+![alt text](semantics.png)
 
 #### Note:
 * The ```<span>``` tag is much like the ```<div>``` element, but ```<div>``` is a block level element and ```<span>``` is an inline element.
-![alt text](images/basic_dom.png)
+![alt text](basic_dom.png)
 
 #### DOM : 
 * To align the content in column-wise using CSS. We have an option called __display:flex__.
 * We can control the attribute of font through CSS using font-family,font-style,font-size,font-weight.
 * For a span element, width property can't be applied directly. To see the effect we use a attribute called __display:inline-block__.
-![alt text](images/shopper_dom.png)
+![alt text](shopper_dom.png)
 
 #### Note:
 * Default screen width is 1200px, so max no of columns in a page is 12.
@@ -150,12 +150,12 @@ Element A ~ Element B { --> All elements are specifc
 
 [Amazon footer](http://127.0.0.1:3000/Footers/src/amazon_footer.html)
 #### Amazon footer DOM:
-![Amazon footer dom](images/Amazon_footer_dom.png)
+![Amazon footer dom](Amazon_footer_dom.png)
 
 ### Flipkart:
 [Flipkart footer](http://127.0.0.1:3000/Footers/src/flipkart_footer.html)
 #### Flipkart footer DOM:
-![Flipkart footer DOM](images/Flipkart_footer_dom.png)
+![Flipkart footer DOM](Flipkart_footer_dom.png)
 ### To display any content to the center:
 1. Keep all the contents in one container.
 2. 
