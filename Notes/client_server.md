@@ -2,14 +2,14 @@
 * Client is a computer which is capable of sending request to other computers present in internet.
 * We say client as a computer but in reality browser software is termed as a client.
 
-![alt text](client_server.png)
+![alt text](images/client_server.png)
 ## Server:
 * It is a computer which has the capability to provide output to any number of clients.
 * Normally, a server computer woud be referred as high configuration computer.
 * Inside the server computer we install a server software called web server.
 * Eg : Tomcat, wildfly, glassfish.
 
-![alt text](engine.png)
+![alt text](images/engine.png)
 ### Note:
 * Installing nodejs wil promote a build tool through which we can automate the process of taking third party libraries from different websites to our projects with the help of a command called "npm".
 
@@ -18,7 +18,7 @@
 * To markup the content on the browser we need a language called __html__(hyper text markup language).
 
 ### HTML PARSING:
-![HTML Parsing](HTML_parsing.png)
+![HTML Parsing](images/HTML_parsing.png)
 
 ### Evolution of HTML language
 * __GML__ : Generic makrup language.
@@ -73,7 +73,7 @@ Eg :  1. Temperature 25C 4500/- 2. Temperature 25&deg;C &#8377;4500/-
 <script>
 ```
 
-![alt text](html_structure.png)
+![alt text](images/html_structure.png)
 
 ```html
 <!DOCTYPE html>
@@ -115,17 +115,17 @@ background-attachment : fixed|scroll|
 9. Aside
 10. Div
 11. Span 
-![alt text](semantics.png)
+![alt text](images/semantics.png)
 
 #### Note:
 * The ```<span>``` tag is much like the ```<div>``` element, but ```<div>``` is a block level element and ```<span>``` is an inline element.
-![alt text](basic_dom.png)
+![alt text](images/basic_dom.png)
 
 #### DOM : 
 * To align the content in column-wise using CSS. We have an option called __display:flex__.
 * We can control the attribute of font through CSS using font-family,font-style,font-size,font-weight.
 * For a span element, width property can't be applied directly. To see the effect we use a attribute called __display:inline-block__.
-![alt text](shopper_dom.png)
+![alt text](images/shopper_dom.png)
 
 #### Note:
 * Default screen width is 1200px, so max no of columns in a page is 12.
@@ -150,13 +150,13 @@ Element A ~ Element B { --> All elements are specifc
 
 [Amazon footer](http://127.0.0.1:3000/Footers/src/amazon_footer.html)
 #### Amazon footer DOM:
-![Amazon footer dom](Amazon_footer_dom.png)
+![Amazon footer dom](images/Amazon_footer_dom.png)
 
 ### Flipkart:
 [Flipkart footer](http://127.0.0.1:3000/Footers/src/flipkart_footer.html)
 #### Flipkart footer DOM:
-![Flipkart footer DOM](Flipkart_footer_dom.png)
-#### To display any content to the center:
+![Flipkart footer DOM](images/Flipkart_footer_dom.png)
+### To display any content to the center:
 1. Keep all the contents in one container.
 2. 
 ```html
@@ -178,3 +178,42 @@ body{
 4. Note : 
     1. justify-content : center;(horizantal)
     2. align-items : center;(vertical)
+ 
+### Fig and figcaption
+* Fig caption element is used by search engine to load the image as a search result for the end user.
+```html
+<figcaption>
+    <div>
+        <!-- Place image -->
+    </div>
+</figcaption>
+```   
+#### Elements designed for coding platforms:
+1. ```<code>``` : To indicate the presentation content is for programming.
+2. ```<var>``` : To indicate the browser engine that it is a variable.
+3. ```<samp>``` : To indicate the description about the program.
+4. ```<pre>``` : It is used to preserve the white spaces in particular container.
+5. ```&nbsp;``` : It is used to mark the spaces set by user at any element.
+#### HTML basic entities and semantics for body
+1. Line break ```<br>``` : 
+    * Browser ignores the line breaks given in edition.
+2. FAQ : What is the diffference between ```<br>``` and ```</br>```?
+    * There is no such element called ```</br>```.
+    * Always use ```<br>```. It is a self closing tag.
+
+#### Small text and large text :
+1. ```<small> small text</small>``` : It sets letter small size.
+2. ```<large> large text</large>``` : It sets letter large size.
+
+### Details and summary
+```html
+<body>
+    <details>
+        <summary></summary>
+        <!-- content to be placed here-->
+    </details>
+</body>
+```
+* It is used to display the content in detail only when required.
+* It allows to expand and collapse your content.
+* It saves the screen space.
