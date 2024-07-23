@@ -217,3 +217,34 @@ body{
 * It is used to display the content in detail only when required.
 * It allows to expand and collapse your content.
 * It saves the screen space.
+
+### Data list with terms and definitons :
+#### Syntax :
+```html
+<dl>
+    <dt>Term</dt>
+    <dd>Definition</dd>
+    <dt>Term</dt>
+    <dd>Definition</dd>
+</dl>
+```
+#### Note :
+1. ```<dt>``` and ```<dd>``` will have some default alignment, so it is easy for presentation.
+2. ```<dl>``` has the capability to display in columns using grid(dt --> one column and dd --> one column).
+
+#### Note :
+* We can make content sticky on a webpage using CSS property.
+```css
+dt{
+    position : sticky;
+    top : 0;
+}
+```
+### box-shadow :
+* In CSS we can set shadow to any container by using box-shadow box shadow will have 4 values.
+```css
+{
+    box-shadow : horizontal vertical blur color;
+}
+```
+* The unit of horizontal vertical blur is pixels.
