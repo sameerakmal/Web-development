@@ -51,7 +51,7 @@ Eg :  1. Temperature 25C 4500/- 2. Temperature 25&deg;C &#8377;4500/-
 5. Foreign element : importing someone's code. Eg : SVG, Mathl
 
 ### HTML Structure : 
-* Araanging the elements of HTML in a hierarchial way to present on a webpage is called __"DOM"__.
+* Aranging the elements of HTML in a hierarchial way to present on a webpage is called __"DOM"__.
 ```html
 <html>
     <!--Document scope-->
@@ -233,14 +233,14 @@ body{
 2. ```<dl>``` has the capability to display in columns using grid(dt --> one column and dd --> one column).
 
 #### Note :
-* We can make content sticky on a webpage using CSS property.
+* We can make content [sticky](http://127.0.0.1:3000/HTML%20items/src/data-list/Sticky.html) on a webpage using CSS property.
 ```css
 dt{
     position : sticky;
     top : 0;
 }
 ```
-### box-shadow :
+### [box-shadow : ](http://127.0.0.1:5500/HTML%20items/src/data-list/box-shadow.html)
 * In CSS we can set shadow to any container by using box-shadow box shadow will have 4 values.
 ```css
 {
@@ -248,3 +248,181 @@ dt{
 }
 ```
 * The unit of horizontal vertical blur is pixels.
+## Heading elements :
+* Heading elements are mainly used to define headings and to describe a <u>topic</u> in a webpage.
+* Heading element default bheaviour is :
+    1. display : block; 
+    2. font-weight : bold;
+    3. font-size : varies from heading to heading;
+### Interview questions :
+
+#### 1. Why to use heading element for heading?
+#### 2. Why we have to use heading elements for giving heading, can't we configure using HTML text styles and CSS styles?
+#### 3. __Can we change the appearance of ```<hn>``` tags?__
+* Through CSS we can change the default behaviour
+```css
+h1{
+    font-size : 50px;
+    font-weight : lighter;
+    color : blue;
+}
+```
+#### 4. Can we remove the default style defined for heading?
+* Yes, it can be made possible with the help of CSS inheritance.
+```css
+h3{
+    font-weight : unset;
+    display : unset;
+    font-size : unset;
+}
+```
+## Working with paragraphs :
+### ```<p>``` : 
+1. To present the content in the form of paragraph, we use ```<p>``` element.
+2. It supports "align" attribute, which can set text left, center, right or justified.
+3. Paragraphs will have a line break before and after.
+## Blockquotes :
+1. It is used to present the summary of the content on a webpage. 
+2. Blockquote is similar to paragraph but have left and right indentation for text.
+3. It is defined by using ```<blockquote>``` element.
+### Interview questions :
+#### 1. How to set the first-line indent for paragraph or blockquote?
+* Using CSS attribute called ```text-indent : ; ```
+```css
+blockquote{
+    text-indent : 50px;
+}
+```
+#### 2. How to set line space, word space, character space in a paragpraph?
+* Using CSS attribute called ```line-height : ;```
+```css
+blockquote{
+    line-height : 30px;
+    word-spacing : 7px;
+    letter-spacing : 3px;
+}
+```
+#### 3. How to set a DropCap?
+* By using the following style we can set DropCrap. : 
+    * Access the first letter using the class: first-letter.
+    * After Acessing the firstletter apply fonts [size, weight, family].
+    * Apply css float as left.
+
+## Difference between display : grid vs column of CSS attribute.
+* display : grid would dsiplay the content column wise in the given frame width(column ratio).
+* Columns : This attribute would take number of columns as input and display the content in <u>(continuous manner)</u>.
+
+# Text formatting in HTML : 
+### Font element :
+* We can change the text formatting using font.
+* font :: we can change the face(family), size, and color.
+#### Syntax :
+```css
+<font face = " "  size = " " color = " " > Your text </font>
+face : font family
+size : 1 to 7 leve[increasing order]
+color : It represents color name and color code.
+```
+| Design team | Review team |
+| :-----------: | :-----------: |
+|```<b>``` | ```<strong>``` |
+|```<i>``` | ```<em>``` |
+|```<u>``` | ```<ins>``` |
+|```<strike>``` | ```<del>``` |
+
+### Interview Questions :
+#### 1. What are web safe fonts?
+* These fonts are such fonts which would be available in every machine and it can't be deleted. 
+* Eg : Sans-serif, monospace, serif.
+
+## Ordered and unordered list
+* Order list will add auto numbering for a list of options, which can update automatically when you add or delete items.
+* Order list is defined by using ```<ol>``` element.
+* Items in list are defined by using ```<li>```.
+
+#### Syntax :
+```html
+<ol>
+    <li> Item-1 </li>
+    <li> Item-2 </li>
+</ol>
+```
+#### Note :
+* Default number will be given for items.
+
+#### Type :
+* It specifies the numbering type, which can be :
+1. a
+2. A
+3. i
+4. I
+5. 1 (default)
+
+#### start[number] :
+* It defines the numbering level to start with.
+
+### Nested list :
+* Nesting of list elements.
+#### Bad code :
+```html
+<ol>
+    <li>Frontend</li>
+    <ol type = "a">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <li>Backend</li>
+    <ol type = "a">
+        <li>MongoDB</li>
+        <li>NodeJS</li>
+    </ol>
+</ol>
+```
+#### Output : 
+<ol>
+    <li>Frontend</li>
+    <ol type = "a">
+        <li>HTML</li>
+        <li>CSS</li>
+    </ol>
+    <li>Backend</li>
+    <ol type = "a">
+        <li>MongoDB</li>
+        <li>NodeJS</li>
+    </ol>
+</ol>
+
+#### Clean code :
+```html
+<ol>
+    <li>Frontend
+        <ol type = "a">
+            <li>HTML</li>
+            <li>CSS</li>
+        </ol>
+    </li>
+    <li>Backend
+        <ol type = "a">
+            <li>MongoDB</li>
+            <li>NodeJS</li>
+    </li>
+    </ol>
+</ol>
+```
+#### Output :
+<ol>
+    <li>Frontend
+        <ol type = "a">
+            <li>HTML</li>
+            <li>CSS</li>
+        </ol>
+    </li>
+    <li>Backend
+        <ol type = "a">
+            <li>MongoDB</li>
+            <li>NodeJS</li>
+    </li>
+    </ol>
+</ol>
+
+### Note : Don't use the bad code even if the output is same.

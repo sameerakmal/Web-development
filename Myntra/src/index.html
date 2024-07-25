@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+        *{
+            margin: 0;
+        }
+        header{
+            display: grid;
+            grid-template-columns: 5.5fr 5fr 1.5fr;
+            margin-top: 20px;
+            padding: 20px;
+            margin-top: 2px;
+            box-shadow: 5px 5px 15px gray;
+                
+        }
+        
+        .categories nav{
+            display: flex;
+            justify-content: space-around;
+            font-weight: bold;
+            font-family: poppins;
+            margin-left: 50px;
+        }
+        .search{
+            margin-left: 50px;
+            background-color: rgba(128 , 128, 128, 0.2);
+            padding: 10px;
+            margin-top: -7px;
+        }
+        .logos{
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            
+        }
+        .new{
+            color: red;
+            display: inline-block;
+            width: 11px;
+        }
+
+
+        footer{
+            margin-top: 20vh;
+            display: grid;
+            grid-template-columns: 7fr 5fr;
+            font-family: 'Roboto', sans-serif;
+            padding-left: 15vw;
+            padding-right: 15vw;
+        }
+        .footer-title{
+            font-weight: bold;
+            color: black;
+            margin-bottom: 20px;
+            margin-top: 15px;
+        }
+        .footer-title~span{
+            display: block;
+            padding: 4px;
+            color: gray;
+        }
+        .left-col{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr;
+        }
+        .right-col{
+            margin-right: 5vw;
+            margin-left: 100px;
+        }
+        aside span{
+            padding: 5px;
+        }
+        .original{
+            margin-top: 15px;   
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class = "categories">
+            <nav>
+                <span>MEN</span>
+                <span>WOMEN</span>
+                <span>KIDS</span>
+                <span>HOME & LIVING</span>
+                <span>BEAUTY</span>
+                <span>STUDIO <span class="new">NEW</span></span>
+            </nav>    
+        </div>
+        <div class="search">
+            <span class="bi bi-search"></span>
+            <span>Search for products, brands and more</span>
+        </div>
+        <div class="logos">
+
+            <div class="person">
+                <span class="bi bi-person"><br></span>
+                <span class="slogo">Profile</span>
+            </div>
+
+            <div class="person">
+                <span class="bi bi-heart"><br></span>
+                <span class="slogo">Wishlist</span>
+            </div>
+             
+            <div class="person">
+                <span class="bi bi-bag"><br></span>
+                <span class="slogo">Bag</span>
+            </div>
+            
+
+        </div>
+    </header>
+    <footer>
+        <div class="left-col">
+            <div>
+                <div>
+                    <div class="footer-title">ONLINE SHOPPING</div>
+                    <span>Men</span>
+                    <span>Women</span>
+                    <span>Kids</span>
+                    <span>Home & Living</span>
+                    <span>Beauty</span>
+                    <span>Gift Cards</span>
+                    <span>Myntra Insider</span>
+                </div>
+                <div>
+                    <div class="footer-title">USEFUL LINKS</div>
+                    <span>Blog</span>
+                    <span>Careers</span>
+                    <span>Site Map</span>
+                    <span>Corporate Information</span>
+                    <span>Whitehat</span>
+                    <span>Cleartrip</span>
+                </div>
+            </div>
+            <div>
+                <div class="footer-title">CUSTOMER POLICIES</div>
+                <span>Contact Us</span>
+                <span>FAQ</span>
+                <span>T&C</span>
+                <span>Terms Of Use</span>
+                <span>Track Orders</span>
+                <span>Shipping</span>
+                <span>Cancellation</span>
+                <span>Returns</span>
+                <span>Privacy policy</span>
+                <span>Grievance Officer</span>
+            </div>
+            <div>
+                <div>
+                    <div class="footer-title">EXPERIENCE MYNTRA APP ON MOBILE</div>
+                    <aside>
+                        <span>Play store</span>
+                        <span>App store</span>
+                    </aside>
+                </div>
+                <div>
+                    <div class="footer-title">KEEP IN TOUCH</div>
+                    <aside>
+                        <span class="bi bi-facebook"></span>
+                        <span class="bi bi-twitter"></span>
+                        <span class="bi bi-youtube"></span>
+                        <span class="bi bi-instagram"></span>
+                    </aside>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-col">
+            <div class="original"><b>100% ORIGINAL guarantee</b> for all products at myntra.com</div>
+            <div class="original"><b>Return within 14 days</b> of receiving your order</div>
+            
+        </div>
+    </footer>
+</body>
+</html>
