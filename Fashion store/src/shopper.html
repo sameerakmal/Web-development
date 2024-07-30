@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+        header{
+            display: flex;
+            justify-content: space-around;
+            font-family  :'Times New Roman', Times, serif;
+        }
+        #cart-name{
+            background-color: red;
+            width: 11px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 50%;
+            color: white;
+            font-size: 8px;
+        }
+        nav span {
+            margin-right: 10px;
+        }
+        .shopper{
+            font-weight: bolder;
+            font-size: 1.4em;
+            margin-top: -10px;
+        }
+        .fshopper{
+            font-weight: bolder;
+            font-size: 1.5em;
+        }
+        .bi-lightning-charge-fill{
+            color: orange;
+        }
+        article{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+            font-size: 20px;
+        }
+        footer{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            background-color: black;
+            border: 10.5vh solid black;
+            color: white;
+            text-align: center;
+            margin-top: 60vh;
+            font-family: poppins;
+        }
+        ol{
+            list-style: none;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <div class="shopper">
+                Shopper.
+            </div>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <span class="bi bi-search"></span>
+                <span class="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart"><span id="cart-name">2</span></span>
+            </nav>
+        </div>
+    </header>
+    <article>
+        <span class="bi bi-lightning-charge-fill"></span>
+        <span class= "happy">HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+        <span class="bi bi-lightning-charge-fill"></span>
+
+    </article>
+    <footer>
+        <div>
+            <div>
+                <div class="fshopper">
+                    Shopper.
+                </div>
+            </div>
+            <div>
+                <nav>
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-instagram"></span>
+                    <span class="bi bi-github"></span>   
+                </nav>
+            </div>
+        </div>
+        <div>
+            <ol>
+                <li>SUPPORT</li>
+                <li>Contact Us</li>
+                <li>FAQs</li>
+                <li>Size Guide</li>
+                <li>Shipping & Returns</li>
+            </ol>
+        </div>
+
+        <div>
+            <ol>
+                <li>SHOP</li>
+                <li>Men's Shopping</li>
+                <li>Women's Shopping</li>
+                <li>Kids' Shopping</li>
+                <li>Discounts</li>
+            </ol>
+        </div>
+
+        <div>
+            <ol>
+                <li>COMPANY</li>
+                <li>Our Story</li>
+                <li>Careers</li>
+                <li>Terms & Conditions</li>
+                <li>Privacy & Cookie policy</li>               
+            </ol>
+        </div>
+
+        <div>
+            <ol>
+                <li>CONTACT</li>
+                <li>1-202-555-0105</li>
+                <li>1-202-555-0106</li>
+                <li>help@shopper.com</li>
+            </ol>
+        </div>
+    </footer>
+</body>
+</html>

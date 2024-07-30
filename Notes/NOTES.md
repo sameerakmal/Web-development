@@ -426,3 +426,60 @@ color : It represents color name and color code.
 </ol>
 
 ### Note : Don't use the bad code even if the output is same.
+
+### Interview Questions :
+#### Q1. How to remove numbering in order list?
+* It is possible to remove numbering of ordered list element through a CSS attribute called ```list-style : "none"```
+#### Q2. How to create a scrollable list?
+1. Keep a border
+2. Keep a proper width and height as per the content area.
+3. using an CSS attribute called "overflow : hidden|scroll|auto"
+#### Q3. How to display list items inline?
+#### Q4. How to display ```<li>``` in column wise?
+##### Grid : 
+```css
+ol{
+display : grid;
+grid-template-columns : 6fr 6fr;
+}
+```
+* O/P :
+* A.--------B.
+* C.--------D.
+* E.--------
+
+# Unordered List
+- It is used to define bulleted list.
+- Bulleted list comprises of symbol instead of numbering.
+- Unordered list is defined by using ```<ul>```
+- List items are defined by using ```<li>```
+- The attribute “type” defines the symbol type,which can be
+	- disc
+	- circle
+	- square
+
+```html
+<body>
+	<ul type="square">
+		<li>Web Sever</li>
+		<li>Web Site</li>
+		<li>Web Page</li>
+	</ul>
+</body>
+```
+#### How to set Custom bullets?
+* Ans. we can do by using list-style-image attribute of css.
+
+#### To display the content in fixed style we can use the following attributes of css in "ul"
+
+```css
+ul{
+    list-style: none;
+    position: fixed;
+    right: 20px;
+    bottom: 10px;
+    width: 5px;	
+    background-color: white;
+    padding: 5px;
+}
+```
