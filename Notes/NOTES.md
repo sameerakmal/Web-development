@@ -483,3 +483,82 @@ ul{
     padding: 5px;
 }
 ```
+## Pagenation: 
+* It refers to process of displaying records by splitting them into <u>pages</u>.
+
+```html
+<ul>
+    <li><span>&laquo;</span></li>
+    <li><span>1</span></li>
+    <li><span>2</span></li>
+    <li class="disabled"><span>3</span></li>
+    <li><span>4</span></li>
+    <li><span>5</span></li>
+    <li><span>...</span></li>
+    <li><span>&raquo;</span></li>
+</ul>
+```
+```css
+body{
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 500px;
+    }
+ul{
+    list-style: none;
+    display: flex;
+    }
+li{
+    margin-right: 10px;
+    border : 1px solid black;
+    width : 25px;
+    padding: 5px;
+    text-align: center;
+    border-radius: 15px;
+    background-color: lightcyan;
+    }
+```
+# Images in HTML
+* To use the images in your website you should keep license in mind. So, you need to check images -> tools -> usage rights -> creative common license.
+```html
+<body>
+    <figure>
+        <img src = "public/images/iphone.jpg" alt = "can't display" title = "iphone" height = "100" width = "100" border = "3" align = "left">
+        <figcaption>Iphone</figcaption>
+    </figure>
+</body>
+```
+## Different types of images
+| Abbreivation | File format | MIMEType | FileExtension |
+| :-----------: | :-----------: | :-----------: | :-----------: | 
+|APNG | Animated portable NetworkGraphics | image/apng | .apng |
+|BMP | Bitmap file | image/bmp | .bmp |
+|GIF | Graphics Interchange Format | image/gif | .gif |
+|ICO | Microsoft icon | image/x-icon| .ico, .cur |
+|JPEG | JointPhotographic Expert Group | image/jpeg | .jpg, .jpeg, .jfif, .pjeg, .pjp |
+|PNG |PortableNetworkGraphics | image/png | .png |
+| SVG   | ScalarVectorGraphics   | image/svg+xml | .svg          |
+| TIFF  | TaggedImage FileFormat  | image/tiff    | .tiff,.tif    |
+| WebP  | WebPicturFormat         | image/webp    | .webp         |
+
+
+### What is MIME?
+* MIME stands for <b>"Multipurpose internet mail extension".</b>
+* Server upon sending the information to the browser, it will also send what type of information is being sent.
+* To inform the type of information, we go for MIME type.
+
+### Different types of images and their purpose
+| Image type | Purpose|
+| :-----------: | :-----------: | 
+| PNG | 1. High resolution(More space) <br> 2.suitable for downloads |
+| JPG | 1. Compressed image format(less space) <br> 2. good for presentation |
+|GIF| 1. Low resolution <br> 2. Used for animations |
+|SVG | 1. Not pixel based <br> 2. High zoom quality <br> <b>Eg :</b> Google maps, Bootstrap icons.
+|Webp | If we try to save an image, it saves the entire image. Image alone can't be captured.| 
+
+### Embedding an image in webpage :
+```html
+<img src="" alt = "" width = "" height = "" title = "">
+``` 
+
