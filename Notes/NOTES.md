@@ -561,4 +561,8 @@ li{
 ```html
 <img src="" alt = "" width = "" height = "" title = "">
 ``` 
+<img src="cards.png" height = "300" width="400">
 
+## What are fluid images?
+* If we set the width and height of an image in percentage then the image will be adjusted to the browser window.
+* If the image is adjusted to browser window through percentage then such images are termed as fluid images
