@@ -563,6 +563,111 @@ li{
 ``` 
 <img src="cards.png" height = "300" width="400">
 
-## What are fluid images?
+### What are fluid images?
 * If we set the width and height of an image in percentage then the image will be adjusted to the browser window.
 * If the image is adjusted to browser window through percentage then such images are termed as fluid images
+
+## Links
+
+* Links are basically used to navigate from one page to another page
+* Links normally will be clickable text or an image which gets navigated through a protocol called "HTTP" 
+
+### Syntax
+
+```html
+<body>
+    <a href="">HOME</a><br>
+    <a href="">KidsFashion</a><br>
+    <a href="">MensFashion</a><br>
+    <a href="">WomensFashion</a>
+</body>
+```
+
+### We can create links in two ways
+* Intra documents links
+* Inter documents links
+
+## Intra Documents Links
+
+* It refers to one location to another location within the same page 
+
+### Interview Questions
+
+#### Q1. How to remove underline? 
+* Ans: Using CSS attribute called text-decoration: none
+
+#### Q2. How to change link color ?
+```css
+a:link{
+	color: red;
+}
+```
+
+#### Q3. In case the image attribute to specify the path , we use src . Where as in-case of anchor element to specify the path we use href why?
+* *src* : It behaves like getter for image elements so we specify the path through src attribute.
+* *href* : It behaves like setter for anchor element. So we specify the path through href attribute.
+
+#### Q4. Difference between URL and URI?
+* *URL*:
+	* stands for uniform resource locator.
+	* Ex: www.myntra.com
+* *URI*: 
+	* it stands for uniform resorce identifier.
+	* Accessing particular element in a website thorugh some name.
+	* Ex: www.mytra.com/watches
+
+#### Q5. How to create a empty link in HTML? 
+* If we use this ```<a href="#">``` then it is wrong.
+* To create a empty link we use javascript code as shown below
+```<a href="javascript:void()">HOME</a>```
+* To give a link which actually navigate we use the following code
+```<a href="javascript:void(location href="http//www.amazon.in")"></a>``` 
+
+#### Note :
+* Whenever we send a request, browser would create an object called "Http Request object"
+* The Http Request object structure is shown below : <br>
+<img src="Http_req.png" height = "200px" width = "400px">
+* Link request is of "GET" method type. <br>
+<img src="Http_get.png" height = "200px" width = "400px">
+* If the request is of GET type, then there would be no request body (data will be sent through server through URL)
+* Server will send a response by creating Http response object.<br>
+<img src="Http_res.png" height = "200px" width = "400px">
+
+
+
+| **1xx Informational** | **2xx Success**              | **3xx Redirection**         | **4xx Client Error()**       | **5xx Server Error (Programmatical mistakes)**                   |
+|-----------------------|------------------------------|-----------------------------|----------------------------|----------------------------------------|
+| 100 Continue          | <u>200 OK   </u>                    | 301 Moved Permanently       | 400 Bad Request            | 500 Internal Server Error              |
+| 101 Switching Protocols | <u>201 Created  </u>               | 302 Found                   | <u>401 Unauthorized </u>           | 501 Not Implemented                    |
+| 102 Processing        | <u>202 Accepted    </u>             | 303 See Other               | 402 Payment Required        |<u> 502 Bad Gateway </u>                       |
+| 103 Early Hints       | 203 Non-Authoritative        |                             |<u> 403 Forbidden   </u>            |<u> 503 Service Unavailable  </u>              |
+|                       | <u>204 No Content  </u>             |                             |<u> 404 Not Found   </u>            | 504 Gateway Timeout                    |
+|                       | 205 Reset Content            |                             |<u> 405 Method Not Allowed </u>     | 505 HTTP Version Not Supported         |
+|                       | 206 Partial Content          |                             | 406 Not Acceptable          | 506 Variant Also Negotiates            |
+|                       | 207 Multi-Status             |                             | 409 Conflict               | 507 Insufficient Storage               |
+|                       | 208 Already Reported         |                             | 413 Payload Too Large       | 508 Loop Detected                      |
+|                       |                              |                             | 429 Too Many Requests       | 510 Not Extended                       |
+|                       |                              |                             |                            | 511 Network Authentication Required    |
+
+#### Note :
+* Normally, links will be corrupted by the end user through a techinque called "URL re-writing".
+
+## Inter documentation links : 
+### Interview questions :
+#### Q1. How to display the content of a link in new tab?
+* Using an attribute called ```target = _blank```(more values will be discussed in js).
+#### Q2. How to specify upon clicking a link, a document to be downloaded?
+```html
+<li>
+    <a href="public/docs/Springboot.pdf" download = "ioi_syllabus">Springboot</a>
+</li>
+```
+* The file will be downloaded with the link name.
+* To downlad a file with user defined file name, we use an option called ```download = "file_name_to_be_downloaded"```
+#### Q3. Imp**. How to open a link document in new window? 
+```html
+<li>
+    <span class = "bi bi-printer-fill"></span>
+    <a href = "javascript:window.print()">Printer</a>
+</li>
+```

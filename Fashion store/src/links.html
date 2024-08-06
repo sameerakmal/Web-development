@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <title>Document</title>
+
+    <style type="text/css">
+        *{
+            margin: 0px;
+        }
+        header{
+            background-color: green;
+            padding: 15px;
+            text-align: center;
+        }
+        main{
+            overflow: auto;
+            height: 400px;
+        }
+        section{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+            margin-top: 30px;
+        }
+        li{
+            list-style: none;
+            background-color: green;
+            padding: 10px;
+            margin-top: 10px;
+            width: 250px;
+        }
+        .bi-cart{
+            font-size: larger;
+            margin-bottom: 20px;
+            color: black;
+        }
+        a{
+            text-decoration: none;
+            color: white;
+        }
+        a:hover{
+            color: black;
+        }
+        
+        div img{
+            border-radius: 100px;
+        }
+
+        #gototop{
+            background-color: burlywood;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="bi bi-cart"><span><a href="#home">Fashion Cart</a></span></div>
+
+        <div>
+            <span>
+                <a href="#kids">
+                    <img src="/Fashion store/public/images/Kids fashion.jpg" alt="" height="150px" width="150px">
+                </a>
+            </span>
+
+            <span>
+                <a href="#mens">
+                    <img src="/Fashion store/public/images/Mens fashion.jpg" alt="" height="150px" width="150px">
+                </a>
+            </span>
+
+            <span>
+                <a href="#women">
+                    <img src="/Fashion store/public/images/Women fashion.jpg" alt="" height="150px" width="150px">
+                </a>
+            </span>
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#kids">KidsFashion</a></li>
+                <li><a href="#mens">MensFashion</a></li>
+                <li><a href="#women">WomensFashion</a></li>
+
+            </ul>
+        </nav>
+        <main>
+            <h2 id="home">Home</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quos animi vero, pariatur non alias totam a corporis porro veniam, facilis, ratione incidunt? Minima accusamus blanditiis quis, explicabo fugiat magni? Aspernatur, magnam accusantium. Omnis quaerat id accusamus esse iure eius numquam laborum repudiandae fugit! Placeat aspernatur quibusdam odit cupiditate tempore recusandae quis porro autem et adipisci illo minus explicabo, impedit architecto necessitatibus velit fugit molestias veniam expedita neque doloribus deleniti ab amet? Eaque recusandae cupiditate fugiat sunt animi delectus consequatur architecto consequuntur fugit, in ea vel aperiam necessitatibus dolores laudantium placeat explicabo, quas temporibus voluptatibus. In ducimus ad pariatur illum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae iusto non quidem rerum voluptate molestiae. Aliquid unde nihil, nemo dolore mollitia cumque tempora quas quibusdam eveniet, nostrum amet sunt aut necessitatibus ab vitae assumenda distinctio repudiandae perferendis blanditiis veritatis. Minima animi saepe at iusto veritatis esse placeat laudantium earum delectus consequatur, expedita explicabo accusamus? Iure cumque ut vitae quibusdam accusantium quaerat magni labore nulla omnis natus vero ab expedita fuga reprehenderit in ex cupiditate eos adipisci illum a earum, aut impedit praesentium? Neque pariatur tempora totam sunt quis quaerat doloribus reiciendis accusamus esse quas earum, ducimus dolore. Eaque, optio!</p>
+
+            <h2 id="kids">KidsFashion</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quos animi vero, pariatur non alias totam a corporis porro veniam, facilis, ratione incidunt? Minima accusamus blanditiis quis, explicabo fugiat magni? Aspernatur, magnam accusantium. Omnis quaerat id accusamus esse iure eius numquam laborum repudiandae fugit! Placeat aspernatur quibusdam odit cupiditate tempore recusandae quis porro autem et adipisci illo minus explicabo, impedit architecto necessitatibus velit fugit molestias veniam expedita neque doloribus deleniti ab amet? Eaque recusandae cupiditate fugiat sunt animi delectus consequatur architecto consequuntur fugit, in ea vel aperiam necessitatibus dolores laudantium placeat explicabo, quas temporibus voluptatibus. In ducimus ad pariatur illum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae iusto non quidem rerum voluptate molestiae. Aliquid unde nihil, nemo dolore mollitia cumque tempora quas quibusdam eveniet, nostrum amet sunt aut necessitatibus ab vitae assumenda distinctio repudiandae perferendis blanditiis veritatis. Minima animi saepe at iusto veritatis esse placeat laudantium earum delectus consequatur, expedita explicabo accusamus? Iure cumque ut vitae quibusdam accusantium quaerat magni labore nulla omnis natus vero ab expedita fuga reprehenderit in ex cupiditate eos adipisci illum a earum, aut impedit praesentium? Neque pariatur tempora totam sunt quis quaerat doloribus reiciendis accusamus esse quas earum, ducimus dolore. Eaque, optio!</p>
+            <img src="/Fashion store/public/images/Kids fashion.jpg" alt="" width="200px" height="150px">
+
+            <h2 id="mens">MensFashion</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quos animi vero, pariatur non alias totam a corporis porro veniam, facilis, ratione incidunt? Minima accusamus blanditiis quis, explicabo fugiat magni? Aspernatur, magnam accusantium. Omnis quaerat id accusamus esse iure eius numquam laborum repudiandae fugit! Placeat aspernatur quibusdam odit cupiditate tempore recusandae quis porro autem et adipisci illo minus explicabo, impedit architecto necessitatibus velit fugit molestias veniam expedita neque doloribus deleniti ab amet? Eaque recusandae cupiditate fugiat sunt animi delectus consequatur architecto consequuntur fugit, in ea vel aperiam necessitatibus dolores laudantium placeat explicabo, quas temporibus voluptatibus. In ducimus ad pariatur illum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae iusto non quidem rerum voluptate molestiae. Aliquid unde nihil, nemo dolore mollitia cumque tempora quas quibusdam eveniet, nostrum amet sunt aut necessitatibus ab vitae assumenda distinctio repudiandae perferendis blanditiis veritatis. Minima animi saepe at iusto veritatis esse placeat laudantium earum delectus consequatur, expedita explicabo accusamus? Iure cumque ut vitae quibusdam accusantium quaerat magni labore nulla omnis natus vero ab expedita fuga reprehenderit in ex cupiditate eos adipisci illum a earum, aut impedit praesentium? Neque pariatur tempora totam sunt quis quaerat doloribus reiciendis accusamus esse quas earum, ducimus dolore. Eaque, optio!</p>
+            <img src="/Fashion store/public/images/Mens fashion.jpg" alt="" width="200px" height="150px">
+        
+            <h2 id="women">WomensFashion</h2>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique quos animi vero, pariatur non alias totam a corporis porro veniam, facilis, ratione incidunt? Minima accusamus blanditiis quis, explicabo fugiat magni? Aspernatur, magnam accusantium. Omnis quaerat id accusamus esse iure eius numquam laborum repudiandae fugit! Placeat aspernatur quibusdam odit cupiditate tempore recusandae quis porro autem et adipisci illo minus explicabo, impedit architecto necessitatibus velit fugit molestias veniam expedita neque doloribus deleniti ab amet? Eaque recusandae cupiditate fugiat sunt animi delectus consequatur architecto consequuntur fugit, in ea vel aperiam necessitatibus dolores laudantium placeat explicabo, quas temporibus voluptatibus. In ducimus ad pariatur illum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam quae iusto non quidem rerum voluptate molestiae. Aliquid unde nihil, nemo dolore mollitia cumque tempora quas quibusdam eveniet, nostrum amet sunt aut necessitatibus ab vitae assumenda distinctio repudiandae perferendis blanditiis veritatis. Minima animi saepe at iusto veritatis esse placeat laudantium earum delectus consequatur, expedita explicabo accusamus? Iure cumque ut vitae quibusdam accusantium quaerat magni labore nulla omnis natus vero ab expedita fuga reprehenderit in ex cupiditate eos adipisci illum a earum, aut impedit praesentium? Neque pariatur tempora totam sunt quis quaerat doloribus reiciendis accusamus esse quas earum, ducimus dolore. Eaque, optio!</p>
+            <img src="/Fashion store/public/images/Women fashion.jpg" alt="" width="200px" height="150px">
+            
+            <a href="#home"><h2 id="gototop">Go to top</h2></a>
+        </main>
+    </section>
+</body>
+</html>
