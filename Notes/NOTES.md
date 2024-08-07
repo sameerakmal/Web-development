@@ -655,7 +655,7 @@ a:link{
 ## Inter documentation links : 
 ### Interview questions :
 #### Q1. How to display the content of a link in new tab?
-* Using an attribute called ```target = _blank```(more values will be discussed in js).
+ Using an attribute called ```target = _blank```(more values will be discussed in js).
 #### Q2. How to specify upon clicking a link, a document to be downloaded?
 ```html
 <li>
@@ -664,10 +664,26 @@ a:link{
 ```
 * The file will be downloaded with the link name.
 * To downlad a file with user defined file name, we use an option called ```download = "file_name_to_be_downloaded"```
-#### Q3. Imp**. How to open a link document in new window? 
+#### Q3. Imp**. How to open a printer page in new window? 
 ```html
 <li>
     <span class = "bi bi-printer-fill"></span>
     <a href = "javascript:window.print()">Printer</a>
 </li>
 ```
+#### Q4. How to open a linked document in new window? 
+```html
+<a href = "javascript:window.open('public/images/kids image.jpg,'title', width = 300, height = 300')">Kids image</a>
+```
+#### Q5. How to open a linked document in the same window along with other contents in a page? 
+* Using an HTML 5 element called " **iframe** ".
+```html
+<iframe src = "" name = "">
+```   
+
+#### In order to embed any videos, ppt, documents we always take the help of iframe element in a page.
+```html
+<iframe src="https://www.youtube.com/embed/PmIuWS8jHys?si=T1I-G63BU-4eJc57"></iframe>
+```
+##### Note :
+* Incase of intra document, if the page content is small and still if we want to give a navigation, we use an element called " **target** ".
