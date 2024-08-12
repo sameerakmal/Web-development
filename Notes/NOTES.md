@@ -259,7 +259,7 @@ dt{
 #### 1. Why to use heading element for heading?
 #### 2. Why we have to use heading elements for giving heading, can't we configure using HTML text styles and CSS styles?
 #### 3. __Can we change the appearance of ```<hn>``` tags?__
-* Through CSS we can change the default behaviour
+ * Through CSS we can change the default behaviour
 ```css
 h1{
     font-size : 50px;

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+
+        header{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top:-25px ;
+            font-size: 20px;
+        }
+        .first-part{
+            display: flex;
+            align-items: center;
+        }
+
+        .middle-part{
+            display: flex;
+            align-items: center;
+        }
+
+        .last-part{
+            display: flex;
+            align-items: center;
+        }
+
+        .search-bar{
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid black;
+            width: 350px;
+            border-radius: 20px;
+            padding: 5px;
+            
+        }
+        .bi-mic-fill{
+            background-color: gray;
+            border-radius: 50%;
+            padding: 5px;
+            margin-left: 10px;
+        }
+        .last-part{
+            display: flex;
+            justify-content: space-around;
+            width: 150px;
+        }
+        .profile{
+            background-color: orange;
+            border-radius: 70%;
+            padding: 5px;
+        }
+        ul{
+            list-style: none;
+        }
+        li{
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="first-part">
+            <span class="bi bi-list"></span>
+            <span><img src="/Youtube/public/images/books.webp"  alt="" width="200px"></span>
+        </div>
+
+        <div class="middle-part">
+            <div class="search-bar">
+                <span>Search</span>
+                <span class="bi bi-search"></span>
+            </div>
+            <span class="bi bi-mic-fill"></span>
+        </div>
+
+        <div class="last-part">
+            <span class="bi bi-camera-video"></span>
+            <span class="bi bi-bell"></span>
+            <span class="profile">N</span>
+        </div>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li class="bi bi-house">Home</li>
+                <li class="bi bi-play-circle">Shorts</li>
+                <li class="bi bi-collection-play">Subscriptions</li>
+            </ul>
+        </nav>
+        <main></main>
+    </section>
+</body>
+</html>
