@@ -687,3 +687,81 @@ a:link{
 ```
 ##### Note :
 * Incase of intra document, if the page content is small and still if we want to give a navigation, we use an element called " **target** ".
+
+# Table Elements in HTML
+
+- **Tables** are used to organize data in rows and columns. However, data presented inside a table is not SEO-friendly.
+- Tables are internally presented with the help of the "Grid" component.
+- Data in a table is static, while filtering and sorting effects are achieved through backend technologies.
+- In earlier versions of HTML, tables were used for designing layouts (rows and columns).
+- In HTML5, tables are used only to present data statically using the elements shown below.
+
+## Table Elements
+
+| Element     | Description                                                                  |
+|-------------|------------------------------------------------------------------------------|
+| `<table>`   | It is a collection of rows and columns.                                      |
+| `<caption>` | It sets a caption for the table, making it more SEO-friendly.                |
+| `<thead>`   | It defines the table header section.                                         |
+| `<tbody>`   | It defines the table body section.                                           |
+| `<tfoot>`   | It defines the table footer section.                                         |
+| `<th>`      | It defines the column heading content (header cell).                         |
+| `<td>`      | It defines the table cell content (ordinary cell).                           |
+| `<tr>`      | It defines a table row.                                                      |
+
+---
+
+## Attributes of Table
+
+1. **Frame**  
+   - Values: `void`, `above`, `below`, `lhs`, `rhs`.
+   - This attribute is used to remove the outer border from the table.
+
+2. **Border**  
+   - This attribute is used to set the border for the entire table (for each cell and also it sets a frame for the entire table).
+   - The value of the border can be `0` or `1`.
+   - Increasing the value beyond `1` has no effect on the cells.
+
+3. **Cellspacing and Cellpadding**  
+   - These attributes are similar to margin and padding in CSS.
+
+4. **Rules**  
+   - Values: `col`, `rows`, `all`, `none`.
+   - If both `rules` and `border` are used together, the `rules` value will dominate.
+   - When using `rules`, avoid using `border`, and vice versa.
+
+5. **Background color (bgcolor) and Image(background)**
+    * bgcolor : It sets a background color for table, body, header, footer, cell, row.
+    * background : It sets background image for table, group, row, cell.
+    * **Syntax** :
+        ```html
+        <table background = "../" border = "1" width = "500">
+        <table bgcolor = "red">
+        <tr bgcolor = "red">
+        <th bgcolor = "red">
+        ```
+
+6. **Height and width attribute**
+    * Height : It defines height for row(affects whole row).
+    * **Syntax** :
+        ```html
+        <tr height = "200"> <!-- best suited -->
+        <th height = "200">
+        <td height = "200">    
+        ```
+    * Width : It defines cell width(affects whole column).
+    * **Syntax** :
+        ```html
+        <td width = "200">
+        <th width = "200">  
+   
+     ```
+7. **Align and v-align attributes**
+
+    * In order to adjust the data within a cell, we use attributes called align(= left, right, center, justify) and v-align(= top, bottom, center).
+    * These attributes are applicable only for particular cell.
+
+8. **Merging or rows and columns**
+    * colspan : It can merge specified number of columns into single column.
+    * rowspan : It can merge specified number of rows into single row.
+    * **Note** : colspan and rowspan can be applied only on `<td>|<th>`.
