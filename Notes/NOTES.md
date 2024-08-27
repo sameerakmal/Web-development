@@ -1,4 +1,4 @@
-## Client server architecture:
+# Client server architecture:
 * Client is a computer which is capable of sending request to other computers present in internet.
 * We say client as a computer but in reality browser software is termed as a client.
 
@@ -13,7 +13,7 @@
 ### Note:
 * Installing nodejs wil promote a build tool through which we can automate the process of taking third party libraries from different websites to our projects with the help of a command called "npm".
 
-## HTML:
+# HTML:
 * On a browser to display the content as per our requirement we need to __markup__ our content.
 * To markup the content on the browser we need a language called __html__(hyper text markup language).
 
@@ -121,16 +121,27 @@ background-attachment : fixed|scroll|
 * The ```<span>``` tag is much like the ```<div>``` element, but ```<div>``` is a block level element and ```<span>``` is an inline element.
 ![alt text](basic_dom.png)
 
-#### DOM : 
+# DOM : 
 * To align the content in column-wise using CSS. We have an option called __display:flex__.
 * We can control the attribute of font through CSS using font-family,font-style,font-size,font-weight.
 * For a span element, width property can't be applied directly. To see the effect we use a attribute called __display:inline-block__.
 ![alt text](shopper_dom.png)
 
+### Amazon:
+
+[Amazon footer](http://127.0.0.1:3000/Footers/src/amazon_footer.html)
+#### Amazon footer DOM:
+![Amazon footer dom](Amazon_footer_dom.png)
+
+### Flipkart:
+[Flipkart footer](http://127.0.0.1:3000/Footers/src/flipkart_footer.html)
+#### Flipkart footer DOM:
+![Flipkart footer DOM](Flipkart_footer_dom.png)
+
 #### Note:
 * Default screen width is 1200px, so max no of columns in a page is 12.
 
-## Different types of CSS Selctor:
+# Different types of CSS Selctor:
 ### Selecting child and sibling in CSS:
 ```
 parent child{  --> child selector
@@ -143,19 +154,11 @@ Element A ~ Element B { --> All elements are specifc
 
 }
 ```
+### Blurring an image :
 * For any image to be blurred and if the content has to be presented on a blurred image we go for an attribute called background-color : rgba.
 * "a" stands for alpha, the range of a is 0 to 1.More the value,lesser the blur.
 
-### Amazon:
 
-[Amazon footer](http://127.0.0.1:3000/Footers/src/amazon_footer.html)
-#### Amazon footer DOM:
-![Amazon footer dom](Amazon_footer_dom.png)
-
-### Flipkart:
-[Flipkart footer](http://127.0.0.1:3000/Footers/src/flipkart_footer.html)
-#### Flipkart footer DOM:
-![Flipkart footer DOM](Flipkart_footer_dom.png)
 ### To display any content to the center:
 1. Keep all the contents in one container.
 2. 
@@ -179,7 +182,7 @@ body{
     1. justify-content : center;(horizantal)
     2. align-items : center;(vertical)
  
-### Fig and figcaption
+# Fig and figcaption
 * Fig caption element is used by search engine to load the image as a search result for the end user.
 ```html
 <figcaption>
@@ -205,7 +208,7 @@ body{
 1. ```<small> small text</small>``` : It sets letter small size.
 2. ```<large> large text</large>``` : It sets letter large size.
 
-### Details and summary
+# Details and summary
 ```html
 <body>
     <details>
@@ -218,7 +221,7 @@ body{
 * It allows to expand and collapse your content.
 * It saves the screen space.
 
-### Data list with terms and definitons :
+# Data list with terms and definitons :
 #### Syntax :
 ```html
 <dl>
@@ -248,7 +251,7 @@ dt{
 }
 ```
 * The unit of horizontal vertical blur is pixels.
-## Heading elements :
+# Heading elements :
 * Heading elements are mainly used to define headings and to describe a <u>topic</u> in a webpage.
 * Heading element default bheaviour is :
     1. display : block; 
@@ -335,7 +338,8 @@ color : It represents color name and color code.
 * These fonts are such fonts which would be available in every machine and it can't be deleted. 
 * Eg : Sans-serif, monospace, serif.
 
-## Ordered and unordered list
+# Ordered and unordered list
+## Ordererd list : 
 * Order list will add auto numbering for a list of options, which can update automatically when you add or delete items.
 * Order list is defined by using ```<ol>``` element.
 * Items in list are defined by using ```<li>```.
@@ -448,7 +452,7 @@ grid-template-columns : 6fr 6fr;
 * C.--------D.
 * E.--------
 
-# Unordered List
+## Unordered List
 - It is used to define bulleted list.
 - Bulleted list comprises of symbol instead of numbering.
 - Unordered list is defined by using ```<ul>```
@@ -483,7 +487,7 @@ ul{
     padding: 5px;
 }
 ```
-## Pagenation: 
+# Pagenation: 
 * It refers to process of displaying records by splitting them into <u>pages</u>.
 
 ```html
@@ -567,7 +571,7 @@ li{
 * If we set the width and height of an image in percentage then the image will be adjusted to the browser window.
 * If the image is adjusted to browser window through percentage then such images are termed as fluid images
 
-## Links
+# Links
 
 * Links are basically used to navigate from one page to another page
 * Links normally will be clickable text or an image which gets navigated through a protocol called "HTTP" 
@@ -765,3 +769,81 @@ a:link{
     * colspan : It can merge specified number of columns into single column.
     * rowspan : It can merge specified number of rows into single row.
     * **Note** : colspan and rowspan can be applied only on `<td>|<th>`.
+
+# Forms in HTML
+
+- **Form** provides a UI where users can interact with our application.
+- Interaction includes insert, update, delete, query, etc. (CRUD, CURD, SCUD).
+- A form is a generic container that has default functionality.
+- A form can submit and reset its data without configuring any explicit functionality.
+
+## Form container
+* It is designed by using form tag.
+### Syntax :
+```html
+<form>
+    form element
+</form>
+```
+### Note :
+* In a page we can submit the details only when they are enclosed in a form.
+
+#### Syntax :
+```html
+Name : <input type = "text" name = "Name"> // Not good
+<form>
+    Name : <input type = "text" name = "Name"> // Okay
+</form>
+```
+
+## Form Attributes
+* These 3 are required for identification purpose in javascript.
+    1. id
+    2. class
+    3. name   
+4. methods : It indicates how the data should be submitted to the server. The values of method are "**get or post**".
+    1. Default method type is **get**(select query would run based on input).
+    2. If we want to send large volume of data to the server then we go for **post method type**(insert query would for the input provided by the user).
+    <img src="post-img.png" height = "200px" width = "400px">
+    
+
+* The other values of method are PUT , PATCH , DELETE , TRACE , OPTION.
+* To send the request of type PUT , PATCH ,DELETE . We use software's like curl , postman , open API.
+
+
+### Differences between get and post
+| GET|POST |
+| :-----------: | :-----------: |
+|It supports caching(saves round trip). | It doesn't supports caching.|
+|Upon submitting the data, query string will be constructed and it will attach to **URL**.| Upon submitting the data, query string will not be constructed and it will not attach to **URL**.|
+|Small volume of data would be allowed(2048 chars) |No limit on selecting the data(any volume) |
+|You can't submit complex datas like audio,video files(binary data)(It supports only ASCII type)| You can submit in POST.|
+|It's not safe. So, the data can be hacked|It's safe. So, the data can't be hacked easily.|
+
+#### What is query string?
+* It is a string which is constructed by web browser upon the user entering the details and clicking on submit button. Query string data would be in the form of key value pair.
+
+### Action : 
+* This attribute value would be the location of program where the data has to be sent.
+
+```html
+<form method = "post" action = "http://localhost:9999/First-Project-01/first">
+```
+* method = "post" -> doPost(req,resp)
+* method = "get" -> doGet(req,resp)
+
+### novalidate :
+* This attribute is used to verify wether the user entered data should be validated or not.
+* If we use **novalidate** attribute then the input entered by the user should not be validated(email,number, etc...)
+
+```html
+<input> //HTML4
+<textarea> //HTML4
+<select> //HTML4
+<progress> //HTML5
+<meter> //HTML5
+```
+
+#### Attributes of input element : 
+    1. type = "text" : user can enter any character type of data.
+    2. placeholder : It is normally used to key a watermark content of particular element.
