@@ -758,8 +758,7 @@ a:link{
         ```html
         <td width = "200">
         <th width = "200">  
-   
-     ```
+        ```
 7. **Align and v-align attributes**
 
     * In order to adjust the data within a cell, we use attributes called align(= left, right, center, justify) and v-align(= top, bottom, center).
@@ -844,6 +843,40 @@ Name : <input type = "text" name = "Name"> // Not good
 <meter> //HTML5
 ```
 
-#### Attributes of input element : 
+## Attributes of input element : 
     1. type = "text" : user can enter any character type of data.
     2. placeholder : It is normally used to key a watermark content of particular element.
+
+![alt text](readonly.png)
+
+### Value :
+
+### readonly :
+
+### disabled : 
+
+
+
+### Differences between readonly and disabled
+* **readonly** would permit submitting the data to the backend wheras **disabled** would not permit submitting the data to the backend.
+
+### required : 
+* It indicates value should be compulsorily entered by the user otherwise the page should not be submitted.
+
+### size = "5" :
+* It adjusts the width of text box. Default width is 20.
+
+### minlength = "4" :
+* It indicates minimum number of characters to be entered by the user(validation).
+
+### maxlength = "4" :
+* It indicates maximum number of characters to be entered by the user(once it reaches the max limit user can't enter any data in the container).
+
+### autofocus : 
+* This attribute is used to focus on a particular element when the page gets loaded
+* Through, javascript we can use this attribute to make it dynamic to identify the error elements in the webpage(validation failed elements).
+
+### list :
+* It uses a datalist that contains an option to display as auto completed text.
+* datalist is designed using an element called `<datalist>`.
+* To design a set of options to datalist we use an element called `<option>`.
