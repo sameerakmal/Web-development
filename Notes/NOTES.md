@@ -880,3 +880,31 @@ Name : <input type = "text" name = "Name"> // Not good
 * It uses a datalist that contains an option to display as auto completed text.
 * datalist is designed using an element called `<datalist>`.
 * To design a set of options to datalist we use an element called `<option>`.
+
+# Pattern :
+* With respect to this attribute we use a regular expression. Regular expression comprises of meta characters and quantifiers.
+
+| Metacharacters     |  quantifiers                      |
+|:-------------:|:--------------------------------------:|
+| ? | {}|
+| + | {m,n}|
+| * | {m}|
+| \| |    |
+| . |    |
+| [] |    |
+| () |    |
+| \ |    |
+| ^ |    |
+| \\^ |    |
+| $ |    |
+
+| Metacharactes  | Description|Code| Range|
+|:-------------:|:-------------:|:-------------:| :-------------:|
+|?|It defines zero or one occurence of character. |```<input pattern = "colou?r" placeholder = "color/colour" type = "text" name = "txtTest">```| O to 1|
+| * | It define zero or more occurences of character. |```<input pattern = "colou*r" placeholder = "color/colour" type = "text" name = "txtTest">```| O to n|
+| + | It define one or more occurences of character.| ```<input pattern = "colou+r" placeholder = "color/colour" type = "text" name = "txtTest">```| 1 to n|
+| . | Stands for replacing exactly one character and that character can be [uppercase, lowercase, digits, any special symbols]. <br> Ex : cow, boy|
+|\\ |It is used as escape sequence character for special chars, [Chars used by parser]| \\\+91 = +91 <br> pattern = ||
+|\|| This operator is used to club multiple expression to find a unique result ||
+|[]| It reprsents a range of characters which can be accepted as input from the user.
+### Escaping : 
