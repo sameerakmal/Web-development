@@ -900,11 +900,30 @@ Name : <input type = "text" name = "Name"> // Not good
 
 | Metacharactes  | Description|Code| Range|
 |:-------------:|:-------------:|:-------------:| :-------------:|
-|?|It defines zero or one occurence of character. |```<input pattern = "colou?r" placeholder = "color/colour" type = "text" name = "txtTest">```| O to 1|
-| * | It define zero or more occurences of character. |```<input pattern = "colou*r" placeholder = "color/colour" type = "text" name = "txtTest">```| O to n|
-| + | It define one or more occurences of character.| ```<input pattern = "colou+r" placeholder = "color/colour" type = "text" name = "txtTest">```| 1 to n|
+|?|It defines zero or one occurence of character. |pattern = "colou?r"| O to 1|
+| * | It define zero or more occurences of character. |pattern = "colou*r"| O to n|
+| + | It define one or more occurences of character.| pattern = "colou+r"| 1 to n|
 | . | Stands for replacing exactly one character and that character can be [uppercase, lowercase, digits, any special symbols]. <br> Ex : cow, boy|
-|\\ |It is used as escape sequence character for special chars, [Chars used by parser]| \\\+91 = +91 <br> pattern = ||
+| Escaping : \\ |It is used as escape sequence character for special chars, [Chars used by parser]| \\\+91 = +91 <br> pattern = ||
 |\|| This operator is used to club multiple expression to find a unique result ||
-|[]| It reprsents a range of characters which can be accepted as input from the user.
-### Escaping : 
+|[]| It reprsents a range of characters which can be accepted as input from the user.|| Range of characters <br> pattern = "[a,d,s]"  ex : a and d and s are allowed. <br> pattern = "[a-z,A-Z]"  ex : a to z and A to Z are allowed. <br> pattern = "[0-9]"  ex : 0 to 9 are allowed.  <br> pattern = "[a-zA-Z0-9]"  ex : Alphanumeric <br> pattern = "[a-d,4-9]"  ex : a to d and 4-9 are allowed.|
+| ^ | Exclude specified | pattern = "[a,d,s]"  ex : a,d,s are allowed <br> pattern = "[^a,d,s]"  ex : a,d,s are not allowed ||
+|\\^| Matches the beginning of input, "starts with".|||
+|$| Matches the end of input, "ends with".|pattern = "\^...your expression...$" <br> Eg :  `pattern="\^[a-z]\.[0-9]$"` => 0.3||
+|\d|It allows only numeric value, any single digit [0-9].| pattern="\d\d" [any 2 digit numbers] <br> pattern="\d?\d" [one or 2 digits]<br> pattern="[0-9]" [one digit b/w 0-9] ||
+| \\D| Not a digit [^0-9] or \D only non-digit. [a-zA-Z!@#$%] <br> [^0-9] Any value other than number. | ||
+|\\i|ingore capitalization| pattern = "colour\i" <br> allowed : color colOr COlor ||
+|\s|Match a single character white space character. Including space, tab, form feed, line feed, and other Unicode chars. <br> \n- line feed <br> \f- form feed <br> \t - horizantal tab <br> \v - vertical tab||
+
+### Note : 
+* Meta characters indicate what characters needs to be allowed wheras quantifiers how many times it has to be allowed.
+
+
+### Regular Expression[PreDefined] :
+1. (?=.*[A-Z]) : Atleast one uppercase letter at any place.
+2. (?=.*[a-z]) : Atleast one lowercase letter at any place.
+3. (?=.*[0-9]) : Atleast one numeric at any place.
+4. (?=.*[!&@#$]) : Atleast one special character at any place.
+
+### FAQ : 
+1. Write a pattern to validate mobile number starting from +91 and should have 10 digits?
