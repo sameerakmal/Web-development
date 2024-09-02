@@ -775,7 +775,7 @@ a:link{
 - Interaction includes insert, update, delete, query, etc. (CRUD, CURD, SCUD).
 - A form is a generic container that has default functionality.
 - A form can submit and reset its data without configuring any explicit functionality.
-
+![alt text](black_ball.png)
 ## Form container
 * It is designed by using form tag.
 ### Syntax :
@@ -821,6 +821,7 @@ Name : <input type = "text" name = "Name"> // Not good
 
 #### What is query string?
 * It is a string which is constructed by web browser upon the user entering the details and clicking on submit button. Query string data would be in the form of key value pair.
+![](query_string.png)
 
 ### Action : 
 * This attribute value would be the location of program where the data has to be sent.
@@ -850,6 +851,7 @@ Name : <input type = "text" name = "Name"> // Not good
 ![alt text](readonly.png)
 
 ### Value :
+* This attribute displays a value by default or shows the value by the programming language from the database.
 
 ### readonly :
 
@@ -898,25 +900,39 @@ Name : <input type = "text" name = "Name"> // Not good
 | \\^ |    |
 | $ |    |
 
-| Metacharactes  | Description|Code| Range|
-|:-------------:|:-------------:|:-------------:| :-------------:|
-|?|It defines zero or one occurence of character. |pattern = "colou?r"| O to 1|
-| * | It define zero or more occurences of character. |pattern = "colou*r"| O to n|
-| + | It define one or more occurences of character.| pattern = "colou+r"| 1 to n|
-| . | Stands for replacing exactly one character and that character can be [uppercase, lowercase, digits, any special symbols]. <br> Ex : cow, boy|
-| Escaping : \\ |It is used as escape sequence character for special chars, [Chars used by parser]| \\\+91 = +91 <br> pattern = ||
-|\|| This operator is used to club multiple expression to find a unique result ||
-|[]| It reprsents a range of characters which can be accepted as input from the user.|| Range of characters <br> pattern = "[a,d,s]"  ex : a and d and s are allowed. <br> pattern = "[a-z,A-Z]"  ex : a to z and A to Z are allowed. <br> pattern = "[0-9]"  ex : 0 to 9 are allowed.  <br> pattern = "[a-zA-Z0-9]"  ex : Alphanumeric <br> pattern = "[a-d,4-9]"  ex : a to d and 4-9 are allowed.|
-| ^ | Exclude specified | pattern = "[a,d,s]"  ex : a,d,s are allowed <br> pattern = "[^a,d,s]"  ex : a,d,s are not allowed ||
-|\\^| Matches the beginning of input, "starts with".|||
-|$| Matches the end of input, "ends with".|pattern = "\^...your expression...$" <br> Eg :  `pattern="\^[a-z]\.[0-9]$"` => 0.3||
-|\d|It allows only numeric value, any single digit [0-9].| pattern="\d\d" [any 2 digit numbers] <br> pattern="\d?\d" [one or 2 digits]<br> pattern="[0-9]" [one digit b/w 0-9] ||
-| \\D| Not a digit [^0-9] or \D only non-digit. [a-zA-Z!@#$%] <br> [^0-9] Any value other than number. | ||
-|\\i|ingore capitalization| pattern = "colour\i" <br> allowed : color colOr COlor ||
-|\s|Match a single character white space character. Including space, tab, form feed, line feed, and other Unicode chars. <br> \n- line feed <br> \f- form feed <br> \t - horizantal tab <br> \v - vertical tab||
+
+## Meta Characters
+
+| Meta Character | Description                                                                 | Example Usage                                   |
+|----------------|-----------------------------------------------------------------------------|-------------------------------------------------|
+| `?`            | Defines zero or one occurrence of a character.                              | `<input pattern="colou?r" placeholder="color/colour" type="text" name="txtTest">` |
+| `*`            | Defines zero or more occurrences of a character.                            | `<input pattern="colou*r" type="text" name="txtTest">` [e.g., color, colour, colouur, coloruuur] |
+| `+`            | Defines one or more occurrences of a character.                             | `<input pattern="colou+r" type="text" name="txtTest">` [e.g., colour, colouur…] |
+| `.` (dot)      | Matches any single character in the specified string. [e.g., A-Za-Z0-9!@#$%] | `<input pattern="b.y" type="text" name="txtTest">` [e.g., buy, boy] <br> `<input pattern=".y" type="text" name="txtTest">` [e.g., by, my] <br> Example: `pattern=".o."` [e.g., cow, toy, boy] <br> Example: `pattern=".at"` [e.g., cat, bat, mat, rat] |
+| `\`            | Escape sequence character for special chars.                                | `pattern="gmail\.com"` [e.g., gmail.com] <br> `pattern="gmail.com"` [e.g., gmail2com, gmailzcom] |
+| `\|` (pipe)     | Used as OR; matches any of the specified patterns.                          | `<input pattern="green\|red\|blue" type="text" name="txtTest">` |
+| `^`            | Excludes specified characters.                                               | `pattern="[a,d,s]"` [e.g., a, d, s allowed] <br> `pattern="[^a,d,s]"` [e.g., all characters excluding a, d, s] |
+| `[]`           | Range of characters.                                                          | `pattern="[a,d,s]"` [e.g., a, d, s are allowed] <br> `pattern="[a-z,A-Z]"` [e.g., a to z and A to Z are allowed] <br> `pattern="[0-9]"` [e.g., 0 to 9 are allowed] <br> `pattern="[a-zA-Z0-9]"` [e.g., Alphanumeric] <br> `pattern="[a-d,4-9]"` [e.g., a to d and 4 to 9 are allowed] <br> `pattern="[^A-Z]"` [e.g., excluding A-Z, all others are allowed] |
+| `\^`           | Matches the beginning of input; "Starts with".                              | `pattern="^[a-z]"` [e.g., a starts with lowercase letter] |
+| `$`            | Matches the end of input; "Ends with".                                      | `pattern="...your expression...$"` <br> Example: `pattern="^[a-z]\.[0-9]$"` [e.g., a.3] |
+| `\d`           | Allows only numeric values, any single digit [0-9].                         | `<input pattern="\d\d" type="text" name="txtTest">` [e.g., any 2-digit number] <br> `<input pattern="\d?\d" type="text" name="txtTest">` [e.g., one or 2 digits] <br> `<input pattern="[0-9]" type="text" name="txtTest">` [e.g., one digit between 0-9] |
+| `\D`           | Matches any character that is not a digit [^0-9] or \D only non-digit.     | `<input pattern="\D\D" type="text" name="txtTest">` [e.g., both should not be digits] <br> `<input pattern="\d\D" type="text" name="txtTest">` [e.g., first should be digit, second should not be digit] |
+| `\s`           | Matches a single whitespace character including space, tab, form feed, etc. | `<input pattern="\d\s\d" type="text" name="txtTest">` <br> Examples: `\n` (line feed), `\f` (form feed), `\t` (horizontal tab), `\v` (vertical tab) |
+| `\w`           | Matches alphanumeric characters and underscore. Equivalent to [A-Za-z0-9_] | `<input pattern="\w\w" type="text" name="txtTest">` |
+| `\W`           | Matches any character that is not a word character [^A-Za-z0-9_]           | `<input pattern="\W" type="text" name="txtTest">` [e.g., %$#@&] |
+| `\i`           | Ignore capitalization.                                                        | `<input pattern="colour\i" type="text" name="txtTest">` [e.g., color, Color, cOLOR] |
+
 
 ### Note : 
 * Meta characters indicate what characters needs to be allowed wheras quantifiers how many times it has to be allowed.
+
+## Quantifiers
+
+| Quantifier | Description                          | Example Usage                                    |
+|------------|--------------------------------------|--------------------------------------------------|
+| `{n}`      | Exactly n occurrences of a character. | `pattern="\d{3}"` [e.g., Exactly 3 digits] <br> `pattern="\d{3}\D{2}"` [e.g., First 3 digits followed by 2 non-digits] |
+| `{n,m}`    | Between n and m occurrences of a character. | `pattern="\w{4,15}"` [e.g., Alphanumeric min = 4 and max = 15] |
+| `{n, }`    | At least n occurrences, with no upper limit. | `pattern="\w{4,}"` [e.g., Alphanumeric allowed min = 4, max can be any] |
 
 
 ### Regular Expression[PreDefined] :
@@ -925,5 +941,147 @@ Name : <input type = "text" name = "Name"> // Not good
 3. (?=.*[0-9]) : Atleast one numeric at any place.
 4. (?=.*[!&@#$]) : Atleast one special character at any place.
 
-### FAQ : 
-1. Write a pattern to validate mobile number starting from +91 and should have 10 digits?
+### FAQs
+
+1. **Write a pattern to validate a mobile number starting from +91 and should have 10 digits.**
+
+   **Ans.** `^\+91\d{10}$`
+
+2. **Write a pattern to validate a US mobile format number (e.g., +(1)(425) 555-0100).**
+
+   **Ans.** `^\+\(1\)\(\d{3}\)\s\d{3}-\d{4}$`
+
+3. **Write a pattern for a UK mobile format number (e.g., +(44)(20)1234 5678).**
+
+   **Ans.** `^\+\(44\)\(20\)\d{4}\s\d{4}$`
+
+4. **Write a pattern to validate an IFSC code (e.g., SBIN0000813).**
+
+   **Ans.** `^SBIN00\d{4}$`
+
+5. **Write a pattern to allow only alphanumeric characters with 4 to 15 chars but special characters not allowed.**
+
+   **Ans.** `^[A-Z0-9a-z]{4,15}$` <br> (Note: `\w{4,15}` allows underscores as well)
+
+6. **Write a pattern to allow only alphabets with 4 to 15 chars but special characters not allowed.**
+
+   **Ans.** `^[A-Z]{4,15}$`
+
+7. **Write a pattern for a username starting with uppercase letters and can be 4 to 15 chars but special characters not allowed.**
+
+   **Ans.** `^[A-Z][a-zA-Z]{3,14}$`
+
+8. **Write a pattern to allow only alphanumeric characters with `_`, 4 to 15 chars but at least one or many characters can be uppercase.**
+
+   **Ans.** `(?=.*[A-Z])\w{4,15}$`
+
+9. **Write a pattern for a username 4 to 15 chars with at least one uppercase letter, number, and special character.**
+
+   **Ans.** `(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#%])\w{4,15}$`
+
+# HTML Inputs
+*type = "text"* (defaut value of input type)
+1) name,id,class
+2) size
+3) placeholder
+4) autofocus 
+5) value 
+6) readonly
+7) disabled 
+8) requried : validation
+9) minlength : validation
+10) maxlenght : not able to enter if data exceeds max length
+11) list : autosuggestion
+12) pattern : validation using regex
+
+### type = "password"
+* Value entered by the user will be masked by star symbol.
+* Enter the password :<br>
+<input type="password" placeholder="Enter the password" name="textPassword">
+
+### type = "number"
+* To enter only the number type we use an attribute value "number".
+* Age: ~minlength~  min <br>
+<input type="number" name="txtNumber"   min="18" max="58" step="5">
+
+### type="range"
+* <input  type="range" min="1000" value="1000" max="100000" name="txtPrice">
+* The value chosen by the slider option can be displayed on a page through "javascript"
+
+### type="email"
+* Synatx: <input type="email" name="txtEmail">
+* It validates email address format.
+* You can define "type=email".
+* It just checks for "@", but will not worry about extension like (.com,.live,.ai,..)
+
+### type="URL"
+* It validate URL format.
+* If you want the user to input website address [URL] and restrict to URL format the you can define type=url
+* URL format should contains "protocol and domain" 
+* Synatax: <input type="url" name="txtUrl" size="50">
+* Example:
+	* www.amazon.com => invalid
+	* http://www.amazon.com => valid
+	* https://www.amazon.com => valid
+
+### type=color
+* To give color type as an input we go for an option call type=color.
+* Color input in HTML can provided in three ways
+	1) name: "Red" "Blue" "Green"
+	2) light colors : Darkcyan, Lightcyan, Lightgreen etc..
+	3) Hexa decimal code:
+		* Hexadecimal color can be defined in 3 or 6 chars followed by hash "#"
+			* 3 Chars Code => #RGB
+			* 3 Chars Code => #RRGGBB
+		
+		* Red, Green and Blue Value can be "0 to F"
+			* Hexa: 0,1,2,3,4,5,6,7,8,9,a,b,c,d,e,f [0 is minimum , f in maxium]
+			* 0 -> Dark , f -> Bright
+
+### type=date/time
+* HTML allows to input date value by using the "type=date"
+* It is not supported on all browsers. hence we have to implement using jQuery.
+* datetime value is removed from "html5 major version".
+1. date
+2. datetime - local
+3. month 
+4. week 
+5. time
+
+* **How to restrict the user for date selection?**
+
+    **Ans.** Using min and max attributes.
+
+#### Note:
+* Always the date input must be "year-month-date" | "YYYT_MM_DD"(default formate of MySQL)
+
+* <u>*Eg:*</u><br>
+	*Departure:*<input type="date" name="txtDate" min="2024-09-02" max="2024-10-02"> <br>
+	*DateTime:* <input type="datetime-local" name="txtDateTime"><br>
+	*Week:* <input type="week" name="txtWeek"><br>
+	*Month:* <input type="month" name="txtMonth"><br>
+	*Time:*` <input type="time" name="txtTime">`<br>
+
+### type="file"
+* In order to accept file as the input from the user , we go for a type called file.
+* It allows the client to browse and select any file from computer to upload into server.
+* However it is just a control for selecting file, upload logic we have to write by using "JavaScriot/JQuery" | "backend technology"
+* You cna define by using type="file"
+* Syntax: <input type="file" name="txtFile" multiple accept=".png">
+
+### Radio Buttons and CheckBox
+* Radio Buttons are refered as group buttons (Mutex nature will be imposed on those elements by giving common names)
+* *NOTE:*
+	* Mutex refers to "Mutual Exclusion".
+	* Mutual exculsion is a threading terminology where one thread should execute only one task at any given point of time.
+
+* Synatx: Every one has same name
+	html
+	<input type="radio" name="age" value="1 to 18" checked><label>1 to 18</label>
+    <input type="radio" name="age" value="19 to 59"><label>19 to 59</label>
+    <input type="radio" name="age" value="above 60" disabled><label>60+</label>
+	
+
+1. **When should we use radio button element in a webpage?**
+	* If we want a user to compulsory select one option among the supplied inputs, we go for radio buttons.
+	* To remove it default selected ,we use an attribute called "checked"
