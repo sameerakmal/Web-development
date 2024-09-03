@@ -1060,7 +1060,7 @@ Name : <input type = "text" name = "Name"> // Not good
 	*DateTime:* <input type="datetime-local" name="txtDateTime"><br>
 	*Week:* <input type="week" name="txtWeek"><br>
 	*Month:* <input type="month" name="txtMonth"><br>
-	*Time:*` <input type="time" name="txtTime">`<br>
+	*Time:* <input type="time" name="txtTime"><br>
 
 ### type="file"
 * In order to accept file as the input from the user , we go for a type called file.
@@ -1069,7 +1069,7 @@ Name : <input type = "text" name = "Name"> // Not good
 * You cna define by using type="file"
 * Syntax: <input type="file" name="txtFile" multiple accept=".png">
 
-### Radio Buttons and CheckBox
+### Radio Buttons
 * Radio Buttons are refered as group buttons (Mutex nature will be imposed on those elements by giving common names)
 * *NOTE:*
 	* Mutex refers to "Mutual Exclusion".
@@ -1084,4 +1084,93 @@ Name : <input type = "text" name = "Name"> // Not good
 
 1. **When should we use radio button element in a webpage?**
 	* If we want a user to compulsory select one option among the supplied inputs, we go for radio buttons.
-	* To remove it default selected ,we use an attribute called "checked"
+	* To remove it default selected ,we use an attribute called "checked".
+
+2. **How to create a checkbox list in HTML?**
+
+### Checkbox :
+* Checkbox allows user to select and deselect any option.
+* You can use checkbox for selecting one or multiple options from a group of choices.
+* The attributes are same as radio buttons.
+    * Id
+    * Name
+    * Class
+    * Value
+    * checked etc...
+* It is defined by input using "type = checkbox".
+#### Syntax :
+<input type="checkbox" name="" value=""><label>Checkbox</label>
+
+### Dropdown list:
+* It allows the user to select any one option from a group of choices.
+* It shows the list of items using a dropdown menu.
+* HTML provides the following elements for desigining dropdown list:
+    * `<select>` : It is used to configure a list.
+    * `<option>` : It is used to configure a list item.
+    * `<optgroup>` : It is used to group a set of options into one category.
+* Every `<option>` comprises of following attributes :
+    * value : It defines value to be submitted.
+    * selected : It defines value to be selected.
+    * disabled : To make it disabled we use this option.
+#### Note : 
+* In one line it is presenting more elements informataion.
+
+### ListBox
+* Everything is same as dropdown list in elements and attribute.
+* It allows to select one or multiple.
+* To change the dropdown into listbox you have use the attribute "size or multiple"
+
+#### Note:
+* The options in dropdown or listbox are RC data type. They allow only plain text number ans special chars.
+* You can't add symbols or images in dropdown options.
+* In order to add symbols or images wee need to use Bootstrap and CSS.
+* We can't create nested drop downs using HTML (using bootstrap and CSS).
+
+### Textarea : 
+* It is used to handle mutli line input.
+* It is similar to textbox but allows multiple lines.
+* It is RC data element used to present plain text, it won't allow format for text.
+* Attributes are similar to text input , additionally uses
+	* rows :It represents height
+	* cols : it represents width
+	* readonly : It will not allow to modify text but we can submit.
+	* disabled : It will not allow to modify and submit.
+
+### METER ELEMENT:
+
+* It is used to display the grade meter.
+* It can display a value range with
+	->min
+	->max
+	->value
+	->low
+	->high
+* It can be controlled by javascript
+
+Syntax:
+	<meter min="" max="" value="" low="" high="" id="" class="" name="">
+
+* low = >min
+* high = <max
+#### Note : 
+* If low and difference is less(high - low = -ve) -> red color.
+* If low and difference is high(high - low = +ve) -> yellow color.
+* If low and difference is zero -> green color.
+
+### PROGRESS ELEMENT:
+* It is used to show the status of any task performed in the page.
+* The task includes actions like : 
+	* copying
+    * Downloading
+	* Uploading
+	* Connecting etc.
+* It is used to display the time elapsed or remaining to complete the task.
+* Specially progress is used in  pages that use "Ajax" [Asynchronous JavaScript And XML]
+* Attributes used for progress :
+	* Min
+	* Max
+	* Value
+
+
+
+
