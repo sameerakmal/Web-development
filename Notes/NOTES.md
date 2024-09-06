@@ -949,7 +949,7 @@ Name : <input type = "text" name = "Name"> // Not good
 
 2. **Write a pattern to validate a US mobile format number (e.g., +(1)(425) 555-0100).**
 
-   **Ans.** `^\+\(1\)\(\d{3}\)\s\d{3}-\d{4}$`
+   **Ans.** `^\+\(1\)\(\d{3}\)\s\d{3}\-\d{4}$`
 
 3. **Write a pattern for a UK mobile format number (e.g., +(44)(20)1234 5678).**
 
@@ -980,7 +980,7 @@ Name : <input type = "text" name = "Name"> // Not good
    **Ans.** `(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#%])\w{4,15}$`
 
 # HTML Inputs
-*type = "text"* (defaut value of input type)
+### type = "text" (defaut value of input type)
 1) name,id,class
 2) size
 3) placeholder
@@ -1065,8 +1065,8 @@ Name : <input type = "text" name = "Name"> // Not good
 ### type="file"
 * In order to accept file as the input from the user , we go for a type called file.
 * It allows the client to browse and select any file from computer to upload into server.
-* However it is just a control for selecting file, upload logic we have to write by using "JavaScriot/JQuery" | "backend technology"
-* You cna define by using type="file"
+* However it is just a control for selecting file, upload logic we have to write by using "JavaScript/JQuery" | "backend technology"
+* You can define by using type="file"
 * Syntax: <input type="file" name="txtFile" multiple accept=".png">
 
 ### Radio Buttons
@@ -1170,6 +1170,103 @@ Syntax:
 	* Min
 	* Max
 	* Value
+
+**Generic Button**
+* **HTML 5**
+	* <button> TEXT|IMAGE|SYMBOL </button>
+	* <button type="submit">TEXT|IMAGE|SYMBOL </button>
+	* <button type="reset">TEXT|IMAGE|SYMBOL</button> 
+
+* **HTML 4**
+	* <input type="submit">TEXT</input>
+	* <input type="reset">TEXT</input>
+
+**Non-Generic Button**
+* **HTML 5**
+	* <button type="button" onclick="window.print()">Print Page</button>
+* **HTML 4**
+	* <input type="button">TEXT</input>
+
+# Building forms using bootstrap classes :
+## A. Container : 
+* .container : smart watches
+* .container-sm : mobiles
+* .container-md : tablets
+* .container-lg : pc
+* .container-xl : laptop
+* .container-xxl : laptop wide screen
+* .container-fluid : responsive[fit according to design]
+
+## B. Margins
+
+- `(m)` margin in all directions  
+- `ms-(size)` left margin (s=start)  
+- `me-(size)` right margin (e=end)  
+- `mt-(size)` top margin  
+- `mb-(size)` bottom margin  
+
+**Size**: 1 to 5
+
+**Example**:  
+```html
+<form class="ms-4 mt-5">
+```
+## C. Padding
+
+- `p-(size)` : padding in all directions  
+- `ps-(size)` : left padding (s = start)  
+- `pe-(size)` : right padding (e = end)  
+- `pt-(size)` : top padding  
+- `pb-(size)` : bottom padding  
+
+**Size**: 1 to 5
+
+## D. Border
+
+- `border-(size)` : Border size (1 to 3)
+- `border-(contextual)` : Contextual border  
+   - Options: `warning`, `danger`, `success`, `info`, `primary`, `secondary`
+- `rounded-(size)` : Rounded corners (1 to 5)
+- `rounded-circle` : Full circle
+- `rounded-pill` : Pill-shaped (requires sure width)
+
+**Example**:
+```html
+<div class="border rounded-circle">
+```
+
+## E. Width and Height
+
+- `w-(size)` : Width (25, 50, 75, 100)
+- `h-(size)` : Height (25, 50, 75, 100)
+
+## F. Display
+
+- `.d-none` : Hides the element
+- `.d-block` : Displays the element as a block-level element
+- `.d-inline` : Displays the element as an inline element
+- `.d-flex` : Displays the element as a flex container
+- `.flex-wrap` : Allows flex items to wrap onto multiple lines
+- `.flex-nowrap` : Prevents flex items from wrapping onto multiple lines
+
+## G. Justify Content
+
+- `justify-content-center` : Centers flex items horizontally
+- `justify-content-between` : Distributes flex items evenly with space between them
+- `justify-content-space-between` : Distributes flex items evenly with space between and around them
+
+## H. Align Items
+
+- `align-items-center` : Aligns flex items vertically in the center
+- `align-items-end` : Aligns flex items to the end of the flex container
+- `align-items-top` : Aligns flex items to the top of the flex container
+- `align-items-start` : Aligns flex items to the start of the flex container
+- `align-items-baseline` : Aligns flex items along the baseline of the flex container
+
+## I. Grid 
+- How to design a Grid(display : grid)?
+    - row : 
+
 
 
 
