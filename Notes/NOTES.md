@@ -1267,6 +1267,17 @@ Syntax:
 - How to design a Grid(display : grid)?
     - row : 
 
+# Bootstrap inbuilt classes for form elements
+
+| IN HTML       |  BootStrap elements                    |
+|:-------------|--------------------------------------:|
+| file <br> text <br> password <br> url <br> email <br> textarea <br> number | form-control <br> form-label |
+|range | form-range|
+|color | form-control-color|
+|select|form-select|
+|radio <br> checkbox|form-check-input \| form-check-label<br> form-check-input \| form-check-switch|
+
+
 
 
 

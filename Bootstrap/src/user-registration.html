@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style type="text/css">
+        body{
+            height: 100vh;
+        }
+    </style>
+</head>
+<body class="d-flex align-items-center justify-content-center">
+    <form action="" method="post" class="border border-3 border-primary p-3 w-25">
+        <div class="h3">Register user</div>
+        <dl>
+            <dt>Username</dt>
+            <dd>
+                <input type="text" name="txtUser" class="form-control">
+            </dd>
+
+            <dt>Password</dt>
+            <dd>
+                <input type="txtPwd" class="form-control" name="pass">
+            </dd>
+
+            <dt>Select city</dt>
+            <select name="txtCity" id="" class="form-select">
+                <option value="rcb">Bengaluru</option>
+                <option value="hyd">Hyderabad</option>
+                <option value="rjy">Rajahmundry</option>
+            </select>
+
+            <dt>Price Range</dt>
+            <dd>
+                <input type="range" name="txtPrice" class="form-range">
+            </dd>
+
+            <dt>Subsrcibe</dt>
+            <dd class="form-switch">
+                <input type="checkbox" name="txtSubs" class="form-check-input"> <label>Yes</label>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
