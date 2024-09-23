@@ -1113,7 +1113,7 @@ Name : <input type = "text" name = "Name"> // Not good
     * selected : It defines value to be selected.
     * disabled : To make it disabled we use this option.
 #### Note : 
-* In one line it is presenting more elements informataion.
+* In one line it is presenting more elements information.
 
 ### ListBox
 * Everything is same as dropdown list in elements and attribute.
@@ -1267,7 +1267,7 @@ Syntax:
 - How to design a Grid(display : grid)?
     - row : 
 
-# Bootstrap inbuilt classes for form elements
+## Bootstrap inbuilt classes for form elements
 
 | IN HTML       |  BootStrap elements                    |
 |:-------------|--------------------------------------:|
@@ -1277,8 +1277,39 @@ Syntax:
 |select|form-select|
 |radio <br> checkbox|form-check-input \| form-check-label<br> form-check-input \| form-check-switch|
 
+## J. Button Classes
+- .btn
+- .btn-{contextual}
+- .btn-outline-{contextual}
+- .brn-sm
+- .brn-lg
+- .brn-group
+- .brn-group-vertical
+- .brn-close
+- .btn-link
+- .btn-toolbar
+
+## K. Input Group Classes
+- .input-group(group the any input type)
+- .input-group-text(highlights the text)
+
+*Syntax:*
+```html
+	<div class="input-group">
+		<span class="input-group-text">&#8377;</span>
+		<input type="text">
+		<span class="input-group-text">.00</span>
+	</div>	
+```
+# CSS classes for validating the elements
+- :required : It configures when the field is defined with required.
+- :optional : It configures when the field is not defined with required.
 
 
-
+# Multimedia in HTML : 
+1. `<marquee>`
+2. `<audio>`
+3. `<video>`
+4. `<embed>`
 
 

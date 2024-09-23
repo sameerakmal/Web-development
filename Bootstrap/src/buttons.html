@@ -10,7 +10,9 @@
 
     <style type="text/css">
         .btn-group-vertical{
-            
+            position: fixed;
+            right: 0px;
+            bottom: 0px;
         }
     </style>
 </head>
@@ -59,6 +61,42 @@
             <button class="bi bi-twitter btn btn-warning"></button>
             <button class=" bi bi-instagram btn btn-danger"></button>
         </dd>
+
+        <dt>Toolbar</dt> 
+        <dd class="btn btn-toolbar btn-danger d-flex justify-content-between">
+            <div class="btn btn-group">
+                <button class="btn btn-danger">Home</button>
+                <button class="btn btn-danger">Shop</button>
+                <button class="btn btn-danger">Contact</button>
+                <button class="btn btn-danger">Blog</button>
+            </div>
+
+            <div class="btn btn-group">
+                <button class="bi bi-search btn  btn-danger"></button>
+                <button class="bi bi-car-front btn btn-danger"></button>
+                <button class="bi bi-hdd btn btn-danger"></button>
+            </div>
+
+        </dd>
+
+        <div class="h4">Amazon Search Bar</div>
+        <div class="input-group w-50">
+            <select name="" class="input-group-text">
+                <option>All</option>
+                <option>Electronics</option>
+                <option>Furnitures</option>
+                <option>Fashion</option>
+            </select>
+            
+            <input type="text" name="txtSearch" placeholder="Search amazon.in" class="form-control">
+            <button class="btn btn-warning bi-search"></button>
+        </div>
+
+        <div class="h3">Netflix Register</div>
+        <div class="input-group">
+            <input type="email" name="txtEmail" placeholder="Enter email address" class="input-group-text">
+            <button class="btn btn-danger ms-2">Get Started <span class="bi bi-chevron-right"></span></button>
+        </div>
 
     </dl>
 </body>
