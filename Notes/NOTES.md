@@ -1304,6 +1304,8 @@ Syntax:
 # CSS classes for validating the elements
 - :required : It configures when the field is defined with required.
 - :optional : It configures when the field is not defined with required.
+- :valid : It defines effects when all validation attributes are satisfied.
+- :invalid : It defines effects when the field validation returns error.
 
 
 # Multimedia in HTML : 
@@ -1312,4 +1314,51 @@ Syntax:
 3. `<video>`
 4. `<embed>`
 
+## Marquee Attributes
 
+### 1. `scrollamount`
+- **Description**: Controls the marquee scrolling speed from 1 to 100.
+- **Syntax**: 
+  ```html
+  <marquee scrollamount="15"> Flash Flash 70% OFF on electronics. </marquee>
+  ```
+
+### 2. `direction`
+- **Description**: Specifies the scrolling direction, which can be `left`, `right`, `up`, or `down`.
+- **Syntax**:
+  ```html
+  <marquee direction="up"> </marquee>
+  ```
+
+### 3. `width` and `height`
+- **Description**: Sets the width and height for the marquee content.
+- **Syntax**:
+  ```html
+  <marquee width="100" height="100"> </marquee>
+  ```
+
+### 4. `loop`
+- **Description**: Specifies the number of times the marquee's content needs to display.
+- **Example**:
+  ```html
+  <marquee loop="1" scrollamount="15"> Flash Flash 70% OFF on electronics. </marquee>
+  ```
+
+### 5. `bgcolor`
+- **Description**: Sets the background color for the marquee area.
+- **Syntax**:
+  ```html
+  <marquee bgcolor="yellow"> </marquee>
+  ```
+
+
+| **Attribute**   | **Description**                                                                                      |
+|-----------------|------------------------------------------------------------------------------------------------------|
+| `autoplay`      | Uses a boolean value (`true`/`false`) to specify if the media should start playing automatically.      |
+| `controls`      | Defines controls for the media player like seekbar, play, resume, etc. When set to `true`, enables them.|
+| `crossorigin`   | Indicates whether to use CORS (Cross-Origin Resource Sharing) for the media.                          |
+| `height/width`  | Used to define the height and width of the media player.                                              |
+| `loop`          | Uses a boolean value (`true`/`false`) to specify if the media should loop continuously.               |
+| `muted`         | Uses a boolean value to mute the video when it is loaded.                                             |
+| `poster`        | Specifies an image (thumbnail) to display before the video starts playing.                            |
+| `src`           | Defines the URL or location of the video content.                                                     |
