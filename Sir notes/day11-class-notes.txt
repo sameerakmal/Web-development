@@ -1,0 +1,143 @@
+<header>
+	content of the header
+</header>
+  It is a container that is used to display a top margin on the page.
+  Typically header is a webpage comprises of brand-name,logo,shortcut buttons,navigation etc...
+
+
+CSS style attributes
+====================
+    To work with any of the fonts we use these attributes in css.
+ font-size    : It changes the character size.[unit: px]
+ font-weight  : It changes in bold 
+ font-style   : It changes in italics 
+ font-family  : It sets text style by using font-family.[Arial,TimesNewRoman,....]
+
+ margin : 
+ margin-left:
+ margin-right:
+ margin-top:
+ margin-bottom: 
+
+ display : It can display the elements in the container with various styles
+		a. none
+		b. block	 : just like <p>
+		c. inline        : just like <span>
+		d. inline-block
+		e. grid		 : Displays an element as a block-level grid container
+		f. flex		 : Displays an element as a block-level flex container
+
+ justify-content  : It can justify the contents in the container with the following values.
+			space-between : Items will have space between them
+                        space-around  : Items will have space before, between, and after them
+			space-evenly  : Items will have equal space around them
+
+  padding         : It sets space around contents in all directions 
+  padding-bottom
+  padding-top
+  padding-right
+  padding-left 
+
+  border 	: It sets border style,side and color for the container
+  border-radius : It sets rounded container.
+  text-align    : It aligns text left,center,right or justify
+ 
+Note: We can't change height and width of any span element using CSS.
+      To set width and height of a span we need to go for "display:inline-block"
+
+<nav>
+ it is used to configure navigation area in a webpage.
+ it comprises of nav items or shortcut buttons.
+
+<article> 
+  it is a container element that keeps the highlights of webpage content.
+  it is typically the offers,announcement,news,updates,....
+
+
+header-template.html
+====================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppert Template</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        header{
+            font-size:25px;
+            font-family: Arial;
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+        }
+        .brand-title{
+            font-weight: bold;    
+        }
+        nav span{
+            margin-right:20px;
+        }
+
+        .cart-count{
+            background-color: red;
+            colour: white;
+            padding:3px;
+            width: 25px;
+            display: inline-block;
+            border-radius: 25px;
+            text-align: center;
+            font-size: 20px;
+        }	
+
+        article{
+            background-color: black;
+            text-align: center;
+            font-size: 20px;
+            color: white;
+            padding: 25px;
+        }
+        
+        .bi-lightning-fill{
+            color: gold;
+            font-style: 20px;
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <span class="bi bi-search"></span>
+                <span class ="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart3"><span class="cart-count">2</span></span>
+            </nav>
+        </div>
+    </header>
+    <article>
+        <marquee>
+            <span class="bi bi-lightning-fill"></span>
+            <span>Happy Holiday Deals on Everything</span>
+            <span class="bi bi-lightning-fill"></span>
+        </marquee>
+    </article>
+</body>
+</html>
+
+

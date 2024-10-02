@@ -1,0 +1,294 @@
+Form Elements
+  a. RadioButtons
+  b. Checkbox
+  c. DropDown
+  d. ListBox[using size and mulitple]
+
+Note: The options in dropdown or listbox are RC data type. They allow only plain text number and special chars.
+      You can't add symbols or images in dropdown options.
+      In order to add symbols or images we need to use Bootstrap and css.
+      We can't create nested drop downs using HTML (using bootstrap and css).
+
+Textarea
+========
+- It is used to handle multiline input.
+- It is similar to textbox but allows multiple lines.
+- It is RC data element used to present plain text,it won't allow format for text.
+- Attributes are similar to text input, additionally uses
+    o rows     : it represent height
+    o cols     : it represents width
+    o readonly : It will not allow to modify text but we can submit
+    o disabled : It will not allow to modify and submit
+
+Syntax:
+a. <textarea></textarea> 
+b. <textarea rows=”4” cols=”40>
+	Your text… / optional
+   </textarea>
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Your comments</legend>
+            <textarea cols="100" rows="10"></textarea>
+            <br><br>
+            <textarea cols="100" rows="10" readonly>Terms of Services</textarea>
+            <br></br>
+            <br><br>
+            <button>Post comments</button>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+Meter Element
+- It is used to display the grade meter.
+- It can display a value range with
+	o min
+	o max
+	o value
+	o low
+	o high
+ - It can be controlled by javascript.
+
+Syntax:
+	<meter min=”” max=”” value=”” low=”” high=”” id=”” class=”” name=””>
+
+
+eg#2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+    <style type="text/css">
+        ul{
+            list-style: none;
+        }
+        li span{
+            margin-left: 10px;
+            margin-bottom: 5px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        meter{
+            margin-left: 10px;
+            width: 150px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>Ratings and Reviews</legend>
+            <ul>
+                <li>
+                    <span>5</span><span class="bi bi-star-fill"></span>
+                    <meter min="1" max="5" value="5"></meter>
+                    <span>35</span>
+                </li>
+                <li>
+                    <span>4</span><span class="bi bi-star-fill"></span>
+                    <meter min="1" max="10" value="4"></meter>
+                    <span>5</span>
+                </li>
+                <li>
+                    <span>3</span><span class="bi bi-star-fill"></span>
+                    <meter min="1" max="10" value="3"></meter>
+                    <span>2</span>
+                </li>
+                <li>
+                    <span>2</span><span class="bi bi-star-fill"></span>
+                    <meter min="10" max="100" value="20" low="40" high="80"></meter>
+                    <span>2</span>
+                </li>
+                <li>
+                    <span>1</span><span class="bi bi-star-fill"></span>
+                    <meter min="10" max="100" value="40" low="50" high="20"></meter>
+                    <span>3</span>
+                </li>
+            </ul>
+        </fieldset>
+    </form>
+</body>
+</html>
+
+Note: If low and high difference is less -> red color
+      If low and high difference is high -> yellow color
+      If low and high is zero            -> green color
+
+
+Progress element
+================
+- It is used to show the status of any task performed in the page.
+- The task includes actions like
+   o Copying
+   o Downloading
+   o Uploading
+   o Connecting etc.
+- It is used to display the time elapsed or the remaining to complete the task.
+- Specially progress is used in pages that use “Ajax” [Asynchronous JavaScript And XML]
+- Attributes used for progress
+	o Min
+	o Max
+	o Value
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>Preparing for Download</dt>
+            <dd>
+                <progress></progress>
+            </dd>
+        </dl>
+        <dl>
+            <dt>40% Completed</dt>
+            <dd>
+                <progress min="1" max="100" value="40"></progress>
+            </dd>
+        </dl>
+        <dl>
+            <dt>Download Completed</dt>
+            <dd>
+                <progress min="1" max="100" value="100"></progress>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
+
+What is label?
+ It is used to display the titles and the captions for fields in a form.
+ It can bind with fields(later in javascript it would used more)
+ To bind with any field it uses "for" attribute.
+ Binding is required to manipulate the field dynamically.
+ 
+Syntax: 
+  <label for="username">Username</label>
+  <div>
+	<input type='text' name='username'>
+  </div>
+ 
+
+eg#4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+    <style type="text/css">
+        form{
+            border: 1px solid #000000;
+            width: 250px;
+            height: 200px;
+            padding: 20px;
+        }
+        .form-group{
+            margin-bottom: 20px;
+        }
+        label{
+            font-weight: bold;
+        }
+        .error-field{
+            color: red;
+            font-size: 12px;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+       <h2><span class="bi bi-person-fill"></span> User Login</h2>
+
+       <div class="form-group">
+           <label for="username">Username</label>
+           <div>
+                <input type="text" name="username">
+                <div class="error-field">
+                    <span>Username is required</span>
+                </div>
+           </div>   
+       </div>
+
+       <div class="form-group">
+            <label for="password">Password</label>
+            <div>
+                    <input type="text" name="password">
+                    <div class="error-field">
+                        <span>password is required</span>
+                    </div>
+            </div>    
+       </div>
+    </form>
+</body>
+</html>
+
+						Buttons
+						=======	
+- Buttons are used to confirm user actions.
+	o Record Actions
+		 Insert, Update, Delete, Edit
+	o Record Navigation
+		 Next, Previous, First, Last
+	o Miscellaneous Actions
+		 Submit, Register, Login, Reset, Save, Open, Print, Cancel etc.
+
+- HTML 5 provides “button” element for designing button.
+- HTML 4 provides button like
+	<input type="submit">
+        <input type="reset">
+
+- Buttons in HTML are classified into 2 groups
+	o Generic Buttons
+	o Non-Generic Buttons
+
+- Generic Buttons have pre-defined functionality
+	o Submit: Have the ability to submit “form”.
+		<input type=”submit”>
+		<button type=”submit”> Text|Image|symbols </button>
+		<button> Text </button>
+
+	o Reset: Have the ability to reset the form.
+		<input type=”reset”>
+		<button type=”reset”> Text|Image|symbols </button>
+
+Note: 
+HTML5 <button> Allows images and symbols.
+HTML4 <input type=”submit”> Will not allow symbols or images.
+
+NonGeneric buttons are static without any default functionality.
+	<input type="button" value="print">  			HTML4
+        <button type="button">Text|Image|symbols </button>      HTML5 
+
+
+
+
+
+

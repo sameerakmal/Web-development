@@ -1351,7 +1351,7 @@ Syntax:
   <marquee bgcolor="yellow"> </marquee>
   ```
 
-
+## Attributes of audio and video
 | **Attribute**   | **Description**                                                                                      |
 |-----------------|------------------------------------------------------------------------------------------------------|
 | `autoplay`      | Uses a boolean value (`true`/`false`) to specify if the media should start playing automatically.      |
@@ -1362,3 +1362,561 @@ Syntax:
 | `muted`         | Uses a boolean value to mute the video when it is loaded.                                             |
 | `poster`        | Specifies an image (thumbnail) to display before the video starts playing.                            |
 | `src`           | Defines the URL or location of the video content.                                                     |
+
+# Styles
+**Styles** refers to providing an <u>extra attribute</u> through which an appearance can be changed to get a good look and feel.  
+- In the case of styling language, we use a mime type called `"text/CSS"`
+
+```html
+<style type="text/CSS">
+
+</style>
+```
+
+---
+
+**We can link CSS to HTML in 3 ways:**
+1) Inline  
+2) Embed  
+3) External
+
+---
+
+### INLINE:
+```html
+<element style="attribute: value; attribute: value; ......"> </element>
+```
+
+- Applying the style inline is faster as it is local to that particular element.
+- Increase in redundancy, as the scope is limited to that line. We need to rewrite the instructions to get the effect for another element.  
+**NOTE**: Best suited when we want to use that particular style at that element.
+
+---
+
+### EMBED:
+```html
+<style type="text/CSS"> </style>
+```
+
+- If the `style` element is placed inside the `head` element, the code would be loaded into the browser's memory and would be used at a later stage as per our requirement.
+![browser](cssbrowser.jpg)
+**CASE-1**: Inside the `head` element.  
+**CASE-2**: Inside the `body` element.  
+- If we keep the `style` element inside the `body`, at the time of rendering elements, the style effects should be applied by the browser.
+
+**CASE-3**: Outside the HTML  
+- Same as Case-2 but behaves in an abnormal way.
+
+**FAQ. What is the mediatype for styles?**
+
+- **Ans.** It configures your styles for various devices and viewports.  
+  We can set styles for screen, print, and speech.
+
+- **Syntax:**
+    ```html
+    <style type="text/css" media="all/screen/print/speech">
+    </style>
+    ```
+
+- **Screen**: To see the effect on screen.
+- **Print**: To see the effect when you take a printout.
+
+## What is Minification?
+
+- Minification is the process of compressing CSS.
+- It is always recommended to minify and use the CSS for production.
+- CSS original file will occupy more space, we have to use them for development but not for production.
+- **NOTE** : Priority order : Inline > embed > external.
+- If new properties are defined in external, embed, inline all will be applied.
+
+## Styles in External File
+- We can write styles in a separate stylesheet.  
+- Stylesheets have the extension `.css`.  
+- Stylesheets can cascade over HTML pages (**Cascade Style Sheets**).  
+- You can access styles across multiple pages.
+
+**Note**:  
+- If you are using external files, the number of requests will increase for a page, which will internally increase the page load time.
+
+---
+
+### Syntax:
+
+1. Maintain a separate CSS file in a folder called `styles` inside the `src` folder.
+2. Add a new file called `ticket.css`.
+3. Link the CSS file to the webpage using:
+```html
+<link rel="stylesheet" href="src/styles/ticket.css">
+```
+
+### Priority order of CSS in linking
+- Inline > Embed > External (If new properties are defined in external, embed, inline all will be applied)
+
+```html
+<head>
+    <style>
+        h1 {
+            color: blue;
+            text-align: center;
+        }
+    </style>
+    <link rel = "stylesheet" href = "test-effect.css">
+</head>
+
+<body>
+    <h1 style="color:red; background-color: black;"> Web Development </h1>
+</body>
+```
+
+![alt text](priority.png)
+
+# Selectors
+- It refers to process of selecting an element in a webpage.
+
+![alt text](criticalrenderingpath.png)
+
+
+## CSS Selectors
+
+CSS selectors are classified into various categories:
+> Primary
+>> **Primary selectors**  
+>> **Rational selectors**  
+
+> Pseudo selector
+>> **Dynamic Pseudo classes**  
+>> **Structural Pseudo classes**  
+>> **Element Pseudo classes**  
+>> **Validation State Pseudo classes**  
+
+> Basic selector
+>> **Attribute selectors**  
+>> **Universal selectors**  
+>> **Root selector**  
+>> **Behavioural selector**
+
+
+### Primary selectors : 
+#### Type selector :
+- We target the element directly by referring to token/tags. 
+
+    ```html
+    <style>
+        h1 {
+            color : red;
+        }
+    </style>
+    ```
+#### Id selector : 
+- Id refers to an identifying an element with unique names.
+
+    ```html
+    <head>
+        <style>
+            #library {
+                color : red;
+            }
+        </style>
+    </head>
+
+    <body>
+        <h1 id="library">REACT</h1>
+    </body>
+    ```
+> NOTE: In real time coding normally we write multiple designs (styles with effects ). To use this design on multiple element if we go for id selector then the effects would not be applied on the elements. To resolve this problem we go for class selector.
+
+- When we give id like : id = "id1 id2", then no effect will be seen.
+- But when we give the id like `<ele id="id1" id="id2" id="id3"...> </ele>`, so the first id will have effect on the element.
+
+#### Class selector : 
+- If we want to apply multiple effects for an element, then we go for class selector.
+Syntax: 
+
+```html
+<style>
+    .className1 {
+
+    }
+    .className2 {
+
+    }
+    .className3 {
+
+    }
+</style>
+
+<body>
+    <element class="className1 className2 className3 className4..."></element>
+</body>
+```
+##### FAQ:
+1. **If styles are defined for any element in all 3 ways (inline, embedded, external), then which set of effects would apply?**  
+   - The **inline styles** will take precedence over embedded (in `<style>` tags) and external styles (in linked CSS files). Inline styles have the highest priority, followed by embedded styles, and then external styles.
+
+2. **If a style container is defined with the same attributes in both the head and body sections, then which set of effects would apply?**  
+   - The styles defined in the **body** section will override those in the **head** section if they target the same element, because CSS follows the rule of **cascading** where later definitions override earlier ones.
+
+3. **If the style container is defined with the same attribute multiple times in the body, then which set will apply?**  
+   - The **last defined** style will apply, as CSS applies the styles that are declared last when multiple declarations of the same attribute exist.
+
+##### FAQ-2:
+1. If we define style for any element usinga all 3 primary selectors, which one will apply?
+    - Priority order : Id > class > type.
+    - If different attirbute will be present all will be applied.
+
+> NOTE :
+ ```html
+ <head>  <--- Browser memory (line by line interpretation would happen)
+    <style></style>  
+    <link src="" rel="stylesheet">
+</head>
+```
+
+2. If same attributes are defined using ID Selector in embeded and external file, which set will apply?
+    - The first will embed apply and then external will apply, but if we have same selector in both place then the first which is appearing in code will have effect. (first come first serve)
+
+3. Is it possible to group the selectors to apply the same effects on different elements?
+
+    - Yes , we can do . 
+    - Ex. : 
+    ```html
+    <style>
+        .className, elementName, #idName {
+
+        }
+    </style>
+    ```
+
+### 2. Rational Selector
+- We can select elements using parent and child hierarchy.
+- We can also select elements using siblings.
+
+> `parent child` : all child elements in specific parent
+
+> `parent > child` : only direct elements in specific parent
+
+> `elementA + elementB` : Adjacent Selector [sibling]
+
+> `elementA ~ elementB` : Generic sibling
+
+Ex1:
+<br>
+![alt text](sel1.png)
+
+Ex2:
+<br>
+![alt text](sel2.png)
+
+### 3. Attribute selector:
+
+Syntax: 
+
+```css
+elementName[attribute] {
+
+}
+
+elementName[attributeName=value] {
+
+}
+```
+
+|Condition | Purpose|
+|-|-|
+|[attribute="val"]| Equal specifies that it should be exact match.|
+|[attribute^="val"]| It refers the value starting with specified.|
+|[attribute$="val"]| It specifies that the value ending with given term.|
+|[attribute\|="val"]| Name starts with specified term and separated with "-"|
+|[attribute\~="val"]| Name starts with specified term and not binded with other words|
+|[attribute\*="val"]| It matches the term at any location|
+
+```html
+<p class="Effects">para-1</p>
+<p class="ParaEffects">para-2</p>
+<p class="EffectsPara">para-3</p>
+<p class="Para-Effects">para-4</p>
+<p class="Effects-Para">para-5</p>
+<p class="Effects Para">para-6</p>
+<p class="Para Effects text">para-7</p>
+```
+1. **[class="Effects"]** : exact match  
+   **Output**: para-1
+
+2. **[class^="Effects"]** : matches elements whose class attribute starts with "Effects"  
+   **Output**: para-1, para-3, para-5, para-6
+
+3. **[class$="Effects"]** : matches elements whose class attribute ends with "Effects"  
+   **Output**: para-1, para-2, para-4
+
+4. **[class\*="Effects"]** : matches elements whose class attribute contains "Effects"  
+   **Output**: all will be selected
+
+5. **[class|="Effects"]** : matches elements whose class attribute value is "Effects" or starts with "Effects-"  
+   **Output**: para-1 and para-5
+
+6. **[class~="Effects"]** : matches elements whose class attribute contains the word "Effects"  
+   **Output**: para-1, para-6, para-7
+
+
+> This is hover in CSS.
+```javascript
+<script type="text/javascript">
+function setEffects() {
+    document.querySelector("h1").style.color='red';
+}
+
+function resetEffects() {
+    document.querySelector("h1").style.color='blue';
+}
+</script> 
+```
+
+### 4. Dynamic Pseudo class selector
+
+- Dynamic indicates that the effect can change according to state and situation.
+- Pseudo means false representation
+- Class refers to program template in computer programming, it contains predefined logic and data which you can implement and customize according to the requirements.
+
+|Selector | Description |
+|--|--|
+|:link| Specifies effect for hyperlink [anchor in default state]|
+|:visited | It defines effects for visited links [anchor in visited state]|
+|:target | It defines effects for the target element [ used normally in intradocument (not scrollable)]   [Element is target of specified hyperlink]|
+|:hover | It defines effects when mouse pointer is over element. [ mouseover] |
+|:active | It defines effects when link is in active state [ mousedown ]|
+
+> NOTE: Class can transform element apperance, transformatin time can be controlled by using "CSS Attribute called transition."
+
+### 5. Validation state pseudo classes
+- On that particular element we are validating
+
+|Selector | Description |
+|--|--|
+|:valid | It defines effects for element if it is valid against the validation defined<br>Validation can be verified by using : <br>minlength, maxlength, required, pattern, email , url, etc.|
+|:invalid | It defines effect for element when it is invalid|
+|:required| It defines effects to element when it verified with required |
+|:optional | If it is not defines with required validation then it is treated as optional|
+
+### 6. Element state pseudo classes
+
+|Selector | Description |
+|--|--|
+|:enabled | It defines effects when element is enabled|
+|:disabled| It defines effects when element is disabled|
+|:read-only | It defines effects when element is set to read-only|
+|:checked| It defines effects when element is checked|
+|:focus| It defines effects when element get focus|
+
+### 6. Structural pseudo selector
+
+- You can target your effects based on the position of the element in parent and child hierarchy 
+
+|Selector | Description |
+|--|--|
+|:first-child| It defines effect only for first child element|
+|:last-child| It defines effects only for last child element|
+|:nth-child(LevelNumber)| It defines effects only to specific child element that occurs at given level.<br>1.Level number starts with<br>2. Index number starts with 0.<br>You can also define the pre-set value like "even & odd" to apply effects based on even and odd occurences|
+|nth-of-type(3\|3n\|3n+1)| Select elements from top nth occurrence |
+|nth-last-of-type(3n+1)| Select elemetns from bottom nth occurence |
+
+Ex:
+<br>
+![alt text](sel3.png)
+
+### 7. Behavioural and occurance classes
+
+| **Selector** | **Description**|
+|------|---------|
+| `::first-line`       | Effects for first line in paragraph.                            |
+| `::first-letter`     | Effects for first character.                                    |
+| `::before`           | Effect or content to add before the current element.            |
+| `::after`            | Effect or content to add after the current element.             |
+| `::placeholder`      | Effects on the placeholder elements.                            |
+
+
+### 8. Universal Selector
+
+- It is mainly used for applying the effects for all the elements in a page.
+
+- Syntax: 
+```
+<style>
+    * {
+        attribute1: value1;
+        attribute2: value2;
+        .
+        .
+        .
+        attribute-n: value-n;
+    }
+</style>
+```
+
+### 9. Root Selector
+- will be discussed in javascript
+
+### 10. Language selector
+- It is used to give the effects based on a langauge configured for an element. If your page contains multiple langauge data then to define the effects based on specific language , we go for langauge selector
+
+- Syntax :
+```
+<style>
+    elementName:lang(lang) {
+        attribute1: value1;
+        attribute2: value2;
+        .
+        .
+        .
+        attribute-n: value-n;
+    }
+</style>
+```
+
+## CSS Inheritance 
+
+Ex.:
+
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INHERITANCE</title>
+
+    <style>
+        .container {
+            border: 2px solid black;
+            padding: 10px;
+            margin: 15px;
+            color: white;
+            font-family: Brush script MT;
+            background-color: black;
+        }
+
+        h1 {
+            border: inherit;
+            background-color: white;
+            color: black;
+        }
+
+        p {
+            font-family: initial;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web Development</h1>
+        <p>HTML</p>
+    </div>
+</body>
+</html>
+```
+
+<p>
+    <img src="./sel4.png"><br>
+    <p align="center">DOM</p>
+</p>
+
+
+Default nature of p and h1 :
+
+```
+p {
+    display : block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+h1 {
+    display : block;
+    font-size: 2em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    margin-left: 0;
+    margin-right: 0;
+    font-weight: bold;
+}
+```
+
+- In CSS inheritance is the process of configuring parent effects to child elements.
+- child elements automatically implements some of the parent feature which we can control by using following css values:
+1. inherit
+2. initial
+3. unset
+
+- All the properties of the parent will not reach to child, if we want it to reach to the child, then we use `inherit` value on that particular attribute all `all:inherit;` attribute
+- After inheriting the attribute from the parent if the child is interesting in changing the value, the child can change the value or set the value to default apperance.
+- To remove the default nature of a particular element we use `unset` value to the attribute   
+
+
+## CSS box model
+
+1. `margin`
+1. `padding`
+1. `border`
+1. `border-radius`
+1. `width`
+1. `height`
+1. `box-shadow`
+1. `border-image`
+
+
+### 1. `margin`
+- It specifies the space around border.
+- You define by using the following properties:
+    - margin [short hand - sets in all direction]
+    - margin-top
+    - margin-bottom
+    - margin-left
+    - margin-right
+
+Syntax:
+
+```
+{
+    margin: 0px 0px 0px 0px; /*top , right, bottom, left*/
+}
+```
+
+### 2. `padding`
+- It specifies the space around content
+- You can define
+    - padding [short hand - sets in all direction]
+    - padding-top
+    - padding-bottom
+    - padding-left
+    - padding-right
+- All options are similar like margin
+
+Syntax:
+
+```
+{
+    padding: 0px 0px 0px 0px; /*top , right, bottom, left*/
+}
+```
+
+### 3. border
+
+- `border` - short hand for style, color and width
+- `border-style: dotted, double, dotted, solid, dashed, etc..; `
+- `border-width: border-size;`
+- `border-color: border-color;`
+- `border-left` - short hand for style color and width
+- `border-left-style` 
+- `border-left-width` 
+- `border-left-color` 
+
+> Similarly for all directions [Indicates top, right, bottom]
+
+### 4. border-radius
+
+- `border-radius` - short hand for all directions (top-left, top-right, bottom-right, bottom-left)
+- `border-top-right-radius`
+- `border-top-left-radius`
+- `border-bottom-right-radius`
+- `border-bottom-left-radius`

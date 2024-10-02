@@ -1,0 +1,50 @@
+Day3: 
+To work with building webapplications
++++++++++++++++++++++++++++++++++++++
+1. Downlad and install "NodeJS" software
+    - We are installing Node js for a package manager called "NPM".
+    - Package manager is a software tool used to install,update and uninstall a library from your device for any project.
+    - There are various package manager called
+	a. npm
+	b. yarn
+	c. rubygems
+	d. Composer
+	e. NuGet
+	f. Bower
+
+2. Installation process
+	a. visit "https://node.js.org/en"
+	b. select the version 20X
+	c. Download setup file
+        d. Double click install the file
+	e. After installing check whether node is installed or not by moving to command prompt
+		C:\Users\nitin>node -v
+		v20.15.0
+
+		C:\Users\nitin>npm -v
+		10.7.0
+
+3. Download and install "Visual Studio Code" editor
+	
+	- Editor is a software tool used by developers to build,debug,test and deploy applications.
+	- Various editors are available for different technologies(https://editorconfig.org/)
+		a. sublime
+		b. edit+
+		c. notepad++
+		d. webstorm
+		e. vscode etc...
+	- link for download https://code.visualstudio.com/
+
+4. Open vscode and install following extensions for Web Designing
+	- Live Server [Ritwick Dey]
+	- vscode-icons
+	- IntelliSense for CSS class names in HTML [Zignd]
+	- Live Preview[Microsoft]
+
+Note: Better enable "emmet" in your VS Code. It is a code snippet generator.
+	> Go to settings of VS Code
+	> Search for "Emmet"
+	> Select checkbox for "Show Possible Emment Abbrevations..."
+
+
+

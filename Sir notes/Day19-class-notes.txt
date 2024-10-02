@@ -1,0 +1,274 @@
+-> Images to show in search result, we need to keep in figcaption
+	<figure>
+		<img src='' alt='' title='' width='' height='' align='left/right'>
+		<figcaption>name</figcaption>
+	</figure>
+
+align: It keeps the text wrapping around the alignment.
+
+eg#1. Keeping the images left alignment
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+            header{
+                font-size: 25px;
+                font-family: Arial;
+                display: flex;
+                justify-content: space-around;
+                padding: 20px;
+            } 
+            nav span{
+                margin-right: 30px;
+            }  
+            .brand-title{
+                font-size: 28px;
+                font-weight: bold;
+                color: blue;
+            }
+           header button{
+                font-size: 24px;
+                border: none;
+                padding: 5px;
+                background-color: blue;
+                color: white;
+                border-radius: 10px;
+            }
+            .title-1{
+                font-family: arial;
+                font-size: 50px;
+                margin-left: 100px;
+                margin-top: 50px;
+            }
+            .title-2{
+                font-family: arial;
+                font-size: 25px;
+                margin-left: 100px;
+                margin-top: 50px;
+                line-height: 35px;
+                color: gray;
+            }
+            .main-button{
+                margin-top: 15px;
+                margin-left: 100px;
+            }
+
+            .btn-pages,.btn-doc{
+                font-size:25px;
+                padding: 10px;
+                width: 250px;
+                border: none;
+            }
+
+            .btn-pages{
+                background-color: blue;
+                color: white;
+            }
+            .btn-pages:hover{
+                background-color: cyan;
+                color: black;
+                cursor: pointer;
+            }
+    </style>
+</head>    
+<body>
+    <header>
+        <div>
+            <span class="brand-title">Landkit</span>
+        </div>
+        <div>
+            <nav>
+                <span>Landing</span>
+                <span>Pages</span>
+                <span>Account</span>
+                <span>Documentation</span>
+            </nav>
+        </div>
+        <div>
+            <button>Buy now</button>
+        </div>
+    </header>
+
+    <section>
+        <main>
+            <img src="public/images/work.png" alt="" width="600" title="work image" align="right">
+            <div>
+                <div class="title-1">
+                    Welcome to Landkit.<br>
+                    Develop anything.
+                </div>
+                <div class="title-2">
+                    Build a beautiful, modern website with flexible<br> 
+                    Bootstrap components built from scratch.
+                </div>
+                <div class="main-button">
+                    <button class="btn-pages">View all pages<span class="bi bi-arrow-right"></span></button>
+                    <button class="btn-doc">Documentation</button>
+                </div>
+            </div>
+        </main>
+    </section>
+
+</body>
+</html>
+
+Also show hspace and vspace so the image will be seperated b/w text to image and vertical to image.
+
+======================================================================================================================================
+=> Image attributes which are used with integration of server-side technologies.
+
+Attribute  :: crossorigin			
+
+Description:: It specifies the accessibility of resources from cross-origin. 
+	      [CORS– Cross Origin Resource Sharing]
+	    - Allow Anonymous [Allow All to access]
+	    - Use Credentials [Need Authentication]
+
+decoding   :: It defines how image have to load along with other contents on a page. It can be "synch/asynch/auto".
+importance :: It sets priority for loading images which can be low,high or auto.
+srcset     :: It can configure set of images as source, so they can change according to situation.
+
+Ex:
+<img crossorigin="anonymous" 
+	src="http://mars.jpl.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_								486265257EDR_F0481570FHAZ00323M_.JPG" 
+	width="200" height="200" decoding="sync/asynch" importace='low'>
+
+=====================================================================================================================
+
+Designing a card
+================
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        .card{
+            border: 1px solid black;
+            width: 400px;
+            padding: 10px;
+            font-family: Arial;
+            margin: 20px;
+            background-color: white;
+        }
+
+        .cardpic{
+            float: left;
+            padding-right: 30px;
+        }
+
+        .card-body{
+            clear: left; 
+            color:gray;
+            padding: 20px;
+            font-size: 15px;
+            text-align: justify;
+            line-height: 25px;
+        }
+
+        .card-footer{
+            font-size: 15px;
+            color:gray;
+            text-align: justify;
+        }
+
+        .card-title{
+            font-size: 20px;
+        }
+
+        .card-subtitle{
+            font-size: 10px;
+            margin-top: 10px;
+        }
+
+        .card-rating{
+            margin-top: 1%;
+            color: goldenrod;
+        }
+
+        body{
+            display: flex;
+            background-color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+
+        <div class="card-header">
+
+            <img src="public/images/card.png" class="cardpic">
+
+            <div class="card-title">
+                Dresses
+            </div>
+
+            <div class="card-subtitle">
+                Cotton Print Dresses
+            </div>
+
+            <div class="card-rating">
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-half"></span>
+            </div>
+
+        </div>
+
+        <div class="card-body">
+            <p>
+                God everyfill great replenish darkness unto. 
+                Very open. Likeness their that light. Given under image to. 
+                Subdue of shall cattle day fish form saw spirit and given stars,
+                us you whales may, land, saw fill unto.
+            </p>
+        </div>
+
+        <div class="card-footer"> 
+            Jane Jefferson, 29 May 2019
+        </div>
+
+   </div>
+
+    <div class="card">
+        <div class="card-header">
+            <img src="public/images/kids.jpg" class="cardpic" width="80">
+            <div class="card-title">
+                Dresses
+            </div>
+            <div class="card-subtitle">
+                Cotton Print Dresses
+            </div>
+            <div class="card-rating">
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-fill"></span>
+                <span class="bi bi-star-half"></span>
+            </div>
+        </div>
+        <div class="card-body">
+            <p>
+                God everyfill great replenish darkness unto. 
+                Very open. Likeness their that light. Given under image to. 
+                Subdue of shall cattle day fish form saw spirit and given stars,
+                us you whales may, land, saw fill unto.
+            </p>
+        </div>
+        <div class="card-footer"> 
+            Jane Jefferson, 29 May 2019
+        </div>
+    </div>
+</body>
+</html>
+

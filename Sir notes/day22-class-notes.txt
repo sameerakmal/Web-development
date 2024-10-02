@@ -1,0 +1,133 @@
+Inter Document Links
+- Hyperlinks that handle navigation to any URL or any another page in website.
+- It also refers Hyperlink which can invoke email and call clients.
+- Navigation can be to
+	o File [word document, presentation, pdf]
+	o Email Client
+	o Mobile Dial application
+	o HTML Page
+	o URL
+  
+
+Note:
+- Every file that you configured as target in Hyperlink can’t open in browser. 
+- Files require special plugins to open the content and show in browser.
+- If plugin is missing on not available then the linked file will be downloaded.
+- target can be pdf file,image,etc.. which can be opened but if the target is audio,video or some word document it can't open
+  because browser doesn't have plugin for that.
+- To know which files can be opened by browser and which plugin is available in browser can be checked by "Javascript" programming.
+
+FAQ: 
+a>How to download any file through a link without opening it in browser?
+Ans. We can use “download” attribute for Hyperlink.(given from HTML5)
+Ex: 
+<a href="../docs/cssdemo.pdf" download="" >CSSTutorial PDF</a>
+	<!--Downloads the file with the name same as that of the link name :: cssdemo.pdf-->
+
+<a href="../docs/cssdemo.pdf" download="csstutorial" >CSS Tutorial PDF</a>
+	<!--Downloads the file with the name as given in the download name :: csstutorial.pdf-->
+
+
+Link to URL
+===========
+=> You can link to any website or URL or any specific resource present in the server.
+=> When we link the url we need to make sure that is configured with proper "protocol" and "domain" name.
+eg
+ <a href="https://www.amazon.com">Shop to Amazon </a>
+ <a href="https://www.youtube.com/physicswallah">Physics Wallah </a>
+
+Link to Application
+===================
+ => We can create a hyperlink that can invoke the application which is running in your device.
+ => You have to make sure that the relative application is already installed on your device.
+ => Mostly commonly linked applications with anchor elements are 
+		mail,skype,telephone
+
+syntax: 
+  < a href="mailto:@...">Email</a>
+  < a href="tell:+91...">Call </a>
+
+
+FAQ: How to open link target in a new Tab?
+- Usually, the link target opens in the same browsing tab.
+- You can define link with “target” attribute with value “_blank” to open in a new tab.
+
+Syntax:
+<a href="../Images/shoe.jpg" target="_blank" >Nike Casuals</a>
+
+FAQ: How to open link target in a new Window?
+  - You have to use JavaScript “window.open()” method for hyperlink.
+
+Syntax:
+   <a href="javascript:window.open('../Images/shoe.jpg','Nike','width=500 height=400')"> Nike Casuals</a>
+
+Note: 
+a. String means "",Inside the double quote if we want to write a String then we need to go for " 'string' ".
+b. Not a good practise to show the output as popup because browser will block those popups.
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ol>
+        <li>To know more details send mail <a href="mailto:hr@pwskills.in"> hr@pwskills.in</a></li>
+        <li>
+            You can skype us 
+            <a href="skypeto:pwskills@outlook.com"">pwskills@outlook.com</a>
+        </li>
+        <li>Call us <a href="tell:+91 92343">2323434</a></li>
+        <li><a href="./amazon-card.html">Amazon Card</a></li>
+        <li><a href="./public/images/a2.jpg" download="KIDSIMG0001">Kids Fashion</a></li>
+        <li><a href="./public/docs/sampledocument.doc" download="document">SampleDoc</a></li>
+        <li><a href="./public/docs/SpringBoot.pdf" target="_blank">SpringBoot</a></li>
+        <li><a href="./public/docs/SpringCoreTest.iml">Some IML file</a></li>
+        <li>
+            <a href="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_								486265257EDR_F0481570FHAZ00323M_.JPG">
+                <img src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB								486265257EDR_F0481570FHAZ00323M_.JPG"
+                     width="100" height="50">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:window.print()">
+                <span class="bi bi-printer-fill"></span> 
+                Print
+            </a>
+        </li>
+        <li>
+            <a href="javascript:window.open('./public/images/a2.jpg',width='100',height='200')">
+                NikeCasuals
+            </a>
+        </li>
+    </ol>
+</body>
+</html>
+
+
+
+FAQ:
+ a> How to download any file through a link without opening it in browser?
+ b> How to open link target in a new Tab?
+ c> How to open link target in a new Window?
+
+
+ 
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+

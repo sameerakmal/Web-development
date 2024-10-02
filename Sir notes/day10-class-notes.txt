@@ -1,0 +1,108 @@
+Body section semantics for Layout Design
+++++++++++++++++++++++++++++++++++++++++
+-> HTML4 uses table element for designing a "Layout".
+-> Table is not SEO Friendly
+-> Table leads to a situation known as "Kiss-Of-Death".[refer image for this problem]
+-> HTML5 introduced new "Semantics" for designing a Layout.
+-> The new semantics will make a page SEO Friendly.
+-> The new layout semantics are
+   	1. <aside> 2. <article> 3. <header> 4. <footer> 5. <div> 6. <span> 7. <figure> 8. <figcaption> 9. <dialogue> 10. <main> 
+        12. <section>
+
+<div> and <span> tag
+++++++++++++++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout</title>
+    <style>
+        div
+        {
+            border: 2px solid black;
+            margin: 5px;
+            padding: 5px;
+        }
+        span{
+            background-color: rgb(0, 174, 255);
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Web Development
+        <div>
+            FrontEnd
+            <div>
+                HTML
+                It is a <span>markup</span> language
+            </div>
+            <div>
+                CSS
+                It is a sytling language
+            </div>
+        </div>
+
+        <div>
+            BackEnd
+            <div>
+                MongoDB
+                It is a database
+            </div>
+            <div>
+               Node.js
+               It is a server side scripting language
+            </div>
+        </div>
+    
+    </div> 
+</body>
+</html>
+
+Note: The <span> tag is much like the <div> element, 
+      but <div> is a block-level element and <span> is an inline element.
+
+-> Padding is used to create space around an element's content, inside of any defined borders.
+   CSS has properties for specifying the padding for each side of an element:
+1. padding-top
+2. padding-right
+3. padding-bottom
+4. padding-left
+
+Note: padding : top left right bottom
+
+eg#1. padding: 25px;
+	all four paddings are 25px
+
+2. <header> 
+	1. It is used to configure header section of webpage.
+	2. Typically every header of a webpage comprises of
+		a. BrandName
+		b. BrandIcon
+		c. NavBar
+		d. Shortcut Buttons etc...
+
+Theme for our project
++++++++++++++++++++++
+ URL :: https://themes.getbootstrap.com/preview/?theme_id=37702
+
+Setup boostrap Icons for project
+++++++++++++++++++++++++++++++++
+a. open terminal in your project
+b. switch to command prompt
+c. type the following command
+	npm install bootstrap-icons --save
+d. npm adds a new folder to your project by name called "node_modules", it comprises of all library files installed using "npm".
+e. To use icons in any of the webpage we need to link bootstrap-icons.css
+	<link rel='stylesheet' href='node_modules\bootstrap-icons\font\bootstrap-icons.css'/>
+f. To display icons we need to use css class names on the container
+	eg: <span class='bi bi-facebook'>Facebook</span>
+            <span class='bi bi-person-fill'>Person</span>
+	    <span class='bi bi-heart'></span>
+
+
+
+
+

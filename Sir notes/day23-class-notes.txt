@@ -1,0 +1,111 @@
+How to remove underline from Hyperlink?
+ Ans. using css style attribute
+	text-decoration: none
+
+How to set visited link and active link to different color?
+Ans. using body attributes <body alink="" vlink = "">
+     using css class called ":visited" and ":active".
+
+How to download linked document always?
+Ans. using download attribute for <a> element
+	eg: <a href='' download''> or <a href='' download='name'/>
+
+How to open Linked document in new tab?
+Ans. using an attribute called target="_blank" of <a> element.
+     <a href='' target="_blank">Name of the link </a>
+
+How to open Linked document in new window?
+Ans. You have to use JavaScript “window.open()” method for hyperlink.
+
+Syntax:
+   <a href="javascript:window.open('../Images/shoe.jpg','Nike','width=500 height=400')"> Nike Casuals</a>
+
+How to Open Linked document in the same window along with other contents in a page?
+Ans.We can embed any external document into page by using an 'iframe'.
+    iframes allows us to access and browse other page contents from current page.
+    iframe can embeded any type of document supported by browser plugins.
+	[image,pdf,html,text... etc]
+    You can set link target that refers to iframe name.
+
+syntax: 
+	<iframe src='url|file by default' name='ref'>
+	</iframe>
+      
+eg#1.
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        body{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+        iframe{
+            border: none;
+            width: 350px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="public/images/women.jpg">Fashion</a>
+        </div>
+        <div>
+            <a href="http://www.amazon.in" target="_blank">Amazon</a>
+        </div>
+        <div>
+            <a href="javascript:window.open('public/images/kidfashion.jpeg','output','width=300,height=400')">Kids</a>
+        </div>
+        <div>
+            <a href="public/images/menfashion.jpeg" target="main-frame">MEN</a>
+        </div>
+        <div>
+            <a href="https://www.youtube.com/embed/R5mSegljWls" target="main-frame">Data science</a>
+        </div>
+    </nav>
+    <main>
+        <iframe name="main-frame">
+        </iframe>
+    </main>
+</body>
+</html>
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3 align="center">Web Technology</h3>
+    <iframe src="https://www.youtube.com/embed/BGTx91t8q50"></iframe>
+    <iframe src="https://www.youtube.com/embed/YbqneqDIZh8"></iframe>
+    <iframe src="https://www.slideshare.net/slideshow/embed_code/key/nCmJgRxNUbb5tM?startSlide=1" width="300" height="300" frameborder="0" 
+      marginwidth="0" marginheight="0" scrolling="no" 
+      style="border:1px solid #CCC; border-width:1px; margin-bottom:5px;max-width: 100%;" allowfullscreen></iframe>
+</body>
+</html>
+
+
+FAQ.
+ a. How to remove underline from Hyperlink?
+ b. How to set visited link and active link to different color?
+ c. How to download linked document always?
+ d. How to open Linked document in new window?
+ e. How to open Linked document in the same window along with other contents in a page?
+ f. Task mentioned in the file.
+
+
+
+
+
+
+      

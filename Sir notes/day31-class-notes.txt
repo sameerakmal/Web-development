@@ -1,0 +1,192 @@
+Password Input:
+- It is similar to text in all attributes.
+- It will mask the text with password char “*”
+- You can configure by using “type=password”
+
+Syntax:
+<input required pattern="[A-Z]{4,10}" type="password" name="txtPwd" minlength="" maxlength="">
+
+Number Input:
+- HTML can use input type as “number”.
+- It allows only numeric values.
+- All basic attributes are similar to text input.
+- Instead of max length and min length number uses “Min and Max”.
+- Min: specifies the minimum range of value.
+- Max: specifies the maximum range of value.
+- Step: specifies the increment and decrement step value. [By default it is 1]
+
+Syntax:
+<input type="number" min="15" max="35"   step="5"   value="17"  name="txtAge">
+<input type="number" min="1.5" max="5.5" step="0.1" value="1.5" name="txtAge">
+
+
+Range Input:
+- It will display a slider that allows to select a range of values.
+- Its attributes are similar to number.
+- Slider value you can show using JavaScript.
+- Slide value can be submitted but can’t display on page in every browser.
+
+Syntax: 
+	<input type="range" min="1000" value="1000" max="10000" name="txtPrice">
+
+Email Input:
+- It validates email address format.
+- You can define “type=email”.
+- It just checks for "@",but will not worry about extension like (.com,.live,.ai,....)
+
+Syntax:
+	<input type="email" name="txtEmail">
+
+URL Input:
+- It validates URL format.
+- If you want the user to input website address [URL] and restrict to URL format the you can define “type=url”
+- URL format should contains "protocol and domain".
+
+Syntax:
+	<input type="url" name="txtUrl" size ="50">
+
+eg: www.amazon.com         => invalid
+    http://www.amazon.com  => valid
+    https://www.amazon.com => valid
+
+Color Input
+===========
+Note: HTML colors are defined by using 3 techniques 
+	a. color name.			
+			eg: <body bgcolor="red" text="white">
+				<p>.....</p>
+			    </body>
+
+
+	b. color shade name.		
+		HTML also support hundreds of color shade names
+			 Darkcyan
+			 Lightcyan
+			 Lightgreen etc..
+
+
+	c. Hexa decimal code.
+		o Hexadecimals colors are basically “RGB” color
+		o R-Red, G-Green, B-Blue
+		o Hexadecimal number system is 16 base number system, where we use 16 different values ranging from “0 to F”.
+		o Hexadecimal color can be defined in 3 or 6 chars followed by hash “#”
+			 3 Chars Code
+				#RGB
+			 6 Chars Code
+				#RRGGBB
+
+		o Red, Green and Blue Value can be “0 to F” 
+			Hexa: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f
+				[0 is minimum, f is maximum]
+				- First place is for Red
+				- Second Place is for Green
+				- Third place is for Blue
+				   0 - Dark, f- bright
+
+Example
+=======			
+#FF0000 	- Red 		#F00
+#00FF00 	- Green 	#0F0
+#0000FF 	- Blue 		#00F
+#FFFF00 	- Yellow 	#FF0
+#000000 	- Black 	#000
+#FFFFFF 	- White 	#FFF
+
+
+- HTML provides a color picker by using “type=color”.
+- It allows to select a color for color panel.
+- The color value should be 6 char hexa code
+	eg: #ff0000
+- The color code/name is submitted.
+	Syntax:
+		<input type="color" name="txtColor">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form align="center">
+        <div>
+            <figure>
+                <img src="public/images/mobilephone.png" width="300" height="300">
+                <figcaption>
+                    <input type="color" name="txtColor">
+                    <input type="color" value="#ff0000">
+                    <input type="color" value="#DE3163">
+                </figcaption>
+            </figure>
+        </div>
+        <button>submit</button>
+    </form>  
+</body>
+</html>
+
+Date and Time Input:
+- HTML allows to input date value by using the “type=date”.
+- It is not supported on all browsers. hence we have to implement using jQuery.
+- datetime value is removed from "html5 major version".
+a. date
+b. datetime-local
+c. month
+d. week
+e. time
+
+How to restrict the user for date selection?
+Ans. using min and max attributes.
+
+Note: Always the date input format must be "year-month-day"|"YYYY-MM-DD"
+
+eg:: 
+Departure : <input type="date" name="txtDate" min="2024-08-20" max="2024-09-20">
+	    <button>submit</button><br>
+
+Note: we can't select range of date values using HTML Elements, we can do that using javascript/jquery.
+
+File Input:
+- It allows the client to browse and select any file from computer to upload into server.
+- However it is just a control for selecting file, upload logic we have to write by using “JavaScript/JQuery”|"backend technology".
+- You can define by using “type=file”.
+- You can use “multiple” attribute to enable selection for multiple files.
+
+Syntax
+<input type="file" multiple name="txtPhoto">
+   - You can configure specific type dynamically using MIME type or you can also use attribute “accept” for filtering the file type.
+Syntax:
+<input type="file" accept=".jpg,.pdf,.png" multiple name="txtPhoto">
+
+FAQ: How to restrict the file type and file size in HTML?
+   Ans. We can't restrict the file type and file size, we can only just filter.
+        To restrict the file type and file size we need to go for backend coding.
+
+Summary
+ a. password
+ b. email
+ c. file
+ d. url
+ e. date
+ f. number
+ g. range
+ h. color
+
+FAQ: 
+a. How to restrict the user for date selection?
+b. How to restrict the file type and file size in HTML?
+
+
+
+
+
+
+
+
+
+
+
+
+
+

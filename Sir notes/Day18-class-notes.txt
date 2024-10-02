@@ -1,0 +1,134 @@
+==================================================================================================
+				     Images in HTML
+==================================================================================================
+- The HTML <img> tag is used to embed images into page.
+- Browser can’t support all image types.
+- Whenever you are configuring images, browser verifies its “MIME” type.
+- MIME [Multipurpose Internet Mail Extension]
+
+Ex:
+Flower.jpg image/jpeg [MIME Type]
+Flower.jpeg
+Flower.jfif
+Flower.pjpeg
+
+===================================================================================
+Abbreviation 		FileFormat          	    MIMEType         FileExtension
+===================================================================================
+APNG 		   Animated Portable      	    image/apng           .apng
+		     NetworkGraphics
+
+BMP 			Bitmap File 	   	    image/bmp 	         .bmp
+
+GIF 		 Graphics Interchange Format        image/gif 	         .gif
+
+ICO 		   Microsoft Icon		    image/x-icon 	 .ico,.cur
+
+JPEG 		 JointPhotographic Expert Group	    image/jpeg 	 	 .jpg,.jpeg,.jfif,.pjpeg,.pjp
+
+PNG 		 PortableNetworkGraphics	    image/png 		 .png
+
+SVG 		 ScalarVectorGraphics		    image/svg+xml	 .svg
+
+TIFF 		TaggedImage FileFormat		    image/tiff 		 .tiff,.tif
+
+WebP 		 WebPicturFormat		    image/webp 		 .webp
+
+
+A developer must know the type of image suitable for situation.
+
+=========================================
+Image Type 		  Purpose
+=========================================
+PNG 			- High resolution
+			- High definition
+			- Occupy more space in memory
+			- Hight pixel depth.
+			- Good for providing image which user can download and use for later.
+
+JPG			- Compressed Image format
+			- Occupies less space.
+			- Less pixel depth than PNG
+			- High resolution
+			- High definition
+			- Loose the quality on ZOOM.
+			- Good for on screen presentation.
+
+GIF 
+			- Low resolution
+			- Low definition
+			- Less pixel depth than JPG
+			- Only 256 colors
+			- Can have animation.
+
+SVG 			- SVG is XML format image.
+			- This image format can’t be blocked by firewall.
+			- XML format images can be available offline.
+			- Cross platform [Every Device]
+			- Vector Graphics [2D]
+			- Not pixel based.
+			- Zoom image – Quality increase
+
+WebP 			- It embeds image into page.
+			- When you try to save image,it saves entire page.
+			- It will not allow to capture the image separately.
+
+The tag <img> is used to embed image into page.
+- It is a void element.
+- <img> is configure with following attributes
+-> <img src="" alt="" width="" height="" title="">
+
+alt 		It defines the alternative text to display when image is unable to load.
+
+src 		It specifies the name path of image to display.
+
+Width &
+height		It specifies the width and height in pixels or in percentage.
+
+border 		It specifies border for image in pixels.
+
+title 		It specifies the screen tip to display for image when mouse is over the image.
+
+align 		Align image left or right.
+		Image will not support center.
+		Align will wrap text around image.
+
+Hspace 		Horizontal space between text and image.
+
+Vspace 		Vertical space between text and image.
+
+Note:
+	In latest versions of HTML “hspace and vspace” are obsolete.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

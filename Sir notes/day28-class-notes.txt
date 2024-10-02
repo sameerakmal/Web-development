@@ -1,0 +1,290 @@
+6. action			It specifies the target where the data is submitted. 
+				It refers to the server-side page to submit form data.
+				Ex: page.jsp, page.aspx, page.php,page.asp
+				Syntax:
+					<form method=”post” action=”page.aspx”>
+
+form-data.html
+	<form action="result.html">
+
+		<input type="password" name="userpwd"><button>submit</button>
+	</form>
+
+result.html
+	<h1>Result Page </h1>
+
+
+7. novalidate 
+- HTML 5 introduced validations.
+- Validation is the process of verifying the user input and restrict to specific type or range.
+- Some of the validations provided by HTML 5 are not suitable for our requirements.
+  Hence we have to by-pass[Ignore] the validations by using “novalidate”.
+
+Ex:
+<form novalidate>
+	Email:<input type=”email” name=”Email”> <button>Submit</button>
+</form>
+
+
+
+					HTML Form elements
+- Form is a container with collection of elements like button, textbox, checkbox, radio, list box etc.
+- HTML form is created by using following elements
+	 a. <form>
+	 b. <input>
+	 c. <select>
+	 d. <option>
+	 e. <datalist>
+	 f. <textarea>
+	 g. <meter>
+	 h. <progress> etc.
+
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <form>
+       <dl>
+         <dt>Username</dt>
+         <dd><input></dd>
+
+         <dt>Pasword</dt>
+         <dd><input></dd>
+
+         <dt>Email</dt>
+         <dd><input></dd>
+
+         <dt>Age</dt>
+         <dd><input></dd>
+
+       </dl>
+    </form>
+</body>
+</html>
+
+HTML <input> element is responsible for configuring an input that allows any type of data.
+HTML5 provides various input types that manages different types of data like date,number,String,email,phone etc.
+
+Syntax: 
+ Name : <input>
+ Age  : <input>
+ Email: <input>
+ Dob  : <input>
+
+						=======
+						TextBox
+						=======
+Text Input / String Input:
+-HTML <input> can use the attribute “type” to define the type of value to accept as input. 
+-You can use “type=text” if you want to allow string type.[default type is "text" only]
+-HTML provides several attributes for input element.
+-The attributes suitable for text input are:
+
+Attribute 				Description
+a. id 					It defines a unique ID
+b. name 				It defines a reference name.
+c. class 				It specifies the classes to implement.
+
+Note: Form element can’t submit its value if not defined with “name” attribute. 
+      Hence name is mandatory to submit the element value.
+
+Note: Always use “Camel Case” for naming.[camelCase]
+	Prefix must speak about object type
+	Suffix must speak about its purpose.
+		eg:: btnDelete, frmRegister
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+
+       <dl>
+         	<dt>Username</dt>
+         	<dd><input type="text"></dd>
+
+         	<dt>City</dt>
+         	<dd><input type="text" name="txtCity"></dd>
+       </dl>
+       <button>submit</button>
+    </form>
+</body>
+</html>
+
+============================================================================================================
+4. value 				It specifies the default value to display in side textbox[Edit form].
+
+Syntax:
+<input type="text" value="David" name="txtName"> 
+
+5. placeholder 				It defines the water mark text for input element. 
+					The water mark can’t display if there is a value defined.
+Syntax: 
+ <input type="text" placeholder="Search amazon.in">
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        form{
+            margin: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <form>
+            <input type="text" name="txtUsername" placeholder="EnterName"> 
+            <input type="text" name="txtPassword" placeholder="EnterPassword">
+            <button>Login</button> 
+        </form>
+    </div>
+    <form>
+        <input type="text" name="txtSearch" placeholder="Search Amazon.in">
+        <button class="bi bi-search"></button>
+    </form>
+</body>
+</html>
+
+6. readonly 				It will not allow to change value.
+					It will not allow to input value.
+					If you want to display a value but should not allow to modify the value,
+					then you can mark it as readonly,It would submit the value to the server[backend]
+Syntax:
+<input type="text" readonly name="txtId" value="101">
+
+7.disabled 				It will not allow to input or change value.
+					It will not submit value.
+Syntax:
+<input type="text" disabled name="txtId" value="101">
+
+Disabled vs Readonly
+- Readonly can submit the value
+- Disabled can’t submit the value
+
+eg#4.
+<form>
+        <dl>
+            <dt>Name</dt>
+            <dd>
+                <input type="text" name="txtName" placeholder="Enter name">
+            </dd>
+            <dt>City</dt>
+            <dd>
+                <input type="text" name="txtCity" disabled value="bengaluru">
+            </dd>
+        </dl>
+        <button>Submit</button>
+</form>
+
+
+8. size 				It is used to define the width of textbox. The default width is 20.
+Syntax:
+	<input type="text" size="4" name="txtPin" placeholder="OTP">
+
+
+
+9.  minlength 				It ensures that the input value minimum length matches the lower bound value[validation].
+10. maxlength 				It restricts the input value to specified maximum number of chars.
+					You can restrict the length of string in textbox by using minlength and maxlength.
+Syntax:
+<input name="txtName" type="text" required minlength="4" maxlength="10">
+
+
+11. required 				It will not allow to submit empty.
+					It is used for mandatory fields.
+					If textbox is not defined with value, then it will not allow to submit the form.
+					However if form is defined with “novalidate” then you can submit empty.
+Syntax:
+<input type="text" name="txtId" required>
+
+12. autofocus 				It can set focus to the text box automatically on page load. 
+					Only one element in “Form” can be set with autofocus.
+					with javascript we can make it dynamic to identify the error elements of the form.
+					show inox movies quickbooking to tell how the focus is shifted to next drop down.
+Syntax:
+	<input type="text" placeholder="LastName" autofocus>
+
+eg#5.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form>
+      <dl>
+
+        <dt>Username</dt>
+        <dd><input type="text" name="usrName"></dd>
+        
+	<dt>Age</dt>
+        <dd><input type="text" name="usrAge" autofocus></dd>
+
+        <dt>Mobile</dt>
+        <dd><input type="text" name="usrMobile"></dd>
+      </dl>
+      <button>submit</button>
+    </form>
+</body>
+</html>
+=================================================================================================================
+list 				 It uses a data list that contains options to display as autocomplete text.
+				 Data list is designed by using <datalist> element
+				 Data list contains a set of options defined by using <option> element.
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <form align="center">
+       <h1>Google</h1>
+       <input type="text" name="txtSearch" list="topics" size="40">
+       <datalist id="topics">
+            <option>HTML Examples</option>
+            <option>CSS Examples</option>
+            <option>Javascript Examples</option>
+            <option>HTML Projects</option>
+            <option>CSS Projects</option>
+            <option>JavaScript Projects</option>
+       </datalist>
+       <p>
+            <button>Search</button>
+       </p>   
+    </form>
+</body>
+</html>
+
+
+
+
+
+

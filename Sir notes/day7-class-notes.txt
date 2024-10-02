@@ -1,0 +1,62 @@
+HTML Page Structure
++++++++++++++++++++
+ => Every HTML file must have static extensions called ".html or .htm"
+ => Every HTML page starts with documentation declaration from HTML5 version.
+ 			<!doctype html>
+	It is a indication to the browser engine that i am using latest features of HTML, if we don't specify the doctype then the
+	browser engine understands the HTML has "HTML4" version.
+
+ => Every HTML page must have a documentation scope, It specifies the start and end of the document in browser.
+ 		eg: <html> 
+			document scope
+		    </html>
+    eg#1.
+	<!DOCTYPE html>
+	<html>
+        	document-1
+	</html>
+	<html>
+        	document-2
+	</html>
+	     Note: If some changes needs to be done in document-1, then it creates a problem because browser does the below things
+	<!DOCTYPE html>
+	<html>
+        	document-1 document-2
+	</html>
+
+=> Every document scope must have "lang" attribute.It is used to define language for the web page content.
+	<html lang="en-IN">
+	<html lang="en-US">
+		eg:: amazon.com (USA) , amazon.in(IND)
+
+=> Every document scope has 2 sections at high level.
+	<!DOCTYPE html>
+	<html>
+        	<head>
+
+        	</head>
+        	<body>
+                
+        	</body>
+	</html>
+	
+HeadSection :: It Comprises of the Content loaded into browser memory and later delivered to browser UI, so that we can reuse the 
+               content across multiple requests.
+	       It typically contains the following components
+			a.link	 b.meta  c.style  d.scripts e.title
+
+title :: It is used for browser and SEO.[Search Engine Optmisation]
+		Note: ROBOTS [Google BOT, WebCrawlers, WebSpiders]
+	 Broswer uses title tag to display in "titlebar" and in "favourites".[While bookmarking the webpage]
+	 SEO uses title to display in search results.
+
+link ::  It is used to link any external document like css file or shortcut icon.
+	  Note: favicon.ico -> size (16px to 32px), type(.ico)
+
+					index.html
+		<html lang="en-US">
+			<head>
+		 		<title>FashionStore</title>
+		 		<link rel= 'shortcut icon' href='public/images/favicon.ico'/>
+			</head>
+		</html>

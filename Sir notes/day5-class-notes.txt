@@ -1,0 +1,72 @@
+WebPage
+  -> It is a hypertext document that provides an UI, where the user can interact with the resources of the website.
+		eg:: open amazon.com  [It display many information]
+		     click on mobiles [It display many information]
+  -> It contains information beyond what user can see.
+  -> Beyond the content the information is available.
+  -> Every webpages are classified into 2 types
+	a. Static pages
+	b. Dyanmic pages
+
+Static pages 
+  -> They are such pages which comprises of same information to display across number of requests.
+  -> Usually static pages have extension of ".html/.htm"
+		eg:: tutorialspoint website(.html will be the extension)
+
+Dynamic pages
+  -> They are such pages which comprises of information according to client requests.
+  -> The output would vary from client to client.
+  -> Apperance may be same for every client, but the content would be different for user to user
+  -> Extension for Dynamic pages are ".jsp,.php,.aspx,....".
+	 	eg:: inox.com(select -> theatre-> select-> book) 
+			The information will vary from user to user depending upon the seats available.
+		     irctc app (PNR textbox and submit)
+
+Note: Static pages and dynamic pages are desinged using "HTML"
+
+PageComposition
+	Static  Pages :: HTML + CSS + JavaScript + jQuery + ....
+	Dynamic Pages :: HTML + CSS + JavaScript + jQuery + JSP|PHP|ASP.... 
+
+Note: Every Project will start with a static page called "index.html",it is also possible to inform server to start 
+1. Go to project folder[D:\FashionStore]
+2. Add a new file called "index.html".
+		Welcome to FashionStore
+3. Click on "GoLive", the application will start in "index.html".
+
+Note: Browser understands plaintext,images,document etc...
+      By default browser will display the information in plain text style,it wont do by default in the way we do it in plain text.
+      To disply the context in the way we want on the webpage, we go for a markup language called "HTML".
+			eg:: index.html
+					Welcome to fashion store
+					   (Kids|Men|Women)
+			     output:: plain text
+	
+			eg:: index.html
+				<div align='center'>
+     					Welcome to fashion store  <br/>
+        					(Kids|Men|Women)
+				</div>
+			     output:: Markup Output
+
+HTML
+ => It stands for Hyper Text Markup Language.
+ => It is used mainly for "Presentation" purpose.
+ => "MarkUp" refers to "Marking up the content" so that it can be presented exactly as required.
+ => HTML to browser will display the presentation as need by the user.
+
+Evolution of HTML
++++++++++++++++++
+ => In Early 1960's GML and SGML are the languages used for "MarkUp".
+ => Generic MarkUp Language and StandardGenericMarkUp Language were designed by CERN[Council for European Research and Nuclear] Labs.
+ => In early 1990's TimeBerner lee introduced "WEB" and a language for "WEB" that is "HTML[Open Source]".
+ => IETF(Internet Engineering Task Force) these people developed HTML for several years upto HTML3.1.
+ => In 2004 "WHATWG(Web HyperText Application Technology Work Group)" took the responsiblity of HTML and started the 
+    version "HTML4.0".
+ => official webiste of WHATWG is "whatwg.org".
+ => The latest version of HTML is "HTML5"(2014).
+ 
+Whats new in HTML5?
+Ans. HTML5  introduced new features to make webpages more browser and SEO friendly.
+     SEO refers to "Search Engine Optimisation".
+     Responsive Designs[users using webapplication using phones, so website should provide facility for user to use website]

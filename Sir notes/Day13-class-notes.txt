@@ -1,0 +1,324 @@
+
+Working with main section(entry point) :: eg:: Netflix.in
+
+
+eg#1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        body{
+            background-size: cover;
+        }
+        .shade{
+            background-color: rgba(0,0,0,0.1);
+            width: 100%;
+            height: 100vh;
+            margin-top: -10px;
+            margin-left: -10px;
+        }
+        header{
+            padding: 20px;
+            color: white;
+            font-size: 20px;
+            font-family: Arial;
+            display: flex;
+            justify-content: space-between;
+        }
+        .brand-title{
+            font-size: 35px;
+            color: red;
+            margin-left:50px;
+            font-weight: bold;
+        }
+
+        .btn-signin{
+            background-color: red;
+            color: white;
+            border-radius: 5px;
+            width: 100px;
+            display: inline-block;
+            text-align: center;
+        }
+        section{
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 500px;
+            text-align: center;
+            font-size: 15px;
+            font-family: Arial;
+            padding: 10px;
+        }
+        .title{
+            font-size: 55px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .subtitle-1{
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+        .subtitle-2{
+            font-size: 25px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .email{
+            background-color: gray;
+            padding: 15px;
+            width: 500px;
+            display: inline-block;
+            text-align: left;
+            font-size: 20px;
+            font-family: Arial;
+        }
+        .btn-start{
+            background-color: red;
+            padding: 15px;
+            width: 150px;
+            display: inline-block;
+            text-align: left;
+            font-size: 20px;
+            font-family: Arial;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body background="public/images/netflix-background.jpeg">
+    <div class="shade">
+        <header>
+            <div>
+                <span class="brand-title">NETFLIX</span>
+            </div>
+            <div>
+                <span class="bi bi-globe"></span>
+                <span>Language</span>
+                <span class="bi bi-chevron-down"></span>
+                <span class="btn-signin">Signin</span>
+            </div>
+        </header>
+        <section>
+            <div>
+                <div class="title">Unlimited movies, TV shows and more</div>  
+                <div class="subtitle-1">Watch anywhere. Cancel anytime.</div>
+                <div class="subtitle-2">
+                    Ready to watch? Enter your email to create or restart your membership.
+                </div>
+                <main>
+                    <span class="email">Email address</span>
+                    <span class="btn-start">Get Started&nbsp;&nbsp;&nbsp;<span class="bi bi-chevron-right"></span></span>
+                </main>
+            </div>
+        </section>
+        <footer>
+
+        </footer>
+    </div>
+</body>
+</html>
+
+Displaying the content in the center
+++++++++++++++++++++++++++++++++++++
+1. Keep all the contents in one container
+2. <body>
+	<div>
+		//your content here
+	</div>
+   </body>
+3. body is the container here which would display the contents center with attributes
+	body{
+		display:flex; justify-content:center; align-items:center; height: 100vh;
+	}
+Note: justify-content:center (horizontal)
+      align-items: center(vertical)
+
+eg#1.   center-demo.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Center Demo</title>
+    <style>
+        .title{
+            font-size: 60px;
+            font-weight: bold;
+        }
+        .sub-title{
+            font-size:30px;
+            font-weight: bold;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center; 
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body background="public/images/background-banner.jpeg">
+    <main>
+        <div class="title">HTML</div>
+        <div class="sub-title">Hyper Text MarkUp Language</div>
+    </main>
+    
+</body>
+</html>
+
+
+dialog
+======
+ -> It is a popup created for page.
+ -> <dialog open=''>
+    </dialog>
+ -> we can keep any content in dialog, but it is hidden.
+ -> you can show/hide the dialog using open attribute.
+ -> we can control dialog dynamically using javascript.
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+</head>
+<body>
+    <dialog open>
+        Chat with our helpdesk...
+    </dialog>
+</body>
+</html>
+
+fig and figcaption
+  -> It is used to make SEO friendly
+  -> It is used to encapuslate any image with caption.
+ 
+syntax: 
+ <figure>
+	<figcaption>
+		name...
+	</figcaption>
+ </figure>
+
+Working with fig and figcaption
++++++++++++++++++++++++++++++++	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figure</title>
+    <style>
+        figure{
+            border: 1px solid black;
+            height: 200px;
+            width: 500px;
+            padding: 10px;
+        }
+        figure div{
+            border: 1px dotted red;
+            height: 150px;
+            width: 360px;
+        }    
+    </style>
+</head>
+<body>
+    <figure>
+        <div></div>
+        <figcaption>
+            Browser Engine
+        </figcaption>
+    </figure>
+</body>
+</html>
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++
+HTML basic entities and semantics for body
+a. line break <br>
+	Browser ignores the line breaks given in editor.
+	You have to manually add line break by using “<br>” element.
+   FAQ: What is difference between <br> and <br/>?
+	- There is not such element called “<br/>” in HTML.
+	- Always use only <br>
+	- <br/> is used to indicate that it is a self-ending or void element.
+
+b. Blank Spaces
+ - Browser ignores additional spaces between words and characters.
+ - Browser allows only one characters space between words or chars.
+ - To add manual space, you have to use “&nbsp” [non-breakable space].
+ - It is “Raw Text Element”
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sematics</title>
+</head>
+<body>
+   H &nbsp;&nbsp;T&nbsp; M &nbsp; L
+</body>
+</html>
+	output  H   T   M   L
+
+
+c. Pre-formatted Text
+  - It is used to present the content exactly as defined in source code.
+  - It will keep the spaces and line break are defined in editor.
+  - The content must be defined with-in “<pre>” element.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sematics</title>
+    <style type="text/css">
+        div{
+            font-size: 25px;
+            font-family: Arial;
+        }
+        pre{
+            border: 1px solid black;
+            height: 150px;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Sample C program
+    </div>
+    <div>
+        <pre>
+            #include &lt;stdio.h&gt;
+            void main()
+            {
+                printf("welcome to html...");
+            }
+        </pre>
+    </div>
+</body>
+</html>
+	
+
+
+
+
+
+

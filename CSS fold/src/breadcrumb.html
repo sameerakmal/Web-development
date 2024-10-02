@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        ol{
+            display: flex;
+            list-style-type: none;
+        }
+        li::after{
+            content: ">>";
+        }
+        li:last-child::after{
+            content: "";
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JS</li>
+        <li>MongoDb</li>
+    </ol>
+</body>
+</html>

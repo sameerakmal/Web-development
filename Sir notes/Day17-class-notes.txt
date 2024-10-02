@@ -1,0 +1,431 @@
+FAQ's
+ a.  How to remove numbers from ordered list?
+ Ans. we can remove using css attribute called
+	ol{
+		list-style: none; 
+	  }
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        ol{
+            list-style-type: none;
+        }
+        li{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ol>
+        <h6>SUPPORT</h6>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li>Size Guide</li>
+        <li>Shipping & Returns</li>
+    </ol>
+</body>
+</html>
+
+2> How to create a scrollable list?
+Ans.
+1. Keep a border
+2. Keep a proper width and height as per the content area.
+3. using an css attribute called "overflow : hidden|scroll|auto"
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        ol{
+            list-style-type: none;
+            border: 1px solid gray;
+            width: 150px;
+            height: 150px;
+            overflow: auto;
+        }
+        li{
+            font-size: 13px;
+            margin-bottom: 10px;
+        }
+        
+    </style>
+</head>
+<body>
+    <ol>
+        <h6>SUPPORT</h6>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li>Size Guide</li>
+        <li>Shipping & Returns</li>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li>Size Guide</li>
+        <li>Shipping & Returns</li>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li>Size Guide</li>
+        <li>Shipping & Returns</li>
+    </ol>
+</body>
+</html>
+
+How to display list items inline?
+Ans. ol{
+            display: flex;
+            justify-content: space-between;    
+        }
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        ol{
+            display: flex;
+            justify-content: space-between;    
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Contact Us</li>
+        <li>FAQs</li>
+        <li>Size Guide</li>
+        <li>Shipping & Returns</li>
+    </ol>
+</body>
+</html>
+
+4> how to display list items in columns wise?
+Ans. using display : grid, grid-template-columns : 6fr 6fr.
+
+eg#4
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        .choice{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            width: 500px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            Which of the following is not a oop language?
+            <ol type="a" class="choice">
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Javascript</li>
+            </ol>
+        </li>   
+    </ol>
+</body>
+</html>
+
+Q> How to change the options in ordered list?
+eg#5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        .choice{
+            width: 500px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+            columns: 2;
+        }
+        li{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>
+            Which of the following is not a oop language?
+            <ol type="a" class="choice">
+                <li>C</li>
+                <li>C++</li>
+                <li>Java</li>
+                <li>Javascript</li>
+            </ol>
+        </li>   
+    </ol>
+</body>
+</html>
+==================================================================================================================
+FAQ: 
+Q> How to remove numbering in orderlist?
+Q> How to create a scrollable list?
+Q> How to display list items inline?
+Q> How to display li in columns wise?
+Q> How to change the options in ordered list?
+
+==================================================================================================================
+UnOrderedList
+=============
+Unordered List
+- It is used to define bulleted list.
+- Bulleted list comprises of symbol instead of numbering.
+- Unordered list is defined by using “<ul>”
+- List items are defined by using “<li>”
+- The attribute “type” defines the symbol type,which can be
+	o disc
+	o circle
+	o square
+
+
+<body>
+	<ul type="square">
+		<li>Web Sever</li>
+		<li>Web Site</li>
+		<li>Web Page</li>
+	</ul>
+</body>
+
+How to set Custom bullets?
+ Ans. we can do by using list-style-image attribute of css.
+
+eg#5
+Flipkart website for displaying contents using ol
++++++++++++++++++++++++++++++++++++++++++++++++++
+Note: Hint we can use bootstrap icons
+
+eg#6
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+
+        ul{
+            list-style: none;
+        }
+        li{
+            font-size: 10px;
+            font-family: Arial;
+            margin-bottom: 10px;
+          
+        }
+        span{
+            font-weight: bold;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ul>
+        <li class="bi bi-tag-fill">
+            <span>Bank Offer</span> Get ₹25 Instant Discount on first Flipkart UPI transaction on order of ₹200 and aboveT&C
+        </li>
+        <li class="bi bi-tag-fill">
+            <span>Bank Offer</span> 5% Cashback on Flipkart Axis Bank CardT&C
+        </li>
+        <li class="bi bi-tag-fill">
+            <span>Bank Offer</span> Flat ₹1,250 off on HDFC Bank Credit Card EMI Txns, Tenure: 6 and 9 months, 
+		Min Txn Value: ₹15,000T&C
+        </li>
+        <li class="bi bi-tag-fill">
+            <span>Special Price</span> Get extra 7% off (price inclusive of cashback/coupon)T&C
+        </li>
+    </ul>
+</body>
+</html>
+
+Q> To display the content in fixed style we can use the following attributes of css in "ul"
+ ul{
+            list-style: none;
+            position: fixed;
+            right: 20px;
+            bottom: 10px;
+            width: 5px;	
+            background-color: white;
+            padding: 5px;
+   }
+
+eg#7.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+
+        ul{
+            list-style: none;
+            position: fixed;
+            right: 20px;
+            bottom: 10px;
+            width: 5px;
+            background-color: white;
+            padding: 2px;
+        }
+        li{
+            font-size: 10px;
+            font-family: Arial;
+            margin-bottom: 10px;  
+            color:green;
+        }
+    </style>
+
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro vero totam atque, animi maiores, quidem ea autem ipsam saepe iusto officiis expedita nemo doloremque aliquid exercitationem distinctio, sapiente quo. Esse quaerat id tempore quidem voluptates, facilis itaque alias quasi quisquam illum error aliquam reiciendis illo delectus sequi optio sapiente cum consequatur minima quis! Vel quam magni suscipit, vitae repellendus ipsam omnis ipsa eligendi, sequi minima iste perferendis ex error corporis quis quas culpa nostrum maiores rem hic nulla. Ex, tempore molestiae est nemo cum assumenda? Ullam doloremque illo beatae, modi eligendi vel aut excepturi impedit molestias facere quisquam consectetur iusto sequi. Illum expedita iste, distinctio quaerat consequatur ducimus deleniti fugit repellendus a. Fuga consequatur laborum praesentium ea aspernatur nostrum error molestias consectetur libero nisi consequuntur veritatis maxime omnis culpa eum voluptatum, nihil ullam et amet, laudantium nobis pariatur alias. Sequi hic odio maiores harum, nisi consequatur deserunt consectetur aperiam dolores velit rem. Quisquam incidunt qui, asperiores possimus laboriosam fugiat nemo placeat nam sit quo sequi, eius eum labore doloremque modi magnam. A earum obcaecati commodi dolor cum labore soluta nesciunt, provident perferendis voluptate doloribus, pariatur in error praesentium necessitatibus, voluptates nemo molestiae doloremque ipsum sequi temporibus consequatur ut velit deserunt? Quam, veritatis, voluptatum fuga odio voluptas, ratione natus modi optio maxime delectus officia quibusdam error tenetur? Aliquam aut, id corporis dignissimos rem, numquam non dolor praesentium necessitatibus distinctio vitae quis quia rerum, assumenda sint atque? Dignissimos pariatur, exercitationem quidem natus est veniam ut dicta voluptatem, nobis ipsam porro iure possimus illum itaque quae sed nam iste eius ex similique officia corporis fugit, quos odit. Nobis architecto vel error assumenda tempore at! Ipsa nobis deserunt unde vero quibusdam modi eum sequi minus accusamus ex eos dolore sunt soluta distinctio similique, earum sed molestiae cupiditate, ipsam nesciunt doloribus. Assumenda, quia. Impedit, ab.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo sunt quae magni, praesentium voluptatibus numquam eius illum veritatis debitis doloremque ipsum iure dolorum a iste error, odit eum perspiciatis, repudiandae dolorem corporis obcaecati? Suscipit repellendus autem vel, hic enim saepe provident eligendi sed nemo officia minus soluta necessitatibus sapiente quaerat aliquam quia iure rerum. Ducimus amet debitis in, ratione culpa placeat officiis, expedita quidem omnis blanditiis, sequi ipsa quibusdam similique dolorum? Repellendus consequatur molestias error harum at blanditiis cupiditate nemo adipisci esse dignissimos excepturi aut nam unde doloremque quisquam, ad inventore animi soluta iste illum laudantium provident aliquid sit suscipit. Eligendi ad numquam, beatae consequatur eaque aliquid! Incidunt quo quas, a eos dolorum eveniet necessitatibus provident numquam iure illum, accusamus cumque accusantium amet. Ratione amet excepturi vel. Ad quam deleniti temporibus provident, odio officiis obcaecati tenetur quia omnis magni sunt consectetur, dignissimos dolore totam! Sunt soluta explicabo nulla exercitationem quidem necessitatibus repudiandae ut, impedit, fugit doloribus distinctio quos cupiditate cum, optio blanditiis ullam quae commodi quaerat saepe ad minus deleniti repellat tempore. Nihil neque consequatur esse, assumenda tempore autem repudiandae laudantium laborum numquam. Natus ullam impedit ex, tempore fugit vero reiciendis illo eum sint repellat provident molestiae, ducimus modi! Cum quibusdam veniam suscipit. Commodi quod minus nihil nam facere fuga inventore magni repellat at odio, aut praesentium? Vero nam aliquam porro facere error odit placeat delectus doloremque eius quas deleniti repellendus impedit doloribus ad consequatur sunt unde obcaecati ex sit perferendis ducimus beatae, quasi veritatis adipisci? Accusamus cupiditate fugit iusto aliquid est mollitia? Commodi cupiditate explicabo, tempora obcaecati pariatur magnam sequi minima ex, ad error quas quisquam debitis, fugit labore esse optio! Incidunt molestias obcaecati iure atque unde dolorum at doloremque possimus ab sapiente voluptatibus, molestiae a consequuntur adipisci quasi ex beatae repellendus velit. Pariatur magni quisquam officia soluta nisi.</p>
+    <ul>
+        <li class="bi bi-facebook"></li>
+        <li class="bi bi-twitter"></li>
+        <li class="bi bi-instagram"></li>
+        <li class="bi bi-linkedin"></li>
+    </ul>
+</body>
+</html>
+
+Q> How to work with pagination using ol?
+Ans. 
+<style type="text/css">
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: end;
+            height: 500px;
+        }
+        ul{
+            list-style: none;
+            display: flex;
+            font-family: Arial;
+        }
+        li{
+          margin-right: 10px;
+          padding:5px;
+          width: 25px;
+          border: 1px solid blue;
+          border-radius: 10px;
+          text-align: center;
+          background-color: lightblue; 
+        }
+
+        li:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .disabled{
+            background-color: grey;
+            color:white;
+            border: none;
+        }
+        .disabled:hover{
+           cursor: not-allowed;
+        }
+</style>
+
+eg#8
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <style type="text/css">
+
+         ul{
+            list-style: none;
+            display: flex;
+            font-family: Arial;
+        }
+
+        li{
+          margin-right: 10px;
+          padding:5px;
+          width: 25px;
+          border: 1px solid blue;
+          border-radius: 10px;
+          text-align: center;
+          background-color: lightblue; 
+        }
+
+        li:hover{
+            background-color: black;
+            color: white;
+            cursor: pointer;
+        }
+        .disabled{
+            background-color: grey;
+            color:white;
+            border: none;
+        }
+        .disabled:hover{
+           cursor: not-allowed;
+        }
+	nav{
+		display: flex;
+		justify-content: center;
+		align-items : end;
+	}
+    </style>
+</head>
+<body>
+  <nav>
+    <ul>
+        <li><span>&laquo;</span></li>
+        <li><span>1</span></li>
+        <li><span>2</span></li>
+        <li><span>3</span></li>
+        <li class="disabled"><span>4</span></li>
+        <li><span>5</span></li>
+        <li><span>...</span></li>
+        <li><span>&raquo;</span></li>
+    </ul>
+  </nav>
+</body>
+</html>
+
+FAQ
+ Q> How to set custom bullets in ul?
+ Q> Can we keep any images for ul instead of circle disc and square?
+ Q> Can we keep bootstrap icons for the ul, list items?
+ Q> How to set pagination using ol?
+ 
+
+
+
+
+
+
+

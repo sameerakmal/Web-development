@@ -1,0 +1,62 @@
+Day4
+====		 
+1. Web Server	: It resembles both hardware and software that satisfies client requests by sending and receving the data.
+			a. Local server [LiveServer -> Local Server]
+			b. Cloud server [AWS,AZURE,GCP,...]
+
+2. Web Site     : It is a virtual directory on webserver that gives access to resources on web.	
+		  Every website comprises of 2 locations
+		 	a. Physical Location
+			b. Virtual  Location
+		 Physical Location is a folder where the resources are kept 
+			eg: D:\FashionStore
+		 Virtual Location is a folder path given to clients inorder to access the resources
+			eg: http://www.fashionstore
+
+
+Creating a new website : [Local]
+++++++++++++++++++++++++++++++++
+a. Open any new location
+
+b. Create a new folder in any location
+	D:\FashionStore
+
+c. Open visual studio code and open your website folder
+	[File Menu -> Open Folder]
+
+d. Open "Terminal" in Visual Studio code
+
+e. Switch to "Command Prompt"[Default is Power Shell]	
+	
+f. Run the following command
+	> npm init -y       
+    
+      * It creates package.json file which is holding meta information about the project[libraries used] 
+      * MetaInformation holds name,version and dependencies used in the project[eg:: https://www.codeproject.com/]
+
+g. Every official webapplication keeps its resources in 2 folders at a hight level
+     a. public
+     b. src
+     c. package.json
+
+	* public folder consists of static files like
+		a. images[.jpg]
+		b. documents
+		c. presentation[.pptx]
+		d. spreadsheets[.XSLX]
+		e. multimedia [audio/video]
+		f. html files
+
+	* src folder comprises of all dynamic resources like
+		a. css
+		b. scss
+		c. js
+		d. ts etc..
+
+h. Keeps some documents in the project folder
+i. Click on Go live server
+j. You can open ur browser and send the request
+	http://localhost:5500/
+
+Note: The website is live now,but it is not having a good UI for the user to access our resource, 
+      so we need to give them a good "webpage", To design a good webpage we go for "HTML/CSS".

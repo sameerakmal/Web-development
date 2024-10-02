@@ -1,0 +1,677 @@
+Hyperlinks in HTML
+- Link is clickable text, picture or graphic that navigates the user to any specified location when clicked.
+- Hyperlink is clickable text, picture of graphics that navigates over “Http”.
+- Hyperlinks are required to design navigation in website.
+
+syntax: 
+	<a> text|pitcure|Graphic </a>
+	<a href="path"> text|pitcure|Graphic </a>
+
+Note: 
+=> According the Web Designing standards every website must have a proper navigation mechanism.
+=> User must able to reach to any topic just with one click.
+
+- HTML Hyperlinks are created by using “Anchor” Element.
+- Anchor is designed by using “<a>” tag.
+- Hyperlinks in website are classified into 2 types
+	o Intra document links
+	o Inter document links
+
+Intra document link
+- It is a hyperlink that handles navigation from one location to another within the page.
+- User can navigate to any location within the page.
+- In order to navigate to any location within page, you have to define unique reference ID for the target element.
+
+Ex:
+<h2 id=”electronics”> </h2>
+<div id=”footwear”> </div>
+<img id=”pic”>
+- The anchor element uses “href” attribute that specifies the target location.
+- “href” will set the specified path in “URL”.
+- You can refer any ID by using “#”
+Syntax:
+   <a href=”#electronics”></a>
+
+	http://localhost:5540/site/page.html#electronics  :: URL(Uniform Resource Locator)
+
+	page.html#electronics : URI(Uniform Resource Identifier)
+
+FAQ: What is the difference b/w "src & href "?
+Ans. <img src="">
+     <a href="">
+
+src = "It is a getter(it is used to get path)".
+href= "It is a setter(it is used to set path) and appends to URL".
+
+Note: 
+a. <a> element can only set the path,    so it requries "href" as the attribute.
+b. <img> element can only get the path , so it requires "src" as the attribute.
+
+
+FAQ:: How to remove underline from hyperlinks?
+Ans.  using text-decoration: none
+
+FAQ:: How to change the colors for visited link and active link
+Ans.  using body tag attributes like vlink and alink
+	<body vlink='red' alink='green'>
+      using css classes called :link,:visited,:active
+	a:link{color:green;}
+	a:visisted{}
+	a:active{}
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        header{
+            background-color: darkcyan;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+
+        main{
+            height: 500px;
+            overflow: auto;
+        }
+
+        ul{
+            list-style: none;
+            margin-left: -40px;
+        }
+
+        li{
+            font-size: 20px;
+            width: 170px;
+            padding: 5px;
+            background-color: gray;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+
+        nav a:link{
+            color:black;
+        }
+
+        nav a:visited{
+            color: yellow;
+        }
+
+        
+    </style>
+</head>
+<body alink="red" vlink="green">
+    <header>
+        <span class="bi bi-cart4"></span>FashionStore
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#kids">KIDS Fashion</a></li>
+                <li><a href="#mens">MENS Fashion</a></li>
+                <li><a href="#women">WOMENS Fashion</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="home">Home</h1>
+            <p>
+                Depending on how you obtained the Windows software, <span><a href="#mobile">MobileOffers</a></span>  this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            <h2 id="kids">Kids Fashion</h2>
+            <img src="public/images/kidfashion.jpeg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                <fig>
+                    <img src="public/images/mobilephone.png" id="mobile" width="200" height="300" title="realme mobile">
+                    <figcaption>Realme black mobile</figcaption>
+                </fig>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            
+
+            <h2 id="mens">Mens Fashion</h2>
+            <img src="public/images/menfashion.jpeg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            <h3 id="women">Womens Fashion</h3>
+            <img src="public/images/women.jpg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+        </main>
+    </section>
+</body>
+</html>
+
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        header{
+            background-color: darkcyan;
+            font-size: 30px;
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 3fr 9fr;
+        }
+
+        main{
+            height: 500px;
+            overflow: auto;
+        }
+
+        ul{
+            list-style: none;
+            margin-left: -40px;
+        }
+
+        li{
+            font-size: 20px;
+            width: 170px;
+            padding: 5px;
+            background-color: gray;
+            border: 1px solid black;
+            margin-bottom: 30px;
+        }
+
+        nav a{
+            text-decoration: none;
+        }
+
+        nav a:link{
+            color:black;
+        }
+        nav a:active{
+            color: green;
+        }
+
+        nav a:visited{
+            color: yellow;
+        }
+        header img{
+            width: 100px;
+            height: 150px;
+            border-radius: 150px;
+        }
+
+        
+    </style>
+</head>
+<body alink="red" vlink="green">
+    <header>
+        <a href="#home"><span class="bi bi-cart4"></span>FashionStore</a>
+        <div>
+            <a href="#mens"><img src="public/images/menfashion.jpeg"></a>
+            <a href="#women"><img src="public/images/women.jpg"></a>
+            <a href="#kids"><img src="public/images/kids.jpg"></a>  
+        </div>
+    </header>
+    <section>
+        <nav>
+            <ul>
+                <li><a href="#home">HOME</a></li>
+                <li><a href="#kids">KIDS Fashion</a></li>
+                <li><a href="#mens">MENS Fashion</a></li>
+                <li><a href="#women">WOMENS Fashion</a></li>
+            </ul>
+        </nav>
+        <main>
+            <h1 id="home">Home</h1>
+            <p>
+                Depending on how you obtained the Windows software, <span><a href="#mobile">MobileOffers</a></span>  this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            <h2 id="kids">Kids Fashion</h2>
+            <img src="public/images/kidfashion.jpeg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                <fig>
+                    <img src="public/images/mobilephone.png" id="mobile" width="200" height="300" title="realme mobile">
+                    <figcaption>Realme black mobile</figcaption>
+                </fig>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            
+
+            <h2 id="mens">Mens Fashion</h2>
+            <img src="public/images/menfashion.jpeg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+            <h3 id="women">Womens Fashion</h3>
+            <img src="public/images/women.jpg">
+            <div>
+                <a href="#home">Back to top</a>
+            </div>
+            <p>
+                Depending on how you obtained the  Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+            <p>
+                Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or software installer that distributes the software with your device; or (ii) you and Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+                This agreement describes your rights and the conditions upon which you may use the Windows software. You should review the entire agreement, including any supplemental license terms that accompany the software and any linked terms, because all of the terms are important and together create this agreement that applies to you. You can review linked terms by pasting the (aka.ms/) link into a browser window.
+            </p>
+
+        </main>
+    </section>
+</body>
+</html>
+
+
+intradocuments without scrollable
+=================================
+=> To highlight the content we go for css class called "target".
+
+Note: CSS provides a "target" class that identifies the target container and sets the effect dynamically.
+      This is used when we don't have much information to scroll.
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+        .card{
+            width: 200px;
+            height: 100px;
+            margin: 20px;
+            padding: 50px;
+            border: 1px solid black;
+            box-shadow: 2px 2px 2px black;
+        }
+        .card:target{
+            background-color: black;
+            color: white;
+        }
+        section{
+            display: flex;
+            margin-top: 15px;
+        }
+        nav span{
+            margin-left: 300px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <span><a href="#html">HTML</a></span>
+        <span><a href="#css">CSS</a></span>
+        <span><a href="#js">JS</a></span>
+    </nav>
+    <section>
+        <div class="card" id="html">
+            <h2>HTML</h2>
+            <p>It is a markup language</p>
+        </div>
+        <div class="card" id="css">
+            <h2>CSS</h2>
+            <p>It is a styling language</p>
+        </div>
+        <div class="card" id="js">
+            <h2>Javascript</h2>
+            <p>It is a scripting language</p>
+        </div>
+    </section>
+    
+</body>
+</html>
+
+Inter Document Links
+- Hyperlinks that handle navigation to any URL or any another page in website.
+- It also refers Hyperlink which can invoke email and call clients.
+- Navigation can be to
+	o File [word document, presentation, pdf]
+	o Email Client
+	o Mobile Dial application
+	o HTML Page
+	o URL
+  
+
+Note:
+- Every file that you configured as target in Hyperlink can’t open in browser. 
+- Files require special plugins to open the content and show in browser.
+- If plugin is missing on not available then the linked file will be downloaded.
+- target can be pdf file,image,etc.. which can be opened but if the target is audio,video or some word document it can't open
+  because browser doesn't have plugin for that.
+- To know which files can be opened by browser and which plugin is available in browser can be checked by "Javascript" programming.
+
+FAQ: 
+a>How to download any file through a link without opening it in browser?
+Ans. We can use “download” attribute for Hyperlink.(given from HTML5)
+Ex: 
+<a href="../docs/cssdemo.pdf" download="" >CSSTutorial PDF</a>
+	<!--Downloads the file with the name same as that of the link name :: cssdemo.pdf-->
+
+<a href="../docs/cssdemo.pdf" download="csstutorial" >CSS Tutorial PDF</a>
+	<!--Downloads the file with the name as given in the download name :: csstutorial.pdf-->
+
+
+Link to URL
+===========
+=> You can link to any website or URL or any specific resource present in the server.
+=> When we link the url we need to make sure that is configured with proper "protocol" and "domain" name.
+eg
+ <a href="https://www.amazon.com">Shop to Amazon </a>
+ <a href="https://www.youtube.com/physicswallah">Physics Wallah </a>
+
+Link to Application
+===================
+ => We can create a hyperlink that can invoke the application which is running in your device.
+ => You have to make sure that the relative application is already installed on your device.
+ => Mostly commonly linked applications with anchor elements are 
+		mail,skype,telephone
+
+syntax: 
+  < a href="mailto:@...">Email</a>
+  < a href="tell:+91...">Call </a>
+
+
+FAQ: How to open link target in a new Tab?
+- Usually, the link target opens in the same browsing tab.
+- You can define link with “target” attribute with value “_blank” to open in a new tab.
+
+Syntax:
+<a href="../Images/shoe.jpg" target="_blank" >Nike Casuals</a>
+
+FAQ: How to open link target in a new Window?
+  - You have to use JavaScript “window.open()” method for hyperlink.
+
+Syntax:
+   <a href="javascript:window.open('../Images/shoe.jpg','Nike','width=500 height=400')"> Nike Casuals</a>
+
+Note: 
+a. String means "",Inside the double quote if we want to write a String then we need to go for " 'string' ".
+b. Not a good practise to show the output as popup because browser will block those popups.
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <ol>
+        <li>To know more details send mail <a href="mailto:hr@pwskills.in"> hr@pwskills.in</a></li>
+        <li>
+            You can skype us 
+            <a href="skypeto:pwskills@outlook.com"">pwskills@outlook.com</a>
+        </li>
+        <li>Call us <a href="tell:+91 92343">2323434</a></li>
+        <li><a href="./amazon-card.html">Amazon Card</a></li>
+        <li><a href="./public/images/a2.jpg" download="KIDSIMG0001">Kids Fashion</a></li>
+        <li><a href="./public/docs/sampledocument.doc" download="document">SampleDoc</a></li>
+        <li><a href="./public/docs/SpringBoot.pdf" target="_blank">SpringBoot</a></li>
+        <li><a href="./public/docs/SpringCoreTest.iml">Some IML file</a></li>
+        <li>
+            <a href="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB_								486265257EDR_F0481570FHAZ00323M_.JPG">
+                <img src="https://mars.nasa.gov/msl-raw-images/proj/msl/redops/ods/surface/sol/01000/opgs/edr/fcam/FLB								486265257EDR_F0481570FHAZ00323M_.JPG"
+                     width="100" height="50">
+            </a>
+        </li>
+        <li>
+            <a href="javascript:window.print()">
+                <span class="bi bi-printer-fill"></span> 
+                Print
+            </a>
+        </li>
+        <li>
+            <a href="javascript:window.open('./public/images/a2.jpg',width='100',height='200')">
+                NikeCasuals
+            </a>
+        </li>
+    </ol>
+</body>
+</html>
+
+
+
+FAQ:
+ a> How to download any file through a link without opening it in browser?
+ b> How to open link target in a new Tab?
+ c> How to open link target in a new Window?
+
+
+	
+FAQ:
+ a. How to remove underline from hyperlinks?
+ b. How to change the colors for visited link and active link?
+ c. What is the difference b/w "src & href "?
+ d. What is the difference b/w URL and URI?
+ e. If the link is scrollable we can see the contents, How will u navigate to a page and show the content if the page is not scrollable?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

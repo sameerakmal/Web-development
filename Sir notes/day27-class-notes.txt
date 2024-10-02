@@ -1,0 +1,118 @@
+Forms in HTML
+=============
+- Form provides an UI from where user can interact with our application.
+- Interaction includes insert, update, delete, query etc.[CRUD/CURD/SCUD]
+- Form is a generic container which have default functionality.
+- A form can submit and reset its data without configuring any explicit functionality.
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div,form{
+           width: 400px;
+           height: 100px;
+           border: 1px solid black;	
+           margin: 25px;
+           padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Name: <input type="text" name="userName"><button>submit</button><button type="reset">Cancel</button>
+    </div>
+    <form>
+        Name: <input type="text" name="userName"><button>submit</button><button type="reset">Cancel</button>
+    </form>
+</body>
+</html>
+
+Syntax : 
+   <form>
+	form elements
+   </form>
+
+Form Container
+- Form container is defined by using <form> tag.
+- A web page can contain multiple forms. Hence you have to define a start and end tag.
+
+Syntax:
+<form>
+	form elements
+</form>
+- A page can submit the details only when they are enclosed a form.
+- You have to make sure that the form elements are present inside <form> container.
+
+Syntax:
+Name : <input type=”text” name=”Name”> //Not good
+
+<form>
+   Name : <input type=”text” name=”Name”> // OK
+</form>
+
+Note: 
+a. Every object have appearnce(how it looks like) and behaviour(what actions it can perform).
+b. Every object would perform something at some time[When it can perform](techincally we call them as "Events")
+
+HTML form element provides following attributes
+
+Attribute                       Description
+==================================================================
+1. id 				It defines a unique ID for form.
+2. name 			It defines a reference for form.
+3. class 			It defines a CSS class for form.
+
+4. method 			It indicates the request method for form, which can be:
+					- GET
+					- POST
+
+				The default form method is GET action 
+
+			
+FAQ:
+1. What is the default method of the Form?
+   Ans. GET
+ 
+2. Can we submit data to server on GET method?
+   Ans. yes, but not suggestible
+
+What is the difference b/w GET and POST?
+Ans.	
+GET 
+a. GET method is used to fetch [Access] data from server.
+b. If you are designing a form to get data from server and display in page, then use GET method.
+c. If submit form data on GET request it will be added into URL as "Query String".
+d. Any one can view your data.
+e. It is not safe. 
+f. It is easy to hack data. 
+g. It allows to bookmark the data.
+h. It is stored in browser logs. [history]
+i. You can’t submit complex data, like binary data. It allows only ASCII type.
+j. You can submit limited data.Query string allows 2048 chars.
+k. The data can be cached, It will store data in cache and saves round trip.
+
+POST
+a. POST method is used to submit data to server.
+b. If you are designing a form to submit the client data to server, then use POST method.
+c. Data will be in "Form Message Body".
+d. It is not appended into URL, it is not visible to users.
+e. It is safe
+f. It is hard to hack data.
+g. It can’t be bookmarked.
+h. It is not stored in browser history.
+i. It can submit complex data[binary data].
+j. There is no limit for submitting data[Any amount of data].
+k. Data can’t be cached.
+
+
+
+
+
+
+
+

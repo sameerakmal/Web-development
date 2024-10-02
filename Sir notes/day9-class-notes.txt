@@ -1,0 +1,121 @@
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+							HTML BODY SECTION
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+=> It comprises of the content which is rendred directly in browser.
+=> It is defined with <body> token and it contains some important attributes.
+
+Attributes
+   a. bgcolor : It sets background color for the page.
+   b. text    : It sets text color 
+
+Note: HTML colors are defined by using 3 techniques 
+	a. color name.			
+			eg: <body bgcolor="red" text="white">
+				<p>.....</p>
+			    </body>
+
+
+	b. color shade name.		
+		HTML also support hundreds of color shade names
+			 Darkcyan
+			 Lightcyan
+			 Lightgreen etc..
+
+	c. Hexa decimal code.
+		o Hexadecimals colors are basically “RGB” color
+		o R-Red, G-Green, B-Blue
+		o Hexadecimal number system is 16 base number system, where we use 16 different values ranging from “0 to F”.
+		o Hexadecimal color can be defined in 3 or 6 chars followed by hash “#”
+			 3 Chars Code
+				#RGB
+			 6 Chars Code
+				#RRGGBB
+
+		o Red, Green and Blue Value can be “0 to F” 
+			Hexa: 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e, f
+				[0 is minimum, f is maximum]
+				- First place is for Red
+				- Second Place is for Green
+				- Third place is for Blue
+
+Example
+=======			
+#FF0000 	- Red 		#F00
+#00FF00 	- Green 	#0F0
+#0000FF 	- Blue 		#00F
+#FFFF00 	- Yellow 	#FF0
+#000000 	- Black 	#000
+#FFFFFF 	- White 	#FFF
+
+
+3. background : It sets background image to body section.
+	
+syntax: 
+	<body background = ""/>
+
+Note: we can control images only through css attributes.
+      These attributes are defined in <style> manner.
+      css attributes for background are
+	background-repeat   	: repeat|no-repeat|repeat-x|repeat-y
+	background-size     	: contain|cover|auto|width&height in pixels
+	background-position 	: top|center|right|left
+	background-attachment	: fixed|scroll
+
+contain : Resize the background image to cover the entire container, even if it has to stretch the image or cut a 
+	  little bit off one of the edges
+cover   : Resize the background image to make sure the image is fully visible
+
+
+eg:: 
+<style>
+         body{
+             background-repeat: no-repeat;
+             background-size: 100%;
+             background-position: center center;
+             background-attachment: fixed;  
+         }
+</style>
+<body background="public/images/background-banner.jpg">
+	........
+	........
+	........
+</body>
+
+4. align : It is used to align the body content to the left, right,center or justify.
+	syntax : 
+		<body align = 'left|right|center|justify'>
+		</body>
+
+left: It sets the text left-align.
+
+right: It sets the text right-align.
+
+center: It sets the text center-align.
+
+justify: It stretches the text of a paragraph to set the width of all lines equal.
+
+5. left margin       ] margin will set space b/w content and page
+   right margin      ] 
+   bottom margin
+   top margin
+
+ eg:: <body align="justify"  topmargin="25" leftmargin="50" bottommargin="50"  rightmargin="50">
+
+6. vlink : It sets colour for visited links in a page
+   alink : It sets colour for active  links in  a page
+   <body vlink="grey" alink="red">
+            <a href="http://www.flipkart.com">FLIPKART</a>|
+            <a href="http://www.amazon.in">AMAZON</a> |
+            <a href="http://www.myntra.com">MYNTRA</a>
+    </body>
+
+Semantics  in Body Section
+++++++++++++++++++++++++++
+ -> An element used for a specific purpose.
+ -> HTML has more than 100 of semantics according to MDN.
+ -> WHATWG(HTML), W3C(WEB), Javascript(ECMA)  for these 3 people documentation is prepared by MDN(Mozilla Development Network).
+ -> HTML5 introduced semantics for body section to make it more SEO[Search Engine Optimisation] Friendly.
+ -> Old websites are not SEO friendly, but by using HTML5 we make wepages SEO Friendly.
+
+
+

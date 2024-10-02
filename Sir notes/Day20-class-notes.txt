@@ -1,0 +1,335 @@
+FAQ: 
+a. How to design fluid image?
+Ans. fluid image means they are such images which will be adjusted to browser width.
+     we can design fluid images by configuring in "percent".
+     we can design the size in pixels. 
+     pixels -> fixed size.
+
+eg#1. <img width='' height=''/> unit can be in percentage or in pixels
+
+Working with designing an Amazon cart
+=====================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>amazon</title>
+
+    <style type="text/css">
+        section{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            margin-top:-200px;
+            grid-gap: 10px;
+        }
+        .card{
+            background-color: white;
+            height: 400px;
+            padding: 5px;
+            margin: 5px;
+            font-family: Arial;
+        }
+        .card-title{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        .card-header{
+            padding: 10px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            grid-gap:5px;
+        }
+        row img{
+            width: 50%;
+        }
+        .footer-title{
+            text-align: left;
+            color: blue;    
+        }
+        .card-footer{
+            padding: 5px;
+        }
+        p{
+            font-size: 10px;
+        }
+    </style>
+</head>
+
+<body bgcolor="lightgray">
+    <header>
+        <img src="public/images/amazon-banner.jpg" width="100%">
+    </header>
+
+    <section>
+        <div class="card">
+
+            <div class="card-header">
+                <div class="card-title">Revamp your home in style</div>
+            </div>
+
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="public/images/a1.jpg">
+                        <p>Cushion cover,bedsheets &more</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a2.jpg">
+                        <p>Figurines,vases & more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="public/images/a3.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a4.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-footer">
+                <div class="footer-title">Explore all</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Revamp your home in style</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="public/images/a1.jpg">
+                        <p>Cushion cover,bedsheets &more</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a2.jpg">
+                        <p>Figurines,vases & more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="public/images/a3.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a4.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">Explore all</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Revamp your home in style</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="public/images/a1.jpg">
+                        <p>Cushion cover,bedsheets &more</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a2.jpg">
+                        <p>Figurines,vases & more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="public/images/a3.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a4.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">Explore all</div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Revamp your home in style</div>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div>
+                        <img src="public/images/a1.jpg">
+                        <p>Cushion cover,bedsheets &more</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a2.jpg">
+                        <p>Figurines,vases & more</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div>
+                        <img src="public/images/a3.jpg">
+                        <p>Home storage</p>
+                    </div>
+                    <div>
+                        <img src="public/images/a4.jpg">
+                        <p>Lighting solutions</p>
+                    </div>
+                </div>
+            </div>
+            <div class="card-footer">
+                <div class="footer-title">Explore all</div>
+            </div>
+        </div>
+
+    </section>
+</body>
+</html>
+
+
+Designing a card with a background images
+=========================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        
+        .women-fashion{
+            background-image: url(public/images/women.jpg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        }
+
+        .men-fashion{
+            background-image: url(public/images/menfashion.jpeg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        }
+
+        .kids-fashion{
+            background-image: url(public/images/kidfashion.jpeg);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.5;
+        }
+
+        .kids-fashion:hover{
+            opacity: 1;
+        }
+        .women-fashion:hover{
+            opacity: 1;
+        }
+        .men-fashion:hover{
+            opacity: 1;
+        }
+         
+        main{
+            height: 500px;
+            display: grid; 
+            grid-template-columns: 4fr 4fr 4fr;
+            margin-top: 20px;
+            grid-gap: 5px;
+        }
+        .card-title{
+            font-size: 50px;
+            font-weight: bold;
+            color:white;
+            text-shadow: 2px 2px 0.5px black;
+        }
+        button{
+            width: 200px;
+            height: 30px;
+            font-size: 20px;
+            background-color: white;
+            border: none;
+            margin-top: 150px;
+        }   
+    </style>
+</head>
+<body>
+    <section>
+
+        <main>
+
+            <div class="women-fashion">
+                <div class="card">
+                    <div class="card-title">
+                        WOMEN
+                    </div>
+                    <div class="card-footer">
+                        <button>SHOP WOMEN <span class="bi bi-arrow-right"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="men-fashion">
+                <div class="card">
+                    <div class="card-title">
+                        MEN
+                    </div>
+                    <div class="card-footer">
+                        <button> SHOP MEN <span class="bi bi-arrow-right"></span></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="kids-fashion">
+                <div class="card">
+                    <div class="card-title">
+                        KIDS
+                    </div>
+                    <div class="card-footer">
+                        <button>SHOP KIDS <span class="bi bi-arrow-right"></span></button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

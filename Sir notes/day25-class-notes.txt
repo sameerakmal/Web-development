@@ -1,0 +1,231 @@
+Tables in HTML
+==============
+- Tables are used to organize the data in rows and columns[Not SEO Friendly eg:: used for just preparing BankStatement].
+- They are used for preparing just "grid" components[present the data in table format and use it for filtering,sorting,....]
+- Grid is a component that allows the user to browse,edit,update,delete,filter,group,sort data etc..
+- Grid is designed by using table in HTML.
+- HTML uses tables to present content in rows and columns.
+- Early version of HTML[4] used tables for designing entire document.
+- HTML 5 introduced new elements and attributes for designing tables.
+- HTML 5 table elements are
+==============================================================
+Element 			Description 
+==============================================================
+<table>              It is a collection of rows and columns.
+<caption>            It sets caption for table which makes it SEO friendly.
+<thead>              It defines the table header section.
+<tbody>              It defines the table body section.
+<tfoot>              It defines the table footer section.
+<th>                 It defines column heading content[header cell].
+<tr>                 It defines the table row.
+<td>                 It defines the table cell content[ordinary cell].
+<colgroup> 	     It groups a set of columns to define effects.
+
+Websites like https://bootstrap.com,  https://mui.com/, https://www.telerik.com/
+HTML presents the table, where js will provide the functionality of sorting,filtering
+
+Syntax: 
+<table>
+
+  <caption>
+	 	Title
+  </caption>
+
+  <thead>
+	<tr>
+		<th> Heading cell </th>
+        </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+          	<td> Data Cell </td>
+      </tr>
+  </tbody>
+
+  <tfoot>
+       <tr>
+           	<td> Cell </td>
+       </tr>
+  </tfoot>
+
+</table>
+
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        table img{
+            width: 30px;
+        }
+
+        table{
+            font-family: Arial;
+        }
+
+        .L{
+            background-color: red;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;    
+        }
+
+        .a{
+            background-color: gray;
+            padding: 2px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .w{
+            background-color: green;
+            padding: 2px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        table span{
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <table width="100%" border='1'>
+        <caption>Asia Cup Points Table 2023- Group A</caption>
+        <thead>
+            <th>Pos</th>
+            <th colspan="2">Teams</th>
+            <th>Matches</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Tied</th>
+            <th>NR</th>
+            <th>Points</th>
+            <th>NRR</th>
+            <th colspan="2">Series Form</th>
+       </thead>
+       <tbody>
+            <tr>
+                <td>1</td>
+                <td><img src="public/images/pak.png"></td>
+                <td>Pakistan</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+4.760</td>
+                <td><span class="w">W</span></td>
+                <td><span class="a">A</span></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td><img src="public/images/ind.png"></td>
+                <td>IND</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+1.028</td>
+                <td><span class="a">A</span></td>
+                <td><span class="w">W</span></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td><img src="public/images/nep.png"></td>
+                <td>Nepal</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-3.572</td>
+                <td><span class="L">L</span></td>
+                <td><span class="L">L</span></td>
+            </tr>
+       </tbody>
+       <tfoot>
+            <td colspan="12">
+                Pos: Position, Pld: Played, Pts:Points, NRR: Net Run Rate
+            </td>
+       </tfoot>
+    </table>
+</body>
+</html>
+
+
+Formatting Tables in HTML
+=========================
+- Table element provides several attributes that are used to configure and format the table appearance.
+
+Border, Frame and Rules
+=======================
+Frame:: Frame is defined for entire table.
+	Frame uses the values:
+		- box
+		- void
+		- above
+		- below
+		- rhs 
+		- lhs
+		Syntax:
+			<table frame=”box”>
+
+Rules:: It is defined for rows and columns.
+	Rules can use following values:
+		- all
+		- none
+		- groups
+		- rows
+		- cols
+		Syntax:
+			<table frame=”box” rules=”groups”>
+
+Border:: It is defined for table cell.
+	 Border can use only 0 or 1.
+		0 - without border
+		1 - with border
+
+Note: Border can’t be applied if table is defined with rules, to get the effect we need to remove the attribute called "rules".
+		Syntax:
+			<table border=”1” frame=”void”>
+			<table border=”1” rules=”all”>
+			border will not be applied to table.
+
+Cell Spacing and Padding
+-> cellspacing  :: It sets space between cells.
+-> cellpadding  :: It sets space between border and cell content.
+
+Syntax:
+	<table width="600" cellpadding="10" cellspacing="10" border="1" frame="void">
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+

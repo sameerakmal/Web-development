@@ -1,0 +1,88 @@
+Browser Architecture
+++++++++++++++++++++
+ - Browser is a software tool to access webpages on the client device.
+ - Various browser available are
+	a. Chrome
+	b. Firefox
+	c. Edge
+	d. Safari
+ - Every browser comprises of following components
+	a. User interface : It contains title bar, address bar, refresh ....
+	b. Browser Engine : It is responsible for converting HTML,CSS into browser understable format.
+				Every browser has browser engine
+				a. Gecko
+				b. webkit
+				c. chakra
+				d. SpiderMonkey
+	c. Rendering  Engine      : It is responsible for presentation of processed content.
+	d. Javascript Interpreter: Every browser uses javascript as a langauge for interactions,It is translated using JS interpreter.
+	e. Network : It monitors the activity performed in a page when requested in browser.
+			a. Resource loaded
+			b. Number of request per page
+			c. Time taken to load Content 
+	f. UI Backend      : It contains the logic for UserInterface of the browser.
+	g. DataPersistence : It is a location where browser can store client details
+				a. Local storage
+				b. Session storage
+				c. Cookies etc...	  
+
+HTML Parsing in Browser
+=======================
+Flow 
+   -> Markup -> bytes-> characters -> Tokens[Tags] -> Elements [Nodes] -> DOM ->  Layout -> Rendering -> Painting
+
+HTML       -> presenting DOM
+JAVASCITPT -> Modifying  DOM 
+
+-> HTML present content on browser using elements arranged in hierarchial order called "DOM".
+-> There are 100's of elements.
+-> HTML Elements are classified into 5 categories
+  a. Normal elements
+  b. void elements
+  c. RC Data elements
+  d. Raw text elements
+  e. Foreign elements
+
+Normal elements
+- Elements which return a presentation directly on call back [without any additional attributes].
+- Elements in HTML are built by using tags.
+- Normal Elements require a start tag and end tag.
+- Normal Elements will start returning presentation but can’t stop implicitly.
+- They require explicit end tag.
+- Usually require start and end tags.
+		eg: <b> HELLO </b>
+
+void elements
+- The term void refers to element that doesn’t return any presentation directly on call back.
+- Void means no return type.
+- They can return only the specific content and stop implicitly.
+- Void elements doesn’t require “End Tag”.
+Ex:
+<img> tag Image – Element
+
+Raw Text Elements
+- These elements are presented without a tag.
+		eg:: Temparature20C 45000/-
+		     Temparture&deg;C &#8377;45000/-
+		     
+Ex:
+&copy; ©
+&#8377;
+&deg;
+
+RC Data Elements
+- Rich Text Content Elements
+- These elements will not allow any another element with in the context.
+Ex:
+<textarea> </textarea>
+
+eg#1. <p> Hello <b>pwian's</> <p>
+      <textarea> 
+	  Hello
+	  <b>pwian's</b>
+      </textarea>
+
+Foreign Element 
+- Every browser can’t understand these elements.
+- You have to import a library that makes the browser compatible with element.
+	Ex: SVG, MathML, Canvas

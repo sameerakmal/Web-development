@@ -1,0 +1,487 @@
+Form classes
+============
+ .form-control 		: text,number,url,email,password,textarea
+ 
+
+ .form-range   		: range
+ .form-control-color	: color	
+ .form-control-file 	: file
+ .form-select		: dropdown,listbox
+
+
+ .form-label		: label
+
+ 
+ .form-check-input	: radio and checkbox
+ .form-check-label	: label for radio and checkbox
+ .form-switch		: for radio and checkbox container
+
+switch type for radio
+=====================
+  <div class="form-switch">
+	<input type='checkbox' class='form-check-label'>
+	<label class='form-check-label'>Yes</label>
+  </div>
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    
+</head>
+
+<body class="container-fluid">
+   <form>
+        <h3>Register user</h3>
+        <dl class="w-25 border border-2 border-primary rounded p-4">
+            <dt>Username</dt>
+            <dd>
+                <input type="text" name="txtUsername" class="form-control">
+            </dd>
+            <dt>
+                Password
+            </dt>
+            <dd>
+                <input type="password" name="txtPassword" class="form-control">
+            </dd>
+            
+            <dt>
+                Select City
+            </dt>
+
+            <dd>
+                <select class="form-select">
+                    <option>Bengaluru</option>
+                    <option>Chennai</option>
+                    <option>Pune</option>
+                </select>
+            </dd>
+
+            <dt>
+                Price Range
+            </dt>
+            <dd>
+                <input type="range" class="form-range">
+            </dd>
+
+            <dt>
+                Subscribed
+            </dt>
+
+            <dd class="form-switch">
+                <input type="checkbox" class="form-check-input"> <label class="form-check-label"> Yes</label>
+            </dd>
+        </dl>
+      <button>submit</button>
+   </form>
+</body>
+</html>
+
+
+Button classes
+==============
+   .btn					
+   .btn-{contextual}			
+   .btn-outline-{contextual}
+   .btn-sm
+   .btn-lg
+   .btn-group
+   .btn-group-vertical
+   .btn-close
+   .btn-link
+   .btn-toolbar
+
+syntax
+   <button class="btn btn-primary"> Text </button>
+	btn : It is a base class and it is required for all button styles.
+
+eg#2
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       
+    </style>
+</head>
+<body class="container-fluid">
+   <form>
+        <dl>
+            <dt>
+                    ToolBar
+            </dt>
+            <dd class="d-flex justify-content-between btn btn-toolbar btn-danger">
+
+                <div class="btn-group">
+                    <button class="btn btn-danger">Home</button>
+                    <button class="btn btn-danger">Shop</button>
+                    <button class="btn btn-danger">Contact</button>
+                    <button class="btn btn-danger">Blog</button>
+                </div>
+
+                <div class="btn-group">
+                    <button class="bi bi-search btn btn-danger"></button>
+                    <button class="bi bi-heart btn btn-danger"></button>
+                    <button class="bi bi-person btn btn-danger"></button>
+                </div>
+
+            </dd>
+
+            <dt>Ordinary Button</dt>
+            <dd>
+                <button>Login</button>
+            </dd>
+
+            <dt>Button Base</dt>
+            <dd>
+                <button class="btn">Login</button>
+            </dd>
+
+            <dt>Contextual Button</dt>
+            <dd>
+                <button class="btn btn-success">Insert</button>
+                <button class="btn btn-warning">Update</button>
+                <button class="btn btn-danger">Delete</button>
+            </dd>
+
+            <dt>Outline Contextual Button</dt>
+            <dd>
+                <button class="btn btn-outline-success">Insert</button>
+                <button class="btn btn-outline-warning">Update</button>
+                <button class="btn btn-outline-danger">Delete</button>
+            </dd>
+
+            <dt>Special button</dt>
+            <dd>
+                <button class="btn-close"></button>
+                <button class="btn btn-link">SignOut</button>
+            </dd>
+
+            <dt>
+                Group Button</dt>
+            <dd class="btn-group-vertical">
+                <button class="btn btn-success">Insert</button>
+                <button class="btn btn-warning">Update</button>
+                <button class="btn btn-danger">Delete</button>
+            </dd>
+
+            <dt>
+                Logo based button
+	    </dt>
+            <dd class="btn-group-vertical">
+                <button class="btn btn-success bi-facebook"></button>
+                <button class="btn btn-warning bi-instagram"></button>
+                <button class="btn btn-danger bi-twitter"></button>
+            </dd>
+
+        </dl>
+        
+   </form>
+</body>
+</html>
+
+
+Input group classes
+===================
+	.input-group
+	.input-group-text
+
+syntax: 
+ 	<div class="input-group">
+		<span class="input-group-text">&#8377;</span>
+            	<input type="text">
+            	<span class="input-group-text">.00</span>
+	</div>
+
+
+eg#3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+   <form>
+        <h2>Amazon Search Bar</h2>
+        <div class="w-50 input-group">
+            <select class="input-group-text">
+                <option>All</option>
+                <option>Mobiles</option>
+                <option>Electronics</option>
+            </select>
+            <input type="text" class="form-control" placeholder="Search Amazon.in">
+            <button class="bi bi-search btn btn-warning"></button>
+        </div>
+
+
+       <h2>Netflix Register</h2>
+       <div class="w-50 input-group input-group-lg p-4 bg-black">
+            <input type="email" name="txtEmail" placeholder="Your Email Address" class="form-control">
+            <button class="btn btn-danger ms-2">
+                Get Started <span class="bi bi-chevron-right"></span>
+            </button>      
+        </div>
+
+        <h2>Password</h2>
+        <div class="w-50 input-group">
+            <span class="bi bi-key-fill input-group-text"></span>
+            <input type="password" class="form-control">
+            <span class="bi bi-check-square input-group-text bg-success text-white"></span>
+        </div>
+
+        <h4>Price</h4>
+        <div class="w-50 input-group">
+            <span class="input-group-text bg-dark text-white">&#8377;</span>
+            <input type="text" class="form-control">
+            <span class="input-group-text bg-dark text-white">.00</span>
+        </div>
+
+   </form>
+</body>
+</html>
+
+Text Alignment
+==============
+    .text-align
+    .text-justify
+    .text-end
+    .text-start
+
+Text Format
+===========
+    .fw-bold
+    .fst
+
+Designing a Text Area
+=====================
+eg#4
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid">
+   <form>
+        <fieldset class="w-25">
+            <legend>Your Comments</legend>
+            <textarea class="form-control">
+
+            </textarea>
+        </fieldset>
+        <button class="btn btn-primary mt-2">
+            Post your comments
+        </button>
+   </form>
+</body>
+</html>
+
+
+Designing a registration page using dl,dt and dd through bootstrap[Grid display]
+==================================================================================
+eg#5
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body class="container-fluid">
+   <form>
+        <h3>Register User</h3>
+        <div class="w-50">
+            <dl class="row">
+                <dt class="col-2">Username</dt>
+                <dd class="col-10">
+                    <input type="text" name="txtName" class="form-control">
+                </dd>
+                <dt class="col-2">Password</dt>
+                <dd class="col-10">
+                    <input type="password" name="txtPassword" class="form-control">
+                </dd>
+                <dt class="col-2">Age</dt>
+                <dd class="col-10">
+                    <input type="text" name="txtAge" class="form-control">
+                </dd>
+                <dt class="col-2">City</dt>
+                <dd class="col-10">
+                    <select name="txtCity" class="form-select">
+                        <option>Select City</option>
+                        <option>Delhi</option>
+                        <option>Bengaluru</option>
+                        <option>Mumbai</option>
+                    </select>
+                </dd>
+            </dl>
+        </div>   
+   </form>
+</body>
+</html>
+
+EMI Calculator
+==============
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body class="container-fluid bg-secondary">
+
+   <div class="bg-white p-4 m-4 rounded mt-2">
+        
+        <div class="h2">
+            Personal Loan EMI Calculator
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                Amount u need <input type="text" size="15" value="50000">
+            </div>
+            <div class="col">
+                For<input type="text" size="4" value="5"> years
+            </div>
+            <div class="col">
+                InterestRate <input type="text" size="4" value="10.5"> %
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-3">
+            <div class="col">
+                <input type="range" class="w-100" min="1" max="100" value="10">
+            </div>
+            <div class="col">
+                <input type="range" class="w-100" min="1" max="5" value="5">
+            </div>
+            <div class="col">
+                <input type="range" class="w-100" min="10.45" max="16.45" value="11.45">
+            </div>
+        </div>  
+
+        <div class="row mt-3 bt-4">
+            <div class="col">
+                <span>&#8377; 50,000</span>
+                <span class="float-end">&#8377; 10,00,000</span>
+            </div>
+            <div class="col">
+                <span>1 year</span>
+                <span class="float-end">5 year</span>
+            </div>
+            <div class="col">
+                <span>10.5%</span>
+                <span class="float-end">16.45%</span>
+            </div>
+        </div>
+
+        <div class="row mt-3 mb-4">
+            <div class="col">
+                <button class="btn btn-primary btn-group float-end">Calculate</button>
+            </div>
+        </div>
+
+   </div>
+</body>
+</html>
+
+Amazon login form
+=================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+        a{
+            text-decoration: none;
+        }
+        body{
+            height: 100vh;
+        }
+        
+    </style>
+</head>
+<body class="container-fluid">
+
+   <div class="d-flex justify-content-center align-content-center">
+       <form class="w-25 h-100">
+            
+        <div class="h4">
+            Sign In
+        </div>
+            
+          <div>
+                <label class="form-label fw-bold">
+                    Enter Mobile number or email
+                </label>
+                <div class="mt-1">
+                    <input type="email" name="txtUsername" class="form-control">
+                </div>
+          </div>
+
+            <div class="mt-3">
+                <button class="btn btn-warning w-100">Continue</button>
+            </div>
+
+            <div class="mt-4">
+                <p>
+                    By continuing, you agree to Amazon's <a href="#">Conditions of Use</a>   and <a href="#">Privacy Notice.</a>
+                </p>
+            </div>
+           
+            <div class="mt-4">
+                <details>
+                    <summary>
+                        <a href="#">Need Help</a>
+                    </summary>
+                    <dl class="ms-3 mt-1">
+                        <dd>
+                            <a href="#">Forgot your password</a>
+                        </dd>
+                        <dd>
+                            <a href="#">Other Issues with Sign-In</a>
+                        </dd>
+                    </dl>
+                </details>
+            </div>
+
+       </form>
+   </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+	

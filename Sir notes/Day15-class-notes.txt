@@ -1,0 +1,588 @@
+Headings in HTML
+   - Headings need a different appearance in page.
+   - HTML provides pre-defined heading levels.
+   - HTML headings levels are defined by using <hn>.
+   - “n” refers to level number from 1 to 6.
+   - They are not mainly meant for 'appearance' but also for 'SEO friendly'.
+
+Syntax:
+<h1> </h1>
+<h2> </h2>
+ ……………….
+<h6> </h6>
+- Heading levels from 1 to 6 will decrease the size.
+- Heading can be defined with “align” attribute, which can align left, center, right or justify.
+
+
+FAQ: Why to use heading element for headings?
+- Heading elements will make your topics SEO friendly.
+- SEO can identify the topics on your page if they are defined in heading.
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+</head>
+<body>
+    <h1>WebTechnologies</h1>
+    <h2>FrontEnd</h2>
+    <h3>HTML</h3>
+    It is a Presentation language
+    <h3>CSS</h3>
+    It is a Styling language
+    <h2>BackEnd</h2>
+    <h3>Node JS</h3>
+    It is a server side scripting language
+    <h3>MongoDB</h3> 
+    It is a database engine
+</body>
+</html>
+
+
+Note: The effect of headings can be give without <hn> tags also, then why we need <hn> tags
+      <hn> tags are given to make page SEO friendly which is as shown below
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <script type="text/javaScript">
+        function bodyload() {
+            var x = document.getElementsByTagName("h3");
+            alert(`The no of 3rd level elements are :: ${x.length}`);
+        }
+    </script>
+    
+</head>
+<body onload="bodyload()">
+    <h1>WebTechnologies</h1>
+    <h2>FrontEnd</h2>
+    <h3>HTML</h3>
+    It is a Presentation language
+    <h3>CSS</h3>
+    It is a Styling language
+    <br><br>
+    <font size='4'>
+        <b>JavaScript</b><br><br>
+    </font>
+    It is a Scripting language
+    <h2>BackEnd</h2>
+    <h3>Node JS</h3>
+    It is a server side scripting language
+    <h3>MongoDB</h3> 
+    It is a database engine
+</body>
+</html>
+
+Output : The no of 3rd level elements are : 4
+
+
+2. can we change the appearence of <hn> tags.
+Ans. yes possible using css styling attributes.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        h1{
+            font-family: Algerian;
+            font-size: 60px;
+        }
+    </style>  
+</head>
+<body onload="bodyload()">
+    <h1>WebTechnologies</h1>
+    <h2>FrontEnd</h2>
+    <h3>HTML</h3>
+    It is a Presentation language
+    <h3>CSS</h3>
+    It is a Styling language
+    <h2>BackEnd</h2>
+    <h3>Node JS</h3>
+    It is a server side scripting language
+    <h3>MongoDB</h3> 
+    It is a database engine
+</body>
+</html>
+
+3. Can we remove the default style defined for Heading?
+ Ans. default style for heading are bold,font-size,display: block.
+      To remove/control default style we go for 'css inheritance value'.
+      we need to use css inheritance value "unset".
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        h1{
+            font-weight: unset;
+            font-size: unset;
+            display: unset;
+        }
+    </style>
+    
+</head>
+<body onload="bodyload()">
+    <h1>WebTechnologies</h1>
+    <h1>welcome</h1>
+    <h2>FrontEnd</h2>
+    <h3>HTML</h3>
+    It is a Presentation language
+    <h3>CSS</h3>
+    It is a Styling language
+    <h2>BackEnd</h2>
+    <h3>Node JS</h3>
+    It is a server side scripting language
+    <h3>MongoDB</h3> 
+    It is a database engine
+</body>
+</html>
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        h1{
+            all: unset;        
+	}
+    </style>
+    
+</head>
+<body onload="bodyload()">
+    <h1>WebTechnologies</h1>
+    <h1>welcome</h1>
+    <h2>FrontEnd</h2>
+    <h3>HTML</h3>
+    It is a Presentation language
+    <h3>CSS</h3>
+    It is a Styling language
+    <h2>BackEnd</h2>
+    <h3>Node JS</h3>
+    It is a server side scripting language
+    <h3>MongoDB</h3> 
+    It is a database engine
+</body>
+</html>
+
+Note:
+- Don’t use headings for highlighting any word or sentence in a paragraph.
+- Heading by default will have line break above and below.
+- Don’t use too many headings in a page. SEO can SPAM your page.
+
+FAQ: 
+ Q> Why to use heading element for headings?
+ Q> Why we have to use heading elements for giving heading,can't we configure using HTML text styles and css styles?
+ Q> can we change the appearnce of <hn> tags?
+ Q> Can we remove the default style defined for Heading?
+
+========================================================================================================================
+Paragraphs and Blockquotes
+- HTML ignores the line breaks and paragraph marks.
+- You have to manually add paragraphs by using <p> element.
+- It supports “align” attribute, which can set text left, center, right or justified.
+- Paragraphs will have a line break before and after.
+
+Syntax:
+<p>Your Content</p>
+<p align='left/right/center/justify'>Your Content </p>
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+</head>
+<body>
+    HTML
+    It is a Markup Langauge 
+    It is used for Presentation Purpose
+</body>
+</html>
+
+Output
+HTML It is a Markup Langauge It is used for Presentation Purpose
+
+Note: The expectation is we need the content one below the other,then we would go for <div> or we would go for <br>
+      div : inline
+      br  : takes the data to new line
+      
+Note: <div> container will seperate the content.
+       br if we use and if we want to align the content to center then it is not possible as shown below
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+</head>
+<body>
+    HTML
+    <div>It is a Markup Langauge </div>
+    <div>It is used for Presentation Purpose</div>
+</body>
+</html>
+Output
+HTML
+It is a Markup Langauge
+It is used for Presentation Purpose
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+</head>
+<body>
+    <h3> HTML </h3>
+    <p align = 'center'>It is a Markup Langauge</p>    
+    <p>It is used for Presentation Purpose</p>  
+</body>
+</html>
+
+Working with <blockquote> tag
+==============================
+- Blockquote is similar to paragraph but have left and right indentation for text.
+   [Indentation is space between margin and text]
+- It is defined by using “<blockquote>” element.
+- In SEO blockquote is used a summary for content in page.
+- It is mainly used during summary representation.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        blockquote{
+            padding-left: 250px;
+            padding-right: 250px;
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+    <blockquote align="justify">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or 
+	software installer that distributes the software with your device; or (ii) you and.
+    </blockquote>
+    <p align="justify">
+        Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of 
+	its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by 
+	Microsoft or one of its affiliates, and Microsoft is the
+        retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer,
+        use of this software is subject to your volume license agreement rather than this agreement.
+    </p>  
+</body>
+</html>
+
+FAQ. How to set the first-line indent for paragraph or blockquote?
+	Ans. we define it using the attribute called text-indent.
+		blockquote
+		{
+			text-indent : 100px;
+		}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        blockquote{
+            padding-left: 250px;
+            padding-right: 250px;
+            font-style: italic;
+            text-indent: 100px;
+        }
+    </style>
+</head>
+<body>
+    <blockquote align="justify">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer or 
+	software installer that distributes the software with your device; or (ii) you and.
+    </blockquote>
+    <p align="justify">
+        Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, 
+	one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced 
+	by Microsoft or one of its affiliates, and Microsoft is the
+        retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this 
+	software is subject to your volume license agreement rather than this agreement.
+    </p>  
+</body>
+</html>
+
+Output : because text-indent is specified for <blockquote> tag, The first line will have some extra space at the begining.
+
+
+2. How to set line space, word space, character space in a paragraph?
+Ans. using css attributes
+		line-height
+		word-space
+		letter-space
+
+syntax: 
+ p{
+	line-height  : 10px;
+	word-space   : 5px;
+	letter-space : 15px;
+ }
+
+eg#1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        blockquote{
+            padding-left: 250px;
+            padding-right: 250px;
+            font-style: italic;
+            text-indent: 100px;
+            line-height: 25px;
+
+        }
+        h1{
+            text-align: center;
+            word-spacing: 15px;
+            letter-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>News updates</h1>
+    <blockquote align="justify">
+        Depending on how you obtained the Windows software, this is a license agreement between (i) you and the device manufacturer 
+	or software installer that distributes the software with your device; or (ii) you and.
+    </blockquote>
+    <p align="justify">
+        Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one 
+	of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced 
+	by Microsoft or one of its affiliates, and Microsoft is the
+        retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this 
+	software is subject to your volume license agreement rather than this agreement.
+    </p>  
+</body>
+</html> 
+
+3. How to set a DropCrap?
+Ans. By using the following style we can set DropCrap.
+-> Access the first letter using the class: first-letter
+-> After Acessing the firstletter apply fonts[size,weight,family]
+-> Apply css float as left
+
+syntax ::
+ p:: first-letter{
+	font-size: 50px;
+        font-weight: bold;
+        float: left;
+        font-family: Brush Script Mt;
+        color: blue;
+        padding-right: 2px;
+ }
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+        .main-para::first-letter{
+            font-size: 50px;
+            font-weight: bold;
+            float: left;
+            font-family: Brush Script Mt;
+            color: blue;
+            padding-right: 2px;
+        }
+    </style>
+</head>
+<body>
+    <p align="justify" class="main-para">
+        Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, 
+	one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices 
+	produced by Microsoft or one of its affiliates, and Microsoft is the
+        retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, 
+	use of this software is subject to your volume license agreement rather than this agreement.
+    </p>  
+</body>
+</html>
+
+4. How to display paragrah as continous paragraph?
+Ans. We prefer working with grid,but it is not a good approach, instead we can use css columsn attribute as shown below. 
+
+By using css columns attribute
+section
+{
+       columns: 5;
+       column-gap: 20px;
+       margin-top: 25px;
+       column-rule: 2px dotted black;
+}
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>headings</title>
+    <style>
+
+        header{
+            background-color: black;
+            color: white;
+            font-size: 45px;
+            font-weight: bold;
+            font-family: 'Times New Roman';
+            padding: 10px;
+            text-align: center;
+        }
+
+        section{
+            columns: 5;
+            column-gap: 20px;
+            margin-top: 25px;
+            column-rule: 2px dotted black;
+        }
+
+        p{
+            text-align: justify;
+        }
+        .para1::first-letter{
+            float: left;
+            margin-left: 5px;
+            color:blue;
+            font-size: 50px;
+            font-weight: bold;
+            font-family: 'Times New Roman';
+        }
+        h3{
+            background-color: black;
+            color: white;
+            padding: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        HINDU
+    </header>
+    <section>
+        <p class="para1">
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, 
+            one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices 
+            produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. 
+            Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather 
+            than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur 
+            odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla 
+            officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem 
+            assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. 
+            Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit 
+            exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat 
+            rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p>
+        <p>
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p>  
+        <p>
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p> 
+        <h3>Sports Updates</h3> 
+        <p>
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p>  
+        <p>
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p>  
+        <p>
+            Microsoft Corporation (or, based on where you live or, if a business, where your principal place of business is located, one of its affiliates) if you acquired the software from a retailer. Microsoft is the device manufacturer for devices produced by Microsoft or one of its affiliates, and Microsoft is the
+            retailer if you acquired the software directly from Microsoft. Note that if you are a volume license customer, use of this software is subject to your volume license agreement rather than this agreement.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt a ea ducimus! Cum temporibus, id expedita ipsa consequatur odit deserunt asperiores, mollitia nulla debitis ab! Nihil ea similique quo! Voluptatum!
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, consequuntur veritatis cum ea at eius fugiat nisi nulla officiis molestias maiores neque blanditiis, voluptatem rem ullam. Ab doloribus placeat fugiat, tempore ea exercitationem assumenda esse eum praesentium eos pariatur quia, dolorum accusamus porro beatae!
+            Omnis modi sint illum dolore quas atque explicabo, voluptas, harum velit totam aspernatur voluptatem placeat. Obcaecati culpa dolorem cumque delectus vero voluptatem at dolores aut laudantium sit, quibusdam facere labore velit exercitationem ea maiores nulla dignissimos, quidem iure. Dolor eius similique animi harum nemo, excepturi repellat rerum esse, debitis recusandae, ducimus beatae a obcaecati? Eaque, omnis!
+        </p>  
+    </section>
+    
+</body>
+</html>
+
+FAQ
+Q> How to set the first-line indent for paragraph or blockquote?
+Q> How to set line space, word space, character space in a paragraph?
+Q> How to set a DropCap?
+Q> How to display paragrah as a continous paragraph?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

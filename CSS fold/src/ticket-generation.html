@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./styles/css/ticket-effects.css">
+    <style type="text/css" media="print">
+        div{
+            background-color: pink;
+            border: 2px solid black;
+            padding: 5px;
+            margin: 5px;
+            }
+        dl{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        img,button{
+            display: none;  
+        }
+    </style>
+    
+</head>
+<body>
+    <div>
+        <a href="https://www.animatedimages.org/cat-trains-75.htm"><img src="https://www.animatedimages.org/data/media/75/animated-train-image-0010.gif" border="0" alt="animated-train-image-0010" /></a>        <h1>Train ticket</h1>
+        <dl>
+            <dt>Departure date</dt>
+            <dd>24-09-2024</dd>
+            <dt>Departure time</dt>
+            <dd>19:00</dd>
+        </dl>
+        <button><a href="javascript:window.print()">Print ticket</a>
+        </button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,297 @@
+Multimedia in HTML
+==================
+ => It comprises of animations, audio and video content.
+ => Directly keeping audio and video is not a good practise because they occupy high memory, Due to which loading time would be more.
+ => If we still want to keep audio and video directly inside the page we use
+	a. <video>
+        b. <audio>
+        c. <embed>
+        d. <marquee>
+ 
+Marquee:
+- It is used to display scrolling content in page.
+- <marquee> is a container that can contain scrolling content.
+
+Syntax:
+<marquee scrollamount="" direction="" width="" height="" loop="" bgcolor="">
+	Any Content
+</marquee>
+
+- You can use the following attributes to handle marquee
+Attribute 					Description
+====================================================================================================
+scrollamount 				Control the marquee scrolling speed [1 to 100].
+					Syntax:
+						<marquee scrollamount="15">
+							Flash.. Flash.. 70% OFF on electronics.
+						</marquee>
+
+direction				 It specifies the scrolling  directions, which can be left, right, up or down.
+					 Syntax:
+							<marquee direction=”up”>
+							</marquee>
+
+width and height			Sets the width and height for marquee content.
+					Syntax:
+						<marquee width=”100” height=”300”>
+						</marquee>
+
+
+loop 					It specifies the number of time	marquee content need to display.
+						Ex:
+						<marquee loop="3" scrollamount="15">
+							Flash.. Flash.. 70% OFF on  electronics.
+						</marquee>
+
+bgcolor 				It sets background color for marquee area.
+						Syntax:
+							<marquee bgcolor=”yellow”></marquee>
+
+
+
+eg#1.
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <marquee scrollamount="20"   bgcolor="yellow" width="300">
+        Big Billon Deals <img src="public/images/a1.jpg" 
+                height="50" width="50">starts of Amazon and Flipkart
+                <img src="public/images/a2.jpg"
+                height="50" width="50"> on oct-2023
+    </marquee>
+    <marquee  onmouseout="this.start()" onmouseover="stop()"
+    scrollamount="20" behaviour="slide" direction="right" bgcolor="orange" width="500">
+        Big Billon Deals <img src="public/images/a1.jpg" 
+                height="50" width="50">starts of Amazon and Flipkart
+                <img src="public/images/a2.jpg"
+                height="50" width="50"> on oct-2023
+    </marquee>
+</body> 
+</html>
+
+
+Embed Audio and Video Content
+- HTML can use “<embed>” element to embed any multi media content into page.
+- HTML 5 introduces <video> and <audio> elements for embedding multi media.
+
+video can be of type : .mp4,.avi,.ogg,.mkv,.mov etc..
+audio can be of type : .mp3,.wav,.midi etc...
+
+
+Attribute 					Description
+====================================================================================
+autoplay 				It uses “boolean” value[true/false]. 
+					It enables autoplay when set to true.
+
+controls 				It is used to define controls for media player. 
+					Controls can be like seekbar, and play/resume etc.
+
+crossorign				It indicates whether to use CORS.
+
+height/width				To define width and height of media player.
+
+loop 					It uses a boolean value, which allows to loop the video continuously.
+
+muted 					It uses boolean value to mute the video on loading.
+
+poster 					It is used as thumbnail for video before playback.
+
+src 					It defines the name and location of video content.
+
+Syntax:
+<video muted src=”” poster=””>
+	Message – Is displayed when browser is unable to use video element.
+</video>
+
+eg#2
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video src="public/images/Day 29.mp4" width="300" height="300" controls poster="public/images/youtube-logo.jpg" muted loop>
+        <p>Not supported by the browser</p>
+    </video>
+</body> 
+</html>
+
+
+Note: Audio element is also similar to video. [mp3,MIDI]
+Syntax:
+<audio controls src="" >
+</audio>
+Poster can’t be defined for audio on various browsers.
+
+
+							======
+							Styles
+							======
+=> Styles are attributes defined for HTML elements to make it more interactive and responsive[adjust according to device].
+=  HTML elements have attributes but limited in functionality, style attributes make HTML more effective. 
+=> Styles can be defined in 3 ways
+	o Inline Styles
+	o Embedded Styles
+	o External Style Sheet
+	
+Inline Styles:
+- The styles are defined for elements by using “style” attribute.
+- Every element has its own individual styles.
+- The styles defined for one element can’t be re-used for other elements.
+- These styles are faster in rendering as they are local to element.
+
+eg#3.
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Styles</title>
+</head>
+<body>
+	<h2 style="background-color: green; color: white; text-align: center;">HTML</h2>
+	<h2>CSS</h2>
+	<h2>JavaScript</h2>
+</body>
+</html>
+
+Embedded Styles:
+- Styles are defined in page by using <style> element.
+- You can keep all your styles at one location and use across various elements.
+- It is good for reusing styles.
+- Slower when comparted to inline.
+- We can't access styles from another pages.
+
+syntax: 
+  <style type="text/css">
+	selector{
+		attribute1:value;
+		attribute2:value;
+	}
+  </style>
+
+eg#4.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       h2{
+        background-color: red;
+        text-align: center;
+        color: white;
+        padding: 5px;
+       } 
+    </style>
+</head>
+<body>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>JavaScript</h2>
+</body>
+</html>
+Note: show them the loading time by keeping both inline and embed.
+
+
+FAQ: Where to embed the styles?
+Ans. You can configure style container in head or body section.
+     If you want to configure a set of style, which are loaded into browser memory, and used later by the elements according 
+     to the requirement then keep in <head> section.
+     If you want to configure a set of styles, which are applied directly on body load then better define them in <body>.
+
+a. keeping in <head>section
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    <style>
+        .head{
+        	background-color: red;
+         	text-align: center;
+         	color: white;
+         	padding: 5px;
+        } 
+     </style> 
+</head>
+<body>
+    <h2>HTML</h2>
+    <h2 class="head">CSS</h2>
+    <h2>JavaScript</h2>
+</body>
+</html>
+
+
+b. keeping in <body> section
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>  
+    
+</head>
+<body>
+    <h2>HTML</h2>
+    <h2>CSS</h2>
+    <h2>JavaScript</h2>
+    <style>
+        h2{
+         background-color: red;
+         text-align: center;
+         color: white;
+         padding: 5px;
+        } 
+     </style> 
+</body>
+</html>
+
+c. we can also keep outside of html elements(not recommended because the code would behave in abnormal way)
+
+FAQ: Where to embed the styles?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

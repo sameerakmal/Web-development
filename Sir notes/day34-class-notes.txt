@@ -1,0 +1,215 @@
+Bootstrap classes for Forms
+===========================
+1. Install Bootstrap
+ > npm install bootstrap --save [don't use powershell,make sure u r using command prompt]
+ 
+2. Link Bootstrap css to your page
+ > <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css"> 
+ > <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+
+3. Bootstrap Container class[To display the content of the page as per the device view port]
+	.container		: [smart watch]	
+        .container-sm		: [mobiles]
+	.container-md		: [tablets]
+	.container-lg		: [pc]
+        .container-xl		: [laptop]
+        .container-xxl		: [laptop wide screen]
+        .container-fluid	: responsive[fit according to device]
+
+	eg: <body class="container-fluid">
+	    </body>
+
+4. Margins
+	.m-{size}  : margin in all directions
+	.ms-{size} : left margin[s=start]
+	.me-{size} : right margin[e=end]
+	.mt-{size} : top margin
+	.mb-{size} : bottom margin
+		
+		size : 1 to 5
+	
+	eg: <form class="ms-5">
+	    <h2 class="ms-4"></h2>
+
+5. Padding
+	.p-{size}  : padding in all directions
+	.ps-{size} : left padding[s=start]
+	.pe-{size} : right padding[e=end]
+	.pt-{size} : top padding
+	.pb-{size} : bottom padding
+
+		size : 1 to 5
+
+6. Border
+	.border			: 
+	.border-{size}		: [1 to 3]
+	.border-{contextual}	: warning danger success info primary secondary
+
+	.rounded
+	.rounded-{size}		: [1 to 3]
+	.rounded-circle
+	.rounded-pill		: [requires more width]
+
+		eg: <img src="fashion.jpg" class="border rounded-circle">
+
+
+7. Width and Height
+	.w-{size}	: 25,50,75,100
+	.h-{size}	: 25,50,75,100
+
+
+8. Background and text colors
+	.bg-{contextual}	: warning danger success info primary secondary
+	.text-{contextual}	: warning danger success info primary secondary
+
+
+9. Display
+	.d-none
+	.d-block
+	.d-inline
+	.d-flex
+	.flex-wrap
+	.flex-nowrap
+	.justify-content-center
+	.justify-content-between
+	.justify-space-between
+	.align-items-center
+	.align-items-end
+	.align-items-top
+	.align-items-start
+	.align-items-baseline
+
+10. Text Alignment
+
+     .text-end
+     .text-start
+     .text-center
+
+11. Text Format
+
+    .fw-bold
+    .fst-italic
+    .fst-normal
+    .fs-{size} - 1 to 6
+
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <style>
+        body{
+            height: 100vh;
+        } 
+    </style>
+</head>
+<body class="d-flex justify-content-center align-items-center">
+    <form class="container-fluid p-5 m-5 border border-5 border-success w-25 h-50 ">
+        <h3 class="text-dark">Registration page</h3>
+        <dl>
+            <dt>Username</dt>
+            <dd>    
+                <input type="text" name="txtName">
+            </dd>
+            <dd class="text-success">Name is required</dd>
+
+            <dt>Password</dt>
+            <dd>
+                <input type="text" name="txtPassword">
+            </dd>
+        </dl>
+        <button>submit</button>
+    </form>
+</body>
+</html>
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+   <header class="bg-danger text-light p-3 m-3 d-flex justify-content-between">
+
+        <div>
+            <span class="fw-bold">Shopper.</span>
+        </div>
+
+        <div>
+            <span class="me-3">Home</span>
+            <span class="me-3">Shop</span>
+            <span class="me-3">Pages</span>
+            <span class="me-3">Blog</span>
+            <span class="me-3">Docs</span>
+        </div>
+
+        <div>
+            <span class="bi bi-search me-3"></span>
+            <span class="bi bi-heart me-3"></span>
+            <span class="bi bi-cart me-3"></span>
+        </div>
+
+   </header> 
+</body>
+</html>
+
+
+10. How to design a Grid (display: grid)?
+	.row	
+	.col	    : responsive
+	.col-{size} : 1 to 12
+
+syntax: 
+   <section class = "row">
+	<nav   class="col"></nav>
+	<main  class="col"></main>
+	<aside class="col"></aside>
+   </section>
+
+eg#3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+       section{
+        	height: 100vh;
+       }
+    </style>
+</head>
+<body class="container-fluid">
+   <section class="row w-100 border border-2 border-success m-2 p-2 w-50">
+        <nav class="border border-black m-2 p-2 col">Nav</nav>
+        <main class="border border-black m-2 p-2 col">Main</main>
+        <aside class="border border-black m-2 p-2 col">Aside</aside>
+   </section>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

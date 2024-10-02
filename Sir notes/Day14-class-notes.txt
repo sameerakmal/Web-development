@@ -1,0 +1,516 @@
+d. Code Element
+    - <code> is an element used to define code snippet in web page.
+    - It allows to browser and SEO to understand that the content enclosed in some computer code.
+     
+e. Variables in HTML Code Presentation:
+     - You can <var> for variable in HTML.
+     - Variables are designated with <var> for code snippet.
+
+f. Sample template for a code
+	-> we use <samp> element to present this.
+	-> It is used for comments and captions in page.
+
+General syntax 
+==============
+<samp>caption about the program</samp>
+<code>
+    <pre>
+	<!-- Code about the caption -->
+    </pre>
+</code>
+
+eg#1:: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+        var{
+            color: blue;
+        }
+        samp{
+            color: gray;    
+        }
+        code{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <samp>Program of Printing Height X Width</samp>
+    </div>
+    <code>
+        <pre>
+            #include &lt;stdio.h&gt;
+                void main()
+                {
+                    int <var>height</var> = 100;
+                    int <var>width</var>  = 200;
+                    printf("welcome to html...");
+                }  
+        </pre>
+    </code>
+</body>
+</html>
+======================================================================================================
+
+small text and large text
++++++++++++++++++++++++++
+ => <small> content <small>  :: It sets letter size small
+ => <big> large   </big>     :: It sets letter size large
+
+Note: In css we adjust the font we use "font-style", In HTML we have <font> but its not suggestible.
+
+eg::
+<body>
+     Normal Text<br>
+    <small>Small Text</small><br>
+    <big>Large Text</big>
+</body>
+
+=====================================================================================================
+
+Details and Summary
+- It is used to display the content in detail only when required.
+- It allows to expand and collapse your content.
+- It saves the screen space.
+
+Syntax:
+<details>
+	<summary> Your Title </summary>
+		some text…
+</details>
+- You can specify “open” attribute to show the details.
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+       details div{
+            background-color: black;
+            color: white;
+            padding: 5px;
+       }
+    </style>
+</head>
+<body>
+    <details>
+        <summary>What is Netflix?</summary>
+        <div>
+            Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more – on 	   	    	    thousands of internet-connected devices.<br>
+            You can watch as much as you want, whenever you want, without a single ad – all for one low monthly price. 
+	    There's always something new to discover, and new TV shows and movies are added every week!
+        </div>
+    </details>
+    <details>
+        <summary>How much does Netflix cost?</summary>
+        <div>
+            Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from 		   		₹149 to ₹649 a month. No extra costs, no contracts.
+        </div>
+    </details>
+</body>
+</html>
+
+eg#3.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sematics</title>
+    <style type="text/css">
+        details span{
+            display: block;
+            padding: 10px;
+            margin-left: 10px;
+            margin-bottom: 10px;
+            background-color: black;
+            color: white;
+            width:150px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <details open>
+            <summary>HTML</summary>
+                <span>Normal Elements</span>
+                <span>RC Elements</span>
+                <span>Void Elements</span>
+                <span>Foreign Elements</span>
+        </details>
+        <details>
+            <summary>Java</summary>
+                <span>OOPS</span>
+                <span>Datatypes</span>
+                <span>Compiler</span>
+                <span>JVM</span>
+        </details>
+    </nav>
+</body>
+</html>
+
+Note: Open amazon.in and tell  >Need help is also <details>?
+
+========================================================================================
+
+Data List with Terms and Definitions:
+	- Data List is defined with <dl>
+	- Data list is a collection of terms defined with <dt> and definition defined with <dd>
+
+Syntax:
+<dl>
+	<dt>Term</dt>
+	<dd> Definition </dd>
+	<dt> Term </dt>
+	<dd> Definition </dd>
+	<dd> Definition </dd>
+</dl>
+
+Note: 
+1. <dt> and <dd> will have some default alignment, so it is easy for presentation
+2. dl has the capability to display in columns using grid(dt-> one column and dd-> one column)
+
+
+eg#4.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+       dt{
+        background-color: gray;
+        color: black;
+        padding: 5px;
+       }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>
+            HTML
+        </dt>
+        <dd>
+            It is a markup language
+        </dd>
+        <dd>
+            It is used for presentation
+        </dd>
+        <dd> 
+            Designed by Tim Berner lee
+        </dd>
+        <dt>
+            CSS
+        </dt>
+        <dd>
+            It defines style
+        </dd>
+        <dt>
+            Javascript
+        </dt>
+        <dd>
+            It manipulates DOM
+        </dd>   
+    </dl>
+</body>
+</html>
+
+eg#5.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+       dl{
+         display: grid;
+         grid-template-columns: 3fr 9fr;
+       }
+       dt{
+         background-color: black;
+         color: white;
+         padding: 5px;
+         margin-bottom: 10px;
+       }
+       dd{
+         background-color: lightgray;
+         color: black;
+         padding: 5px;
+         margin-bottom: 10px;
+       }
+    </style>
+</head>
+<body>
+    <dl>
+        <dt>First Name</dt>
+        <dd>some name</dd>
+        <dt>Last Name</dt>
+        <dd>some name</dd>  
+        <dt>Father Name</dt>
+        <dd>some name</dd>
+        <dt>Age</dt>
+        <dd>some number</dd>
+        <dt>Date of birth</dt>
+        <dd>some date</dd>
+    </dl>
+</body>
+</html>
+
+eg#6.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+       .title{
+            font-size: 40px;
+            font-weight: bold;
+       }
+       dt{
+         background-color: black;
+         color: white;
+         padding: 10px;
+         width: 150px;
+         position: sticky;
+         top: 0;
+         margin-left: 10px; 
+       }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="title">Shopper.</div>
+        <dl>
+            <dt>Electornics</dt>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+            <dd>Mobiles</dd>
+            <dd>Watches</dd>
+
+            <dt>FashionWear</dt>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd> 
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd> 
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd> 
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd> 
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd>
+            <dd>KidsWear</dd>
+            <dd>MensWear</dd>
+            <dd>WomensWear</dd> 
+
+            <dt>Footwear</dt>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+            <dd>Sneakers</dd>
+            <dd>Loafers</dd>
+            <dd>Casuals</dd>
+        </dl>
+    </nav>
+</body>
+</html>
+
+Note: We can make content sticky on a webpage using css property 
+	dt{
+		position : sticky;
+		top : 0;
+	}
+       show one example of inox.com (check quickbox section, it is fixed once we scroll the page)
+=============================================================================================================
+
+Field Set and Legends
+- Field set is container with frame.
+- Legend puts a caption for field set.
+
+Syntax:
+<fieldset>
+	<legend> Title </legend>
+	Your content…
+</fieldset>
+
+In Css we can set shadow to any container by using box-shadow
+box shadow will have 4 values 
+{
+	box-shadow : horizontal vertical blur color;
+}
+
+The unit of horizontal vertical blur is "pixels".
+
+eg#7.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <style>
+
+       dl{
+         display: grid;
+         grid-template-columns: 3fr 9fr;
+       }
+
+       dt{
+         background-color: black;
+         color:white;
+         padding: 5px;
+         margin-bottom: 10px;
+       }
+
+       dd{
+        background-color: lightgray;
+        color:black;
+        padding: 5px;
+        margin-bottom: 10px;
+        width: 200px;
+       }
+
+       fieldset{
+         margin-bottom: 20px;
+         border-radius: 10px;
+         width: 500px;
+         box-shadow: 10px 10px 5px black;
+         background-image: url(public/images/background-banner.jpeg);
+         background-size: cover;
+       }
+
+       legend{
+          text-align: center;
+          background-color: black;
+          color:white;
+          padding: 5px;
+          border-radius: 20px;
+       }
+
+    </style>
+</head>
+<body>
+    <fieldset>
+        <legend>Person details</legend>
+        <dl>
+            <dt>FirstName</dt>
+            <dd>SomeName</dd>
+            <dt>LastName</dt>
+            <dd>SomeName</dd>
+            <dt>Age</dt>
+            <dd>SomeAge</dd> 
+         </dl>
+    </fieldset>
+    
+    <fieldset>
+        <legend>Contact details</legend>
+        <dl>
+            <dt>City</dt>
+            <dd>SomeCity</dd>
+            <dt>State</dt>
+            <dd>SomeState</dd>
+            <dt>PostalCode</dt>
+            <dd>Somepostalcode</dd>
+         </dl>
+    </fieldset>
+     
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,404 @@
+<footer>
+  -> It defines the content to display at the bottom margin of a web page.
+  -> Typically footer comprises of copyrights, contact details, social bars, services etc.
+
+<aside>
+  -> It defines the content which is not relative to current context or that navigates the user to another website.
+  -> It contains the content outside the current context.
+ 
+syntax:
+  <aside>
+	social media ads,....
+  </aside>
+
+Note: display : flex -> Keeps flexible columns, which changes according to the width of the screen.
+      display : grid -> Keeps fixed no of columns.
+      Default screen width is 1200px, so max no of columns in a page is 12.
+      we can split the grid into columns using "grid-template-columns".
+      Every  columns size  can be  using pixel or fractions.
+		eg:: 	200px 5fr
+      pixels are fixed and fractions are responsive[will be adjusted as per the width of the screen].
+
+syntax:
+  footer{
+	display: grid;
+	grid-template-columns : 240px;
+  }
+
+Note: selecting child and sibling in CSS
+       parent child{		===> child selector
+
+       }
+       ElementA + ElementB      ====> Adjacent building
+       {
+
+       }
+       ElementA~ElementB       ====> All elements after specific
+       {
+
+       }
+   
+eg#2    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FashionStore</title>
+    <style>
+        footer{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            background-color: black;
+            color:white;
+            padding: 10px;
+            font-family: Arial;
+        }
+        .footer-brand-name{
+            font-weight: bold;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+        .footer-title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .footer-title~span{
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        aside span{
+            margin-right: 5px;
+            font-size: 15px;
+        }
+    </style>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head> 
+<body>
+    <footer>
+        <div>
+            <div class="footer-brand-name">Shopper.</div>
+                <aside >
+                    <span class="bi bi-facebook"></span>
+                    <span class="bi bi-twitter"></span>
+                    <span class="bi bi-youtube"></span>
+                    <span class="bi bi-linkedin"></span>
+                </aside>
+        </div>
+        <div>
+            <div class="footer-title">Support</div>
+            <span>Contact Us</span>
+            <span>FAQs</span>
+            <span>Size Guide</span>
+            <span>Shipping & Returns</span>   
+        </div>
+        <div>
+            <div class="footer-title">SHOP</div>
+            <span>Men's Shopping</span>
+            <span>Women's Shopping</span>
+            <span>Kids' Shopping</span>
+            <span>Discounts</span>
+        </div>
+        <div>
+            <div class="footer-title">COMPANY</div>
+            <span>Our Story</span>
+            <span>Careers</span>
+            <span>Terms & Conditions</span>
+            <span>Privacy & Cookie policy</span>
+        </div>
+        <div>
+            <div class="footer-title">CONTACT</div>
+            <span>1-202-555-0105</span>
+            <span>1-202-555-0106</span>
+            <span>help@shopper.com</span>
+        </div>
+    </footer>
+</body>
+</html>
+
+Complete source code
+++++++++++++++++++++
+index.html
+++++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoppert Template</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style>
+
+        header{
+            font-size: 25px;
+            font-family: Arial;
+            display: flex; 
+            justify-content: space-between; 
+            padding: 10px;
+        }
+        .brand-title{
+            font-weight: bold;
+            padding:25px;
+        }
+        nav span{
+            margin-right: 10px;
+        }
+        .cart-count{
+            background-color: red;
+            color: white;
+            width: 25px;
+            display: inline-block;
+            text-align: center;
+            border-radius: 25px;
+            padding:5px; 
+        }
+
+        .bi-lightning-fill{
+            color: gold;
+            font-size: large;
+        }
+        article{
+            background-color: black;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-size: 10px;
+        }
+
+        section{
+            height: 40px;
+        }
+
+        footer{
+            display: grid;
+            grid-template-columns: 2.4fr 2.4fr 2.4fr 2.4fr 2.4fr;
+            padding: 20px;
+            font-family: Arial;
+            background-color: black;
+            color: white;
+        }
+
+        .footer-brand-name{  
+            font-size: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .footer-title{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .footer-title~span{ 
+            display: block;
+            margin-bottom: 15px;
+        }
+        aside span{
+            margin-right: 5px;
+            font-size: 15px;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <span>Shopper.</span>
+        </div>
+        <div>
+            <nav>
+                <span>Home</span>
+                <span>Catalog</span>
+                <span>Shop</span>
+                <span>Pages</span>
+                <span>Blog</span>
+                <span>Docs</span>
+            </nav>
+        </div>
+        <div>
+            <nav>
+                <span class="bi bi-search"></span>
+                <span class ="bi bi-person"></span>
+                <span class="bi bi-heart"></span>
+                <span class="bi bi-cart3"><span class="cart-count">2</span></span>
+            </nav>
+        </div>
+    </header>
+    <article>
+       <span class="bi bi-lightning-fill"></span>
+       <span>HAPPY HOLIDAY DEALS ON EVERYTHING</span>
+       <span class="bi bi-lightning-fill"></span>
+    </article>
+
+    <section>
+
+    </section>
+
+    <footer>
+
+        <div>
+            <div span class="footer-brand-name">Shopper</div>
+            <aside>
+                <span class="bi bi-facebook"></span>
+                <span class="bi bi-twitter"></span>
+                <span class="bi bi-youtube"></span>
+                <span class="bi bi-linkedin"></span>
+            </aside>
+        </div>
+
+        <div>
+            <div class="footer-title">SUPPORT</div>
+            <span>Contact Us</span>
+            <span>FAQs</span>
+            <span>Size Guide</span>
+            <span>Shipping & Returns</span>
+        </div>
+
+        <div>
+            <div class="footer-title">SHOP</div>
+            <span>Men's Shopping</span>
+            <span>Women's Shopping</span>
+            <span>Kids' Shopping</span>
+            <span>Discounts</span>
+        </div>
+        <div>
+            <div class="footer-title">COMPANY</div>
+            <span>Our Story</span>
+            <span>Careers</span>
+            <span>Terms & Conditions</span>
+            <span>Privacy & Cookie policy</span>
+        </div>
+        <div>
+            <div class="footer-title">CONTACT</div>
+            <span>1-202-555-0105</span>
+            <span>1-202-555-0106</span>
+            <span>help@shopper.com</span>
+        </div>
+    </footer>
+</body>
+</html>
+
+eg#2
+footer of flipkart.html
++++++++++++++++++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flipkart</title>
+    <style type="text/css">
+        footer{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            height: 200px;
+        }
+        .col-left{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+        }
+        .col-right{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+            border-left: 2px solid black;
+            padding-left: 20px;
+        }
+    </style> 
+</head>
+<body>
+    <footer>
+        <div class="col-left">
+            <div>
+                <div>ABOUT</div>
+                <span></span>
+            </div>
+            <div>
+                col-2
+            </div>
+            <div>
+                col-3
+            </div>
+            <div>
+                col-4
+            </div>
+        </div>
+        <div class="col-right">
+            <div>
+                col-1
+            </div>
+            <div>
+                col-2
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
+Designing a section area and main area
+++++++++++++++++++++++++++++++++++++++
+section : It defines the content between header and footer area.
+          Typically all website content is kept in section.
+
+syntax: 
+	<section>
+		//content
+	</section>
+
+main : It is considered as entry point, user can start using the website through an entry point called main.
+
+syntax:
+	<main>
+		//entry point
+	</main>
+
+Working with netflix website to make the image blur and we need to put content inside that
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+eg#3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <style>
+        body{
+            background-size: cover;
+        }
+        .shade{
+            background-color: rgba(0,0,0,0.1);
+            width: 105%;
+            height: 100vh;
+            margin-top: -10px;
+            margin-left: -10px;
+        }
+    </style>
+</head>
+
+<body background="public/images/netflix-background.jpeg">
+    <div class="shade">
+
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

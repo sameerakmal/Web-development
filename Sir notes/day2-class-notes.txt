@@ -1,0 +1,27 @@
+
+					Designing webapplications
+Q>  What is Internet?
+Ans. Internet is a wide area network that connects computers all over the world.
+     Internet makes information available any time,any location and from any device.
+     First computer network is "ARPANET" introduced by US-DOD[Department of Defence] in early 1960's
+     			[Advanced Research Projects Agency Network]
+     To use internet during those days we need to learn protocols like SMTP,FTP,.....
+     The main problem with internet is "No restrictions", so to avoid this tim berner lee introduced "web".
+
+What is Web?
+   A portion of internet with restricted acess.
+   Tim Berner Lee(father of web) introduced the concept of Web.
+   Web Standards are maintained by W3C(www.w3.org)[World wide web Consortium] and whatwg(http://whatwg.org).
+   Darkweb -> not everyone can access[It is illegal way of acccessing the web]
+   Currently WebVersion is "WEB-3".
+
+Every webapplication is known as "3 tier application".
+Database tier     :: It is a location where data is present.
+Application tier  :: It is a location where the application is hosted.  
+Presentation tier :: It is a location where we access and use the application.
+
+As a full stack developer we will work with 3 layers
+a. Application layer
+b. Database layer     
+c. Presentation layer :: UI Developer role(HTML,CSS,JS,JQuery,Bootstrap,....)
+

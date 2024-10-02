@@ -1,0 +1,231 @@
+Radio Buttons:
+- Radio buttons allow to select one or multiple.
+- Once radio button is checked, it can’t be unchecked.
+- To uncheck the radio button, you have to reload the page.
+
+eg: syntax: 
+  <input type='radio'><label>TEXT</label>
+
+Gender:
+        <input type="radio"> <label>MALE</label>
+        <input type="radio"> <label>FEMALE</label>
+
+- Radio buttons are used to exhibit “Mutex” [Mutual Exclusion] mechanism.
+- “Mutex” is a multi-threading mechanism that loads all tasks into memory but allow only one task in process.
+- To configure mutex all radios must run on same thread, which you can define by using “common name”.
+
+Gender:
+        <input type="radio" name="gender"> <label>MALE</label>
+        <input type="radio" name="gender"> <label>FEMALE</label>
+
+Note: 
+  Q. When to use the Radio button?
+Ans. When selection of any one option is mandatory, without selecting an option if user moves to next default one option is selected.
+
+- “Checked” attribute is used to select radio.
+Gender:
+        <input type="radio" name="gender" checked> <label>MALE</label>
+        <input type="radio" name="gender"> <label>FEMALE</label>
+
+- By default, radio submits “ON” as value.
+
+   <form>
+        Gender:
+        <input type="radio" name="gender" checked> <label>MALE</label>
+        <input type="radio" name="gender"> <label>FEMALE</label><br><br>
+        <button>submit</button>
+    </form>
+
+Output: Upon submitting the form, the value to the gender will be on as shown below
+	http://127.0.0.1:5500/form-intro.html?gender=on
+
+- You can define a value to every radio button so that upon submit we can retrieve the value.
+<form>
+        Gender:
+        <input type="radio" name="gender" checked value="male"> <label>MALE</label>
+        <input type="radio" name="gender" value="female"> <label>FEMALE</label><br><br>
+        <button>submit</button>
+</form>
+
+Output: http://127.0.0.1:5500/form-intro.html?gender=male
+
+CheckBox
+- Checkbox allows user to select and deselect any option.	
+- You can use checkbox for selecting one or multiple options from a group of choices.
+- The attributes are same as radio buttons
+	o Id
+	o Name
+	o Class
+	o Value
+	o Checked etc.
+- It is defined by using input attribute “type=checkbox”.
+
+syntax: 
+  <input type="checkbox" name="" value="" ><label>Text</label>
+
+eg:: 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+<body>
+    <h4>Select courses</h4>
+    <form>
+        <input type="checkbox" name="course" value="HTML" checked><label>HTML</label><br>
+        <input type="checkbox" name="course" value="CSS" checked><label>CSS</label><br>
+        <input type="checkbox" name="course" value="JS"><label>JS</label><br>
+        <button>submit</button>
+    </form>  
+</body>
+</html>
+
+FAQ: How to create a Checkbox list?
+Ans. HTML is not provided with checkbox list control, you have to design with CSS overflow technique.
+
+eg#1
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style type="text/css">
+        ul{
+            list-style: none;
+            border: 1px solid gray;
+            width: 150px;
+            height: 60px;
+            overflow: auto;
+        }
+   </style>
+</head>
+<body>
+    <h4>Select courses</h4>
+    <form>
+       <ul>
+        <li> 
+            <input type="checkbox"><label>HTML</label>
+        </li>
+        <li> 
+            <input type="checkbox"><label>CSS</label>
+        </li>
+        <li> 
+            <input type="checkbox"><label>JS</label>
+        </li>
+        <li> 
+            <input type="checkbox"><label>jQuery</label>
+        </li>
+        <li> 
+            <input type="checkbox"><label>React</label>
+        </li>
+        <li> 
+            <input type="checkbox"><label>Node.js</label>
+        </li>
+       </ul>
+        <button>submit</button>
+    </form>  
+</body>
+</html>
+
+Dropdown list:
+- It allows the user to select any one option from a group of choices.
+- It shows the list of items using a dropdown menu.
+
+- HTML provides the following elements for designing dropdown list:
+	<select>   It is used to configure a list.
+	<option>   It is used to configure a list item.
+	<optgroup> It is used to group a set of options into one category.
+
+- Every <option> comprises of following attributes
+	o value		: It defines the value to be submitted.
+	o selected	: It defines the value to be selected.
+        o disabled      : To make it disabled we use this option.
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+       <fieldset>
+         <legend>Select Product</legend>
+        <select name="product">
+
+            <option>Select Product</option>
+
+            <optgroup label="Electronics">
+                <option value="TEL">Television</option>
+                <option value="MOB" disabled>Mobiles</option>
+                <option value="WATCH">Watches</option>
+            </optgroup>
+
+           <optgroup label="Fashion">
+                <option value="MEN">MensFashion</option>
+                <option value="KID" selected>KidsFashion</option>
+                <option value="WOMEN">WomenFashion</option>
+           </optgroup> 
+
+        </select>
+        <button>submit</button>
+       </fieldset>
+       
+    </form>  
+</body>
+</html>
+
+Note: In one line it is presenting more elements information
+
+ListBox
+- Everything is same as dropdown list in elements and attribute.
+- It allows to select one or multiple.
+- To change the dropdown into listbox you have use the attribute “size or multiple”
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <style type="text/css">
+   </style>
+</head>
+<body>
+    <form>
+       <fieldset>
+         <legend>Select Product</legend>
+        <select name="product" size="3" multiple>
+
+            <option>Select Product</option>
+
+            <optgroup label="Electronics">
+                <option value="TEL">Television</option>
+                <option value="MOB" disabled>Mobiles</option>
+                <option value="WATCH">Watches</option>
+            </optgroup>
+
+           <optgroup label="Fashion">
+                <option value="MEN">MensFashion</option>
+                <option value="KID" selected>KidsFashion</option>
+                <option value="WOMEN">WomenFashion</option>
+           </optgroup> 
+
+        </select>
+        <br><br>
+        <button>submit</button>
+       </fieldset>    
+    </form>  
+</body>
+</html>
+
+
+
+

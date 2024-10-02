@@ -1,0 +1,196 @@
+Text formatting in HTML
+=======================
+ -> We can change the text formatting  using font.
+ -> font :: we can change the face(family), size and color.
+ 
+syntax: <font face=" " size="" color=""> Your Text </font>
+           face  : font family
+	   size  : 1 to 7 level[increasing order]
+           color : it represents color name and color code 
+
+Note: <font> is deprecated [Obsolete] from HTML 5. 
+      It is recommended to define font only with CSS.
+
+Note: To go check the font, go to control panel and see the folder called "fonts" and find all the fonts of your system.
+
+FAQ: What are websafe fonts?
+     These are fonts available to all devices. The websafe fonts are 
+		a. sans-serrif
+		b. serrif
+		c. monospace
+
+2. fontstyle
+	 <b> bold </b>
+         <strong> strong> </strong
+
+         <i> italics </i>
+	 <em> emphasize </em>
+
+What is the difference between <b> and <strong>
+ Ans. Our code will undergo different phases like design and review phase.
+	design phase : developer will give <b> for bolding some content and it would be sent for reviewing
+        review phase : after reviewing the content they will use <strong> tag to tell there are few more content which needs
+		       to be highlighted. after this in the design phase developer will notice <strong> tag and he will
+		       recognize that this contents are for <bold> so he will change <strong> to <bold> again.
+	similarly for <i> and <em>
+
+3. font effects
+	Font Effects Tag
+		Underline <u> <ins>[review]
+		Strikeout <strike> <del>[review]
+		Super Script <sup> Character position raised from base line
+		Sub Script <sub> Character position lowered from base line
+
+FAQ: 
+ Q> What are websafe fonts?
+ Q> What is the difference between <b> and <strong>
+===================================================================================================================
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        b{
+            background-color: cyan;
+        }
+        strong{
+            background-color: cyan;
+        }
+        i{
+            background-color: green;
+        }
+        em{
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    The font style <b> <u>Bold</u> </b> is similar to <strong> <ins>Strong</ins></strong><br><br> 
+    The font style <i> <strike>italic</strike> </i> is similar to <em> <del> emphasize </del>  </em>
+    <br><br>
+    X<sup>2</sup><br>
+    H<sub>2</sub>O
+</body>
+</html>
+
+Ordered and Unordered List
+- Order List will add auto numbering for a list of options, which can update automatically when you add or delete items.
+- Orders List is defined by using <ol> Element.
+- Items in list are defined by using <li>.
+
+Syntax:
+<ol>
+	<li> Item-1 </li>
+	<li> Item-2 </li>
+</ol>
+Note: Default numbering will be given for Items.
+
+type::  If specifies the numbering type, which can be
+- a
+- A
+- i
+- I
+- 1(default)
+
+start[number] : It defines the numbering level to start with.
+Ex:
+<ol type="A" start="5">
+	<li>Internet</li>
+	<li>Web Server</li>
+	<li>Web Site</li>
+	<li>Web Page</li>
+</ol>
+
+reversed:: It arranges the numbering in reverse order. It is not support on old version browser.
+Ex:
+<ol reversed start="5">
+	<li>Internet</li>
+	<li>Web Server</li>
+	<li>Web Site</li>
+	<li>Web Page</li>
+</ol>
+
+We can do nesting of ordering elements
+++++++++++++++++++++++++++++++++++++++
+ => In UI technologies we need to analyse the elements in good programming style not on the appearence way because the application
+    may break when it goes for testing.
+
+bad code
+++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <h3> Web Technologies </h3>
+    <ol>
+
+        <li>Front End</li>
+            <ol type="a">
+                <li>HTML</li>
+                <li>CSS</li>
+             </ol>
+        
+        <li>Back End </li>
+            <ol type="a">
+                <li>NodeJS</li>
+                <li>MongoDB</li>
+            </ol>   
+    </ol>
+
+</body>
+</html>
+
+Good code
++++++++++
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fonts</title>
+    <style type="text/css">
+        
+    </style>
+</head>
+<body>
+    <h3> Web Technologies </h3>
+    <ol>
+
+        <li>Front End
+            <ol type="a">
+                <li>HTML</li>
+                <li>CSS</li>
+             </ol>
+        </li>
+         
+        <li>Back End
+            <ol type="a">
+                <li>NodeJS</li>
+                <li>MongoDB</li>
+            </ol> 
+        </li>   
+    </ol>
+</body>
+</html>
+
+
+ 
+
+
+
+
+
+
+
+

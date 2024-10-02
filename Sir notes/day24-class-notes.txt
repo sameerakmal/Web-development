@@ -1,0 +1,325 @@
+Cloning the youtube channel
+============================
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link  rel="stylesheet"  href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style type="text/css">
+
+        header{
+            font-size: 35px;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .shortcut-buttons{
+            display: flex;
+        }
+
+        .shortcut-buttons span{
+            margin-left: 20px;
+        }
+
+        .search-area{
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .search-bar{
+            width: 700px;
+            border: 1px solid gray;
+            border-radius: 25px;
+            padding: 5px;
+            font-size: 25px;
+            color:gray;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .bi-mic-fill{
+            margin-left: 25px;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: 2fr 10fr;
+            margin-top: 20px;
+        }
+        .nav-items  {
+            font-size: 15px;
+            margin-bottom: 25px;
+            margin-top: 15px;     
+        }
+
+        .nav-items span{
+            font-size: 25px;
+            margin: 10px;
+        }
+
+        article{
+            font-family: arial;
+            margin-top: 15px;
+        }
+
+        .title{
+            font-weight: bold;
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
+        .sub-title{
+            font-size: large;
+            margin-bottom: 20px;
+        }
+
+        .text{
+            font-size:20px;
+            margin-bottom: 15px;
+        }
+
+        .link{
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .link a {
+            color:blue;
+        }
+        .subscribe{
+            margin-top: 15px;
+            width: 150px;
+            padding: 5px;
+            margin-left: 150px;
+            border-radius: 15px;
+            border: 1px solid black;
+            background-color: gray;
+            
+        }
+        .subscribe span{
+            margin-left: 5px;
+        }
+        
+        .categories{
+            display: flex;
+            font-size: 25px;
+            color:gray;
+            text-transform: capitalize;
+            margin-top: 15px;
+            padding: 10px;
+        }
+
+
+        .categories span{
+            margin-left:20px;
+        }
+
+        .thumbnails{
+            display: grid;
+            grid-template-columns: 4fr 4fr 4fr 4fr;
+            margin-bottom: 30px;
+        }
+
+        iframe{
+            width: 250px;
+            height: 150px;
+        }
+
+    </style>
+
+</head>
+<body>
+    <header>
+
+        <!--Code for left side of youtube panel-->
+        <div>
+            <span class="bi bi-justify"></span>
+            <img src="public/images/youtube-logo.jpg" width="100">
+        </div>
+
+        <!--Code for youtube panel-->
+        <div class="search-area">
+            <div class="search-bar">
+                <span>Search</span>
+                <span class="bi bi-search"></span> 
+            </div>
+            <span class="bi bi-mic-fill"></span>           
+        </div>
+
+        <!--code for right side of youtube panel-->
+        <div class="shortcut-buttons">
+            <span class="bi bi-camera-video"></span>
+            <span class="bi bi-bell-fill"></span>
+            <span>
+                <img src="public/images/shortcut.jpg" width="35" height="30">
+            </span>   
+        </div>
+
+    </header>
+   
+    <section>
+
+        <nav>
+
+            <div class="nav-items">
+                <span class="bi bi-house-door"></span>
+                <span>Home</span>
+            </div>
+
+            <div class="nav-items">
+                <span class="bi bi-film"></span>
+                <span>Shorts</span>
+            </div>
+           
+            <div class="nav-items">
+                <span class="bi bi-collection-play"></span>
+                <span>Subscriptions</span>
+            </div>   
+
+        </nav>
+
+        <main>
+
+            <div>
+                <img src="public/images/pwlogo.png" width="100%">
+            </div>
+
+            <article>
+
+                <!--Image content placed in the article container-->
+                <div>
+                    <img src="public/images/pwioi-logo.png" align="left" width="150">
+                    <div class="title"> PW Institute of Innovation </div> 
+                    <div class="sub-title"> @PW-IOI 7.14K subscribers 156 videos </div>
+                    <div class="text"> Shaping Futures, Empowering Innovators!</div> 
+                    <div class="link">
+                        <a href="pwioi.com/?utm_source=Youtube&utm_medium=Social&utm_campaign=Organic" >
+                            pwioi.com/?utm_source=Youtube&utm_medium=Social&utm_campaign=Organic
+                        </a> &nbsp; &nbsp;
+                        8 more Links   
+                    </div> 
+                    <div class="subscribe"> 
+                        <span class="bi bi-bell-fill"></span>
+                        <span>Subscribed</span>
+                        <span class="bi bi-chevron-down"></span>
+                    </div>
+                </div>   
+            </article>
+
+            <div class="categories">
+                <span>Home</span>
+                <span>Videos</span>
+                <span>Shorts</span>
+                <span>Playlists</span>
+                <span>Community</span>
+                <span class="bi bi-search"></span>
+            </div>
+
+            <div class="thumbnails">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/9Qe7Sc7Izw0"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/MVPYoRTV438"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/aBnhflnsmXw"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/LfnrkX0RGn8"></iframe>
+                </div>
+            </div>
+
+            <div class="thumbnails">
+                <div>
+                    <iframe src="https://www.youtube.com/embed/9Qe7Sc7Izw0"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/MVPYoRTV438"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/aBnhflnsmXw"></iframe>
+                </div>
+                <div>
+                    <iframe src="https://www.youtube.com/embed/LfnrkX0RGn8"></iframe>
+                </div>
+            </div>
+        </main>
+    </section>
+</body>
+</html>
+
+
+FAQ: 
+a.How to create a Empty Link?
+Ans. When we work in a project, we design templates(creating a screen(design) give it to next team(functionality))
+     These empty links should pass testing.(incomplete design also should pass the test)
+
+eg: <a>Home</a>            //fail in testing -> no href
+    <a href=""></a>       //href empty -> missing the exact path,link is empty because href returns black
+    <a href="#">Home</a>  //href '#' means id reference(no id mentioned so it fails)
+ 
+Solution : use javascript void operator
+           <a href="javascript:void()">EmptyLink</a>
+
+
+eg#1.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a>Home</a><br>  //Fail in Testing
+    <a href="">Home</a><br>  //Fail in Testing
+    <a href="#">Home</a><br> //Fail in Testing
+    <a href="javascript:void()">Home</a>//Pass in Testing
+</body>
+</html>
+
+Note: After it undergoes testing, we will give the functioanality of the link using
+ 	<a href="javascript:void(location.href='***.html')">Home</a>//Pass in Testing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

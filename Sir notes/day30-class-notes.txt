@@ -1,0 +1,163 @@
+ 1. () -> It is union of chars and expression
+		eg: (10/2)+12
+		    10+(10/2)
+
+eg::
+[A-Z] 		 Only uppercase letters allowed
+[a-z] 		 Only lowercase letters allowed
+[0-9] 		 Only numeric allowed.
+[a-zA-Z] 	 Both upper and lowercase allowed.
+[a-Z] 		 Both upper and lowercase allowed.
+[a-zA-Z0-9] 	 Alpha numeric allowed
+[a,d,s] 	 Only specified chars allowed.
+[^a,d,s] 	 Excluding the specified all others allowed.
+[a-mA-M4-9]      Only chars in specified range allowed.
+[^a-mA-M4-9]     Excluding specified chars range all others allowed.
+(abc) 		 Exactly the specified group allowed in specified order.
+
+
+\d 		 It allows only numeric value, any single digit [0-9].
+ 		 Ex: <input pattern="\d\d" type="text" name="txtTest">  [any 2 digits number]
+		 Ex: <input pattern="\d?\d" type="text" name="txtTest"> [one or 2 digits]
+		 Ex: <input pattern="[0-9]" type="text" name="txtTest"> [one digit b/w 0-9]
+
+\D 		Not a digit [^0-9] or \D only non-digit. [a-ZA-Z!@#$%]
+		[^0-9] Any value other than number.
+		Ex:<input pattern="\D\D" type="text" name="txtTest">  [both should be not be digits]
+		Ex:<input pattern="\d\D" type="text" name="txtTest">  [First should be digit,second should be not be digit]
+
+
+\s 		Match a single white space character. Including space, tab, form feed, line feed, and other Unicode chars.
+		\n – line feed
+		\f – form feed
+		\t – horizontal tab
+		\v – vertical tab
+
+		Ex:<input pattern="\d\s\d" type="text" name="txtTest">
+
+\w 		Matches alpha numeric[word] characters with underscore.
+		Equivalent to [A-Za-z0-9_]
+		Ex:<input pattern="\w\w" type="text" name="txtTest"> 
+
+\W 		Matches any character that is not a word character. [^A-Za-z0-9_]
+		Ex:<input pattern="\W" type="text" name="txtTest">  allowed chars::  [%$#@&]
+
+\i              ignore capitaliztion
+		Ex: <input pattern="colour\i" type="text" name="txtTest"> 
+		allowed : color Color cOLOR
+
+
+Quantifiers are used to define the range of value
+
+Quantifier 				Description
+===========================================================================
+{n} 					Exactly specified number of chars.
+					n – refers to number.
+					Ex: pattern = "\d{3}" 		[Exactly 3 digits]
+					    pattern = "\d{3}\D{2}"      [First 3 digits followed by 2 non-digits]
+					  
+
+{n,m} 					Minimum-n and Maximum-m 
+					{4,10} - 4 to 10
+					Ex: pattern="\w{4,15}"         [alphanumeric min = 4 and max= 15]
+					    
+
+{n, } 					Minimum-n and Maximum-any
+					{4, }
+
+					Ex: pattern="\w{4,}"	  [alphanumeric allowed min=4 and max can be any]
+
+
+Regular Expressions[PreDefined for validation]
+==================================================
+a. (?=.*[A-Z])			: Atleast one upper case letter at any place.
+b. (?=.*[a-z])			: Atlease one lower case letter at any place.
+c. (?=.*[0-9])			: Atleast one numeric  at any place.
+d. (?=.*[!&@#%])		: Atleast one special character at any place.
+
+1. Write a pattern to validate mobile number starting from +91 and should have 10 digits?
+	Ans. pattern = "\^\+91\d{10}$"
+
+2. Write a pattern to validate US Mobile format number?
+	 ex: +(1)(425) 555-0100
+	Ans. pattern = "\^\+\(\1\)\(\d{3}\)\s\d{3}-\d{4}$"
+
+3. Write a pattern for UK mobile format number?
+	ex: +(44)(20)1234 5678
+	Ans. pattern = "\^\+\(44\)\(20\)\d{4}\s\d{4}$"
+
+4. Write a pattern to validate IFSC code?
+        ex: SBIN0000813
+	Ans. pattern = "\^SBIN00\d{4]&$"
+
+5. Write a pattern to allow only alpha numeric with 4 to 15 chars but special characters not allowed.
+	pattern = "\^[A-Z0-9a-Z]{4,15}$"
+	pattern = "\w{4,15}" =>underscore is also allowed
+
+6.  Write a pattern to allow only alphabets with 4 to 15 chars but special characters not allowed.
+	pattern = "\^[A-Z]{4,15}$"
+
+
+7.  Write a pattern for username starting with uppercase letters and can be  4 to 15 chars but special characters not allowed.
+	pattern = "[A-Z]{1}[a-zA-Z]{3,14}"
+
+8. Write a pattern to allow only alpha numeric with _ 4 to 15 chars but Atleast one or many characters can be Uppercase.
+        pattern = "(?=.*[A-Z])\w{4,15}"
+
+9. Write a pattern for username 4 to 15 chars with atleast one uppercase letter,number and special character?
+       pattern = "(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*[!@#%])\w{4,15}"
+
+
+FAQ. 
+a. Write a pattern to validate mobile number starting from +91 and should have 10 digits?
+
+b. Write a pattern to validate US Mobile format number?
+	ex: +(1)(425) 555-0100
+
+c. Write a pattern for UK mobile format number?
+	ex: +(44)(20)1234 5678
+ 
+d. Write a pattern to validate IFSC code of SBI Bank?
+	ex: SBIN0000813
+
+e. Write a pattern to allow only alpha numeric with 4 to 15 chars but special characters not allowed.
+f. Write a pattern to allow only alphabets with 4 to 15 chars but special characters not allowed.
+g. Write a pattern for username starting with uppercase letters and can be  4 to 15 chars but special characters not allowed.
+h. Write a pattern to allow only alpha numeric with _ , 4 to 15 chars but Atleast one or many characters can be Uppercase.
+k. Write a pattern for username 4 to 15 chars with atleast one uppercase letter,lowercase letter, number and special character?
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+

@@ -1,0 +1,105 @@
+	
+Web UI Full stack with React
+- This course is for absolute beginners
+- Topics required for Experts[Advanced Level also will be covered]
+- Module wise Projects will be covered
+- Final End to End Project[One project will be done by me and another project you should build]
+
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Types of Software applications
+++++++++++++++++++++++++++++++
+a. Desktop applications
+b. Web applications
+c. Distributed applications
+d. Mobile applications
+e. AI applications
+f. IoT applications
+g. 2D and 3D applications
+
+Note::
+Desktop application     : No communication with internet
+
+Explanation
+===========
+=> Suppose we have a hospital, we don't have branches
+=> Now we need to track about doctor login|logout time, which all patients have come today and to which doctor we have assigned, we need to track about the
+   patient status.
+=> For this to track i would prefer building applications which would be used locally in our machine, such applications are termed as "Desktop applications".
+		note: This type of trend is gone.....
+
+			eg: notepad,paint,calculator,......
+
+
+WebApplications
+Distrubuted application : using app/browser with the help of internet if the interactions happens then it is web/distrubuted applications.
+
+Explanation
+===========
+=> Assume i need to take an appointment with doctor in "Apollo Hosptial".
+=> To take an appointment,now first check the internet connection and open browser and type the webiste of apollo(but not good opening in browser)
+=> Trend now is install an apollo app[using the app all the details will be a part of that app so it is user friendly]
+		eg: netflix,flipkart,amazon,myntra,.....
+
+
+Mobile application      : calculator,calendar,gallery,....
+
+AI applications         : chatgpt,siri,googlehome,amzaon alexa
+
+IoT applications        : smartwatches,smartband(Internet of Things-> help of sensors it tracks how many calories burnt)
+
+2D and 3D applications  : Gaming applications[Bike shown on Screen, where we click and it shows accelarte and u play games]
+
+=========================================================================================================================================
+
+With the help of our course we can build webapplications and distrubuted applications.
+Using UI full stack with React we can build "Webapplications and Distrubutedapplications".
+		eg: netflix,youtube,spotify,instagram,....
+
+After learning this course, our profile will be 
+1. WEBUI Full stack Developer
+	UI Developer
+	UI/UX Developer[User Experience] -> Give example as show 
+	MERN stack Developer
+		M : MongoDB
+		E : ExpressJS
+		R : ReactJs
+		N : NodeJs
+
+	MEAN stack Developer
+		M : MongoDB 
+		E : ExpressJS
+		A : Angular
+		N : NodeJs
+
+UI/UX Developer[User Experience] :: Type react in google[show them page no] it is called as "UI"
+				 :: Change the tab to images[it won't show page no, rather when we scroll the page, images gets loaded] it is called "UX".
+				 :: UI|UX developer with good "Accessibility".
+				 :: "Accesibility" > Building webapplications for "disabled and challenged people". 
+
+
+Topics for our course
+=====================
+FrontEnd
+========
+ a. HTML
+ b. CSS
+ c. Bootstrap
+ d. Sass
+ e. JavaScript
+ f. jQuery
+ g. React[For UX]
+
+BackEnd
+=======
+ a. Node Js
+ b. Express Js
+ c. MongoDB
+
+To get into free-lancing we need to have knowledge on few tools like
+====================================================================
+ a. coreldraw
+ b. photoshop
+ c. adobe reader
+
+

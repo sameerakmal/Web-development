@@ -1,0 +1,67 @@
+pattern : It is used to validate the format of input value.
+          pattern uses regular expression for verifying the format of input value
+          A regular expression is built by using "Meta characters and quantifiers".
+	  Metacharacters : what to allow? , 
+          quantifiers    : how many will be allowed?
+
+
+Meta characters				    Description
+========================================================================================================================
+   ?					It defines zero or one occurrence of a character.
+					<input pattern="colou?r" placeholder="color/colour" type="text" name="txtTest">
+
+   * 					It defines zero or more occurrences of a character.
+					<input pattern="colou*r" type="text" name="txtTest">
+						[color, colour, colouur, coloruuur etc..]
+
+  + 					It defines one or more occurrences of a character.
+					<input pattern="colou+r" type="text" name="txtTest">
+							[colour, colouur…]
+
+ . [dot] 				Matches any single character in the specified string.[A-Za-Z0-9!@#$%]
+					<input pattern="b.y" type="text" name="txtTest"> [buy, boy]
+					<input pattern=".y" type="text"  name="txtTest"> [by, my]
+					Ex: cow, toy, boy [ pattern=”.o.” ]
+					Ex: cat, bat, mat, rat [ pattern=”.at”]
+
+\ 					It is used as escape sequence character for special chars. 
+					[Chars used by parser] \+91 = +91
+					pattern="gmail.com"  ex: gmail2com,gmailzcom
+					pattern="gmail\.com" ex: gmail.com
+
+ |(pipe)  				The “|” is used as OR. We can configure multiple by using OR. 
+					It can match with any of the specified.
+					<input pattern="green|red|blue" type="text" name="txtTest">
+
+^ 					Exclude specified
+					pattern="[a,d,s]"  ex: a,d,s allowed
+					pattern="[^a,d,s]" ex: all are allowed excluding a,d,s
+
+[]					Range of characters
+					pattern="[a,d,s]"     ex: a and d and s are allowed
+					pattern="[a-z,A-Z]"   ex: a to z and A to Z are allowed
+					pattern="[0-9]"	      ex: 0 to 9 are allowed
+					pattern="[a-zA-Z0-9]" ex: Alphanumeric
+					pattern="[a-d,4-9]"   ex: a to d and 4 to 9 are allowed
+					pattern="[^A-Z]"      ex: excluding A-Z all others are allowed  
+
+\^ 					Matches the beginning of input, “Starts with”.
+
+$ 					Matches the end of input. “Ends with”.
+					pattern="\^ ...your expression.... $"
+					
+					eg: pattern="\^[a-z]\.[0-9]$" => a.3
+
+
+
+
+
+
+
+
+
+
+ 
+          
+
+

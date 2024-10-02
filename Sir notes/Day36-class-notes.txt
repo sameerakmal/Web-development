@@ -1,0 +1,314 @@
+CSS Form Attributes
+===================
+-> CSS provides attributes and classes to handle form appearance and validation
+
+:required  : It configures when the field is defined with required. 
+:optional  : It configures when the field is not defined with required.
+:valid     : It defines effects when all validations attributes are satisfied.
+:invalid   : It defines effects when the field validation returns error.
+:readonly  : It defines the effects for the elements when the field is set for readonly.
+:disabled  : It defines the effects when the element is set with disabled.
+.checked   : It defines the effects when the element is set with checked attribute.
+		[It can't be radiobox and checkbox]
+.focus 	   : It defines effects, When element is in focus. 
+
+::placeholder : To define effects for placeholder we use this.
+
+eg#1.
+Working with "required and optional"	
+===================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <style>
+
+        input:required + span{
+            display: inline;
+            color: red;
+        } 
+        input:optional + span{
+            display: none;
+        }
+        input:required{
+            border: 1px solid red;
+        }
+        input:optional{
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body class="container-fluid">
+    <form>
+        <dl>
+            <dt>
+                Username
+            </dt>
+            <dd>
+                <input type="text" name="txtUser" required><span>*</span>
+            </dd>
+            <dt>
+                UserPwd
+            </dt>
+            <dd>
+                <input type="password" name="txtPwd" required ><span>*</span>
+            </dd>
+            <dt>
+                Age
+            </dt>
+            <dd>
+                <input type="number" name="txtNumber"><span>*</span>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
+
+eg#2.
+Working with valid and invalid option
+=====================================
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+
+    <style type="text/css">
+
+        input:required + span{
+            display: inline;
+            color: red;
+        } 
+        input:optional + span{
+            display: none;
+        }
+
+        input:required{
+            border: 1px solid red;
+        }
+        input:optional{
+            border: 1px solid black;
+        }
+
+        input:valid{
+            border: 1px solid black;
+        }
+        input:valid + span{
+            display: none;
+        }  
+
+        input:valid~div{
+            display: none; 
+        } 
+        input:invalid~div{
+            display: block;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+
+            <dt>Username</dt>
+            <dd>
+                <input type="text" name="txtUser" required><span>*</span>
+                <div>Name requried</div>
+            </dd>
+
+            <dt>UserPwd</dt>
+            <dd>
+                <input type="password" name="txtPwd" required ><span>*</span>
+                <div>Password required</div>
+            </dd>
+
+            <dt>Age</dt>
+            <dd>
+                <input type="number" name="txtNumber" required><span>*</span>
+                <div>Age requried</div>
+            </dd>
+
+            <dt>Mobile</dt>
+            <dd>
+                <input type="tel" name="txtMobile"  pattern="\+91\d{10}">
+                <div>Invalid mobile : +91 and 10 digits required</div>
+            </dd>
+
+        </dl>
+    </form>
+</body>
+</html>
+
+eg#3. Working with :disabled option
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+
+    <style type="text/css">
+        textarea:disabled{
+            color: lightgray;
+            cursor: not-allowed;
+        }
+        
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>TextArea</dt>
+            <dd>
+                <textarea disabled  rows="4" cols="40"> OurTerms and Services</textarea>
+            </dd>
+        </dl>
+    </form>
+</body>
+</html>
+
+
+eg#4 working with .checked option
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+
+    <style type="text/css">
+        textarea:disabled{
+            color: lightgray;
+            cursor: not-allowed;
+        }
+        .terms:checked + span{
+            color: green;
+        }
+        .terms:checked ~ button{
+            display: block;
+        }
+        .terms~button{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>
+                Terms and Service
+            </dt>
+            <dd>
+                <textarea rows="4" cols="40" disabled>Our Terms and Service</textarea>
+            </dd>
+            <dd>
+                <input type="checkbox" class="terms"><span>I Accept</span>
+                <br><br>
+                <button>submit</button>
+            </dd>
+        </dl>     
+    </form>
+</body>
+</html>
+
+eg#5. 
+Working with focus[Suggesting the tip for the user]	
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Output</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style type="text/css">
+        input+div{
+            display: none;
+        }
+        input:focus + div{
+            display: block;
+            color: goldenrod;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <dl>
+            <dt>
+                Username
+            </dt>
+            <dd>
+                <input type="text" name="txtUser">
+                <div>
+                    <span class="bi bi-info-circle"></span>Name in block letters
+                </div>
+            </dd>
+        </dl>     
+    </form>
+</body>
+</html>
+
+eg#6
+ Working with placeholder(::)
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <style>
+        input + div{
+            display: none;
+        }
+        input:focus + div{
+            display: block;
+            color: goldenrod;
+        }
+
+        input::placeholder{
+            color: green;
+        }
+    </style>
+</head>
+
+<body class="container-fluid">
+
+    
+        <form>
+            <dl class="m-3 p-3">
+                <dt>Username</dt>
+                <dd>
+                    <input type="text" placeholder="Enter username">
+                    <div>
+                       <span class="bi bi-info-circle"></span> Name in block letters
+                    </div>
+                </dd>
+            </dl>
+        </form>
+
+    </form>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+

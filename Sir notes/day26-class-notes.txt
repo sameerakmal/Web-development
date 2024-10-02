@@ -1,0 +1,446 @@
+Attributes of tables
+====================
+1. Border, Frames and rules
+2. Cell spacing and padding
+3. Background color and background image
+4. Allignments
+5. Height and width
+6. colpsan and rowspan
+
+Background color(bgcolor) and Image(background)
+===============================================
+bgcolor    : It sets a background color for table, body, header, footer, cell, row.
+background : It sets background image for table,group,row,cell.
+
+Note: You can't manipulate Columns in HTML table meaning manipulation can happen only in row wise.
+
+Syntax:
+<table background="../Images/shoeanimated.gif" border="1" width="500">
+<table bgcolor=”red”>
+<tr bgcolor=”red”>
+<th bgcolor="red">
+
+
+Alignments
+==========
+align :: It aligns the content horizontally left, center, right or justify.
+Syntax:
+<table align=”center”>
+<tbody align=”center”>
+<tr align=”center”>
+<td align=”center”>
+
+valign It aligns the content vertically top, center, bottom.
+Syntax:
+<tbody valign=”top”>
+<tr valign=”bottom”>
+<td valign=”center”>
+
+Height and width
+================
+Height:: It defines height for row(affects whole row).
+Syntax:
+<tr height=”200”> <!-- best suited -->
+<th height=”200”>	
+<td height=”200”>
+
+Width:: It defines cell width(affects whole column).
+<td width=”200”>
+<th width=”200”>
+
+Syntax:
+<table width=”300” height=”100”>
+
+Note: Always define height for "tr" and width for "td|th"
+
+
+eg#1.
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <style type="text/css">
+
+        table img{
+            width: 30px;
+        }
+
+        table{
+            font-family: Arial;
+        }
+
+        .L{
+            background-color: red;
+            color: white;
+            padding: 2px;
+            border-radius: 5px;    
+        }
+
+        .a{
+            background-color: gray;
+            padding: 2px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .w{
+            background-color: green;
+            padding: 2px;
+            border-radius: 5px;
+            color: white;
+        }
+
+        table span{
+            display: inline-block;
+            width: 20px;
+            text-align: center;
+        }
+
+        table caption{
+            margin-bottom: 30px;
+        }
+        table{
+            color:white ;
+        }
+
+    </style>
+</head> 
+<body>
+    <table width="100%" frame="void" border="4" background="" bgcolor="black">
+        <caption>Asia Cup Points Table 2023- Group A</caption>
+        <colgroup span="3"></colgroup>
+        <thead height="100" valign="center">
+            <th>Pos</th>
+            <th colspan="2" width="150">Teams</th>
+            <th>Matches</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Tied</th>
+            <th>NR</th>
+            <th>Points</th>
+            <th>NRR</th>
+            <th colspan="2">Series Form</th>
+       </thead>
+
+       <tbody>
+
+            <tr align="center">
+                <td>1</td>
+                <td><img src="public/images/pak.png"></td>
+                <td align="left">Pakistan</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+4.760</td>
+                <td><span class="w">W</span></td>
+                <td><span class="a">A</span></td>
+            </tr>
+
+            <tr align="center">
+                <td>2</td>
+                <td><img src="public/images/ind.png"></td>
+                <td align="left">IND</td>
+                <td>2</td>
+                <td>1</td>
+                <td>0</td>
+                <td>0</td>
+                <td>1</td>
+                <td>3</td>
+                <td>+1.028</td>
+                <td><span class="a">A</span></td>
+                <td><span class="w">W</span></td>
+            </tr>
+
+            <tr align="center">
+                <td>3</td>
+                <td><img src="public/images/nep.png"></td>
+                <td align="left">Nepal</td>
+                <td>2</td>
+                <td>0</td>
+                <td>2</td>
+                <td>0</td>
+                <td>0</td>
+                <td>0</td>
+                <td>-3.572</td>
+                <td><span class="L">L</span></td>
+                <td><span class="L">L</span></td>
+            </tr>
+       </tbody>
+       <tfoot>
+            <td colspan="12">
+                Pos: Position, Pld: Played, Pts:Points, NRR: Net Run Rate
+            </td>
+       </tfoot>
+    </table>
+</body>
+</html>
+
+Merging or Rows and Columns
+==========================
+colspan :: It can merge specified number of columns into single column.
+rowspan :: It can merge specifies number of rows into single row.
+
+Note: colspan and rowspan can be applied only "<td>|<th>"
+
+
+Summary 
+=======
+Tags
+- table
+- thead
+- tbody
+- tfoot
+- th
+- tr
+- td
+- colgroup
+- caption
+
+Attributes
+- frame
+- border
+- rules
+- width
+- height
+- align
+- valign
+- bgcolor
+- background
+- cellspacing
+- cellpadding
+- colspan
+- rowspan
+
+Note: We can use tables for designing a Layout
+
+eg#2.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table width="100%" cellspacing="5" cellpading="5" border="1" frame="void">
+
+
+        <tr>
+            <td colspan="3">Header</td>
+        </tr>
+
+        <tr height="400">
+
+            <td width="100">
+                <ul>
+                    <li>
+                        <a target="frameoutput" href="./shopper-template.html">Shopper</a>
+                    </li>
+                </ul>
+            </td>
+
+            <td>
+                <iframe name="frameoutput"  width="100%" height="400"></iframe>
+            </td>
+            <td width="100">Aside</td>
+        </tr>
+
+        <tr>
+            <td colspan="3">Footer</td>
+        </tr>
+
+    </table>
+</body>
+</html>
+
+eg#4. Amazon card using tables
+      
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+
+        td img{
+            width:100%;
+        }
+        tr th{
+            font-size: 25px;
+            margin-right: -25px;
+        }
+        p{
+            font-size: 20px;
+            margin-top:2px;
+        }
+    </style>
+</head>
+<body bgcolor="gray">
+    <table border="1" frame="void" cellspacing="10" cellpadding="5" width="100%">
+        
+	<tr height="400" bgcolor="white">
+            <td width="300">
+
+                <table>
+
+                    <tr>
+                        <th colspan="2">Upto 60% off | Styles for Men</th>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <img src="public/images/a1.jpg">
+                            <p>clothing</p>
+                        </td>
+
+                        <td>
+                            <img src="public/images/a2.jpg">
+                            <p>footwear</p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>    
+                            <img src="public/images/a3.jpg">
+                            <p>watches</p>
+                        </td>
+
+                        <td>
+                            <img src="public/images/a4.jpg">
+                            <p>bags</p>
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td colspan="2">
+                            <a href="javascript:void()">see all</a>
+                        </td>
+
+                    </tr>
+
+                </table>    
+            </td>
+
+            <td width="300">
+                <table>
+                    <tr>
+                        <th colspan="2">Upto 60% off | Styles for Men</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="public/images/a1.jpg">
+                            <p>clothing</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a2.jpg">
+                            <p>footwear</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>    
+                            <img src="public/images/a3.jpg">
+                            <p>watches</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a4.jpg">
+                            <p>bags</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="javascript:void()">see all</a>
+                        </td>
+                    </tr>
+                </table>    
+            </td>
+
+            <td width="300">
+                <table>
+                    <tr>
+                        <th colspan="2">Upto 60% off | Styles for Men</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="public/images/a1.jpg">
+                            <p>clothing</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a2.jpg">
+                            <p>footwear</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>    
+                            <img src="public/images/a3.jpg">
+                            <p>watches</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a4.jpg">
+                            <p>bags</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="javascript:void()">see all</a>
+                        </td>
+                    </tr>
+                </table>    
+            </td>
+
+            <td width="300">
+                <table>
+                    <tr>
+                        <th colspan="2">Upto 60% off | Styles for Men</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="public/images/a1.jpg">
+                            <p>clothing</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a2.jpg">
+                            <p>footwear</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>    
+                            <img src="public/images/a3.jpg">
+                            <p>watches</p>
+                        </td>
+                        <td>
+                            <img src="public/images/a4.jpg">
+                            <p>bags</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <a href="javascript:void()">see all</a>
+                        </td>
+                    </tr>
+                </table>    
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
+
+
+
+
+
+
+
+
