@@ -1496,7 +1496,7 @@ CSS selectors are classified into various categories:
 >> **Behavioural selector**
 
 
-### Primary selectors : 
+### 1.Primary selectors : 
 #### Type selector :
 - We target the element directly by referring to token/tags. 
 
@@ -1725,6 +1725,8 @@ Ex:
 
 ### 7. Behavioural and occurance classes
 
+![alt text](srs.png)
+
 | **Selector** | **Description**|
 |------|---------|
 | `::first-line`       | Effects for first line in paragraph.                            |
@@ -1739,7 +1741,7 @@ Ex:
 - It is mainly used for applying the effects for all the elements in a page.
 
 - Syntax: 
-```
+```html
 <style>
     * {
         attribute1: value1;
@@ -1759,7 +1761,7 @@ Ex:
 - It is used to give the effects based on a langauge configured for an element. If your page contains multiple langauge data then to define the effects based on specific language , we go for langauge selector
 
 - Syntax :
-```
+```html
 <style>
     elementName:lang(lang) {
         attribute1: value1;
@@ -1776,7 +1778,7 @@ Ex:
 
 Ex.:
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -1822,7 +1824,7 @@ Ex.:
 
 Default nature of p and h1 :
 
-```
+```css
 p {
     display : block;
     margin-top: 1em;
@@ -1920,3 +1922,94 @@ Syntax:
 - `border-top-left-radius`
 - `border-bottom-right-radius`
 - `border-bottom-left-radius`
+
+- In order to make image to appear like a proper circle, width  and height value of an image should be made equal to border-radius value.
+<br>
+![alt text](border-img.png)
+
+### 5. Border-Image
+
+- We can set an image as a border by using attributes like: `border` and `border-image`.
+
+**Syntax:**
+```css
+<style>
+    border: 10px solid transparent;
+    border-image: url() stretch|space 1-100;  
+</style>
+```
+
+
+## CSS Units
+
+- CSS units define size and position.
+- They are used to define the dimensions and location of elements on a page.
+- You can configure size with: height and width.
+- The CSS units are categorized into two groups:
+  - Absolute length units
+  - Relative length units
+
+### 1. Absolute Length Units
+- They are not relative to anything else and are generally considered as normal units.
+- These are not affected by other relative elements and their units.
+- They are not affected by parent or adjacent elements, and are individual and configured for various media devices.
+
+| Unit | Name              | Equivalent ID                  |
+|------|-------------------|--------------------------------|
+| cm   | centimeters        | 1cm = 96px/2.54 = 37px         |
+| mm   | millimeters        | 1mm = 1/10th of 1 cm           |
+| Q    | Quarter-millimeters| 1Q = 1/40th of 1cm             |
+| in   | Inches             | 1in = 2.54cm = 96px            |
+| pc   | Picas              | 1pc = 1/6th of 1in             |
+| pt   | Points             | 1pt = 1/72nd of 1in            |
+| px   | Pixels             | 1px = 1/96th of 1in            |
+
+> NOTE: When we are creating animations on a button click, if we want to zoom, go for "Absolute Path".
+
+> If we want to move the objects a little farther on a screen, go for "inch|cm|mm".
+
+### 2. Relative Units
+
+- These are related to other content on the page.
+- The size of any element can be determined based on its parent, child, or adjacent elements.
+- The advantage is that when the parent element size changes, it will relatively affect the child element too.
+
+| Unit | Relative to                                                            |
+|------|------------------------------------------------------------------------|
+| em   | It uses the font size of the parent element and applies to current element. [element relative]<br>**Note**: <br>1em -> 100% of parent element <br>0.5em -> 50% of parent element |
+| rem  | Font size relative to the root element size [root element relative]     |
+| %    | Relative to the viewport                                                |
+
+- When we use `rem`, we need to target the root element (`<html>`).
+
+## CSS Positions
+
+- Generally, elements are placed according to the document layout flow.
+- Positions allow elements to behave differently and step out of the document flow.
+- CSS positions are defined by using the "position" style attribute.
+  1. Static
+  2. Absolute
+  3. Fixed
+  4. Sticky
+  5. Relative
+
+### 1. Static
+- This value would not disturb the layout of the page.
+- It keeps the element according to the normal flow of the document.
+- Static position is not affected by top, right, bottom, left if defined.
+- Generally in JS, if we want to move elements, we can change their place, but if we don't want to change them, we need to take those elements as "static".
+- While designing a responsive design, if the element should not change dynamically, then we use the position "static".
+
+### 2. Absolute
+- It disturbs the flow layout of the page.
+- It allows changing the position using top, bottom, left, and right values.
+- It attaches to the content in the page and moves along with the content.
+
+### 3. Fixed
+- It disturbs the normal flow. The position of the element is fixed when we use top, left, right, and bottom attributes.
+- It attaches to the browser window, and it won't move along with the content on the page.
+
+### 4. Sticky
+- It does not disturb the layout of the page.
+- It would not allow you to change the position.
+- It can make the element sticky after reaching a certain position.
