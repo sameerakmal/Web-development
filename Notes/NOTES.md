@@ -1846,9 +1846,9 @@ h1 {
 
 - In CSS inheritance is the process of configuring parent effects to child elements.
 - child elements automatically implements some of the parent feature which we can control by using following css values:
-1. inherit
-2. initial
-3. unset
+    1. inherit
+    2. initial
+    3. unset
 
 - All the properties of the parent will not reach to child, if we want it to reach to the child, then we use `inherit` value on that particular attribute all `all:inherit;` attribute
 - After inheriting the attribute from the parent if the child is interesting in changing the value, the child can change the value or set the value to default apperance.
