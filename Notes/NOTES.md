@@ -2013,3 +2013,197 @@ Syntax:
 - It does not disturb the layout of the page.
 - It would not allow you to change the position.
 - It can make the element sticky after reaching a certain position.
+
+### Working with CSS display options : 
+- Values of display are : 
+    1. display : none
+    2. display : block
+    3. display : inline
+    4. display : inline-block
+    5. display : flex (for responsive design)
+    6. display : grid (for responsive design)
+
+
+
+> What is the difference between `display : none` v/s `visibity : hidden`?
+- `visibilty:hidden` will not remove the memory for that element on a page wheras `display:none` would remove memory for that element on a page as a result of which it disturbs the layout of a page.
+
+- `display : block` : content will appear in new line (`<br>`).
+- `display : inline` : content will appear in same line. <br>
+It is applicable only for elements not for container.
+- `display : inline-block` : to adjust the dimension(height and width) of few HTML elements we use `inline-block`. Ex : `<a>`, `<span>`.
+- `display : flex` : 
+    - It should be applied on container not on element.
+    - By default, the elements present in the container would be arranged in "row-wise".
+    -  If we apply `display:flex` on element we get abnormal behaviour as response. 
+    - Flex would support adjusting the elements in both row and column wise. 
+
+>Note : 
+```css
+display : flex;
+flex-direction : column;
+```
+- The elements present in the container would be adjusted as per the <u>width</u> of the container. If the `flex-direction` is row then the elements present in the container would be adjusted as per height of the container.
+
+#### `flex-direction : column` 
+```css
+nav{
+    display: flex;
+    flex-direction: column;
+
+    /* Alignment */
+    justify-content: space-around;
+    align-items: ---;
+}
+
+nav bottom { 
+    width: 100px;
+}
+```
+![alt text](flexcolumn.png)
+
+#### `flex-direction : row` 
+
+```css
+nav{
+    display: flex;
+    flex-direction: row;
+
+    /* Alignment */
+    justify-content: space-around;
+    align-items: ---;
+}
+
+nav bottom { 
+    width: 100px;
+}
+```
+![alt text](flexrow.png)
+
+- Inorder to wrap the elements within the container we go for `flex-wrap`
+- If we set the container to wrap the elements would span to multiple rows depending upon width of the element .
+
+#### Flex wrap
+```css
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+```
+- Elements will be shifted to multiple rows as per screen adjustment(it will not shrink the content).
+
+## CSS Background Properties
+
+- **background-color**: Defines the background color of an element.
+
+- **background-image**: Sets an image as the background of an element.
+
+- **background-size**: Specifies the size of the background image.
+
+- **background-attachment**: Determines whether the background image scrolls with the rest of the page or is fixed.
+
+- **background-repeat**: Specifies if/how the background image repeats.
+
+### Additional Notes:
+
+- **RGB for Background Color**: `background-color: rgb(255, 255, 255);`
+
+- **Background Image**:
+  - Syntax: `background-image: url("path-to-image");`
+
+- **Background Repeat Options**: 
+  - `no-repeat`, `repeat-x`, `repeat-y`, `repeat`
+
+- **Background Attachment**: 
+  - `fixed`, `scroll`
+
+- **Background Position**: 
+  - `left`, `right`, `center`, `top`, `center bottom`
+
+- **Shorthand for Background**:
+  - Syntax: 
+    ```css
+    background: #ffffff url("img/tree.png") no-repeat right top;
+    ```
+    - Combines background color, image, repeat, and position.
+
+### FAQ
+> Can we set a multiple background images?
+- Yes, it is possible but we need to control the alignment.
+```css
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./../../public/Image/zoro.jpg"), url("./../../public/Image/saitama.jpg");
+    background-repeat: no-repeat, repeat;
+    background-size: 20% 100%, 30% 90%;
+    background-position: center center, top left;
+```
+> Can we change background image dynamically?
+- Yes, through media queries.
+
+> Can we give background color and background image both?
+- Yes
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .container {
+            width: 600px;
+            height: 600px;
+            border: 1px solid black;
+            background-color: black;
+            background-image: url("./../../public/Image/One\ Piece.png");
+            background-repeat: no-repeat;
+            background-size: 40% 30%;
+            background-position: center center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+
+    </div>
+</body>
+</html>
+```
+## CSS Font Effects
+
+- **font-family**: Defines the font for the text.
+- **font-style**: Specifies whether the text is normal, italic, or oblique.
+- **font-weight**: Sets the thickness of characters.
+- **font-size**: Specifies the size of the font.
+- **font-variant**: Transforms text into small-caps (all lowercase letters are converted into capital letters with a smaller size).
+
+## CSS Text Effects
+
+1. **text-align**: Aligns text to `left | center | right | justify`.
+2. **text-shadow**: Adds a shadow to the text (similar to box-shadow).
+3. **text-indent**: Adds an indent to the first line of the paragraph (`length | initial | inherit`).
+4. **text-transform**: Transforms text to `uppercase | lowercase | capitalize`.
+5. **text-overflow**: Displays overflowing text with characters like ellipsis (`...`).
+6. **text-decoration**: Adds decorations to text (`overline | underline | line-through`).
+   
+   **Shorthand for `text-decoration:`**
+   ```css
+   text-decoration: text-decoration-line text-decoration-style text-decoration-color thickness;
+
+
+## While Working with Paragraph:
+
+1. **line-height**: Specifies the space between lines.
+2. **word-spacing**: Defines the space between words.
+3. **letter-spacing**: Specifies the space between letters.
+4. **word-break**: Breaks long words at the right margin of the paragraph.
+5. **white-space**: Controls the wrapping of text within the container (e.g., `nowrap`).
+6. **overflow**: Determines how content is displayed when it overflows (`hidden | scroll | auto`).
+
