@@ -208,7 +208,8 @@ body{
 1. ```<small> small text</small>``` : It sets letter small size.
 2. ```<large> large text</large>``` : It sets letter large size.
 
-# Details and summary
+# [Details and summary](http://127.0.0.1:3000/HTMLItems/DetailsAndSummary.html)
+
 ```html
 <body>
     <details>
@@ -236,14 +237,14 @@ body{
 2. ```<dl>``` has the capability to display in columns using grid(dt --> one column and dd --> one column).
 
 #### Note :
-* We can make content [sticky](http://127.0.0.1:3000/HTML%20items/src/data-list/Sticky.html) on a webpage using CSS property.
+* We can make content [sticky](http://127.0.0.1:3000/HTMLItems/src/data-list/Sticky.html) on a webpage using CSS property.
 ```css
 dt{
     position : sticky;
     top : 0;
 }
 ```
-### [box-shadow : ](http://127.0.0.1:5500/HTML%20items/src/data-list/box-shadow.html)
+### [box-shadow : ](http://127.0.0.1:3000/HTMLItems/src/data-list/box-shadow.html)
 * In CSS we can set shadow to any container by using box-shadow box shadow will have 4 values.
 ```css
 {
@@ -692,7 +693,7 @@ a:link{
 ##### Note :
 * Incase of intra document, if the page content is small and still if we want to give a navigation, we use an element called " **target** ".
 
-# Table Elements in HTML
+# [Table Elements in HTML](http://127.0.0.1:3000/Tables/src/rowspancolspan.html)
 
 - **Tables** are used to organize data in rows and columns. However, data presented inside a table is not SEO-friendly.
 - Tables are internally presented with the help of the "Grid" component.
@@ -997,19 +998,25 @@ Name : <input type = "text" name = "Name"> // Not good
 ### type = "password"
 * Value entered by the user will be masked by star symbol.
 * Enter the password :<br>
+```html
 <input type="password" placeholder="Enter the password" name="textPassword">
-
+```
 ### type = "number"
 * To enter only the number type we use an attribute value "number".
 * Age: ~minlength~  min <br>
+```
 <input type="number" name="txtNumber"   min="18" max="58" step="5">
-
+```
 ### type="range"
-* <input  type="range" min="1000" value="1000" max="100000" name="txtPrice">
+``` 
+<input  type="range" min="1000" value="1000" max="100000" name="txtPrice">
+```
 * The value chosen by the slider option can be displayed on a page through "javascript"
 
 ### type="email"
-* Synatx: <input type="email" name="txtEmail">
+```
+<input type="email" name="txtEmail">
+```
 * It validates email address format.
 * You can define "type=email".
 * It just checks for "@", but will not worry about extension like (.com,.live,.ai,..)
@@ -1018,7 +1025,9 @@ Name : <input type = "text" name = "Name"> // Not good
 * It validate URL format.
 * If you want the user to input website address [URL] and restrict to URL format the you can define type=url
 * URL format should contains "protocol and domain" 
-* Synatax: <input type="url" name="txtUrl" size="50">
+```
+<input type="url" name="txtUrl" size="50">
+```
 * Example:
 	* www.amazon.com => invalid
 	* http://www.amazon.com => valid
@@ -1056,18 +1065,35 @@ Name : <input type = "text" name = "Name"> // Not good
 * Always the date input must be "year-month-date" | "YYYT_MM_DD"(default formate of MySQL)
 
 * <u>*Eg:*</u><br>
-	*Departure:*<input type="date" name="txtDate" min="2024-09-02" max="2024-10-02"> <br>
-	*DateTime:* <input type="datetime-local" name="txtDateTime"><br>
-	*Week:* <input type="week" name="txtWeek"><br>
-	*Month:* <input type="month" name="txtMonth"><br>
-	*Time:* <input type="time" name="txtTime"><br>
+	*Departure:*
+    ```
+    <input type="date" name="txtDate" min="2024-09-02" max="2024-10-02">
+    ```
+	*DateTime:* 
+    ```
+    <input type="datetime-local" name="txtDateTime">
+    ```
+	*Week:* 
+    ```
+    <input type="week" name="txtWeek">
+    ```
+	*Month:* 
+    ```
+    <input type="month" name="txtMonth">
+    ```
+	*Time:* 
+    ```
+    <input type="time" name="txtTime">
+    ```
 
 ### type="file"
 * In order to accept file as the input from the user , we go for a type called file.
 * It allows the client to browse and select any file from computer to upload into server.
 * However it is just a control for selecting file, upload logic we have to write by using "JavaScript/JQuery" | "backend technology"
 * You can define by using type="file"
-* Syntax: <input type="file" name="txtFile" multiple accept=".png">
+```
+<input type="file" name="txtFile" multiple accept=".png">
+```
 
 ### Radio Buttons
 * Radio Buttons are refered as group buttons (Mutex nature will be imposed on those elements by giving common names)
@@ -1076,10 +1102,11 @@ Name : <input type = "text" name = "Name"> // Not good
 	* Mutual exculsion is a threading terminology where one thread should execute only one task at any given point of time.
 
 * Synatx: Every one has same name
-	html
+	```html
 	<input type="radio" name="age" value="1 to 18" checked><label>1 to 18</label>
     <input type="radio" name="age" value="19 to 59"><label>19 to 59</label>
     <input type="radio" name="age" value="above 60" disabled><label>60+</label>
+    ```
 	
 
 1. **When should we use radio button element in a webpage?**
@@ -1099,8 +1126,9 @@ Name : <input type = "text" name = "Name"> // Not good
     * checked etc...
 * It is defined by input using "type = checkbox".
 #### Syntax :
+```
 <input type="checkbox" name="" value=""><label>Checkbox</label>
-
+```
 ### Dropdown list:
 * It allows the user to select any one option from a group of choices.
 * It shows the list of items using a dropdown menu.
@@ -1148,7 +1176,10 @@ Name : <input type = "text" name = "Name"> // Not good
 * It can be controlled by javascript
 
 Syntax:
-	<meter min="" max="" value="" low="" high="" id="" class="" name="">
+
+```
+<meter min="" max="" value="" low="" high="" id="" class="" name="">
+```
 
 * low = >min
 * high = <max
@@ -1173,19 +1204,27 @@ Syntax:
 
 **Generic Button**
 * **HTML 5**
+    ```
 	* <button> TEXT|IMAGE|SYMBOL </button>
 	* <button type="submit">TEXT|IMAGE|SYMBOL </button>
 	* <button type="reset">TEXT|IMAGE|SYMBOL</button> 
+    ```
 
 * **HTML 4**
+```
 	* <input type="submit">TEXT</input>
 	* <input type="reset">TEXT</input>
+```
 
 **Non-Generic Button**
 * **HTML 5**
+```
 	* <button type="button" onclick="window.print()">Print Page</button>
+```
 * **HTML 4**
+```
 	* <input type="button">TEXT</input>
+```
 
 # Building forms using bootstrap classes :
 ## A. Container : 
@@ -2206,4 +2245,14 @@ nav bottom {
 4. **word-break**: Breaks long words at the right margin of the paragraph.
 5. **white-space**: Controls the wrapping of text within the container (e.g., `nowrap`).
 6. **overflow**: Determines how content is displayed when it overflows (`hidden | scroll | auto`).
+
+    ```css
+    p{
+        border : 1px solid black;
+        width : 200px;
+        white-space : nowrap;
+        text-overflow : ellipsis;
+        overflow : hidden;
+    }
+    ```
 
