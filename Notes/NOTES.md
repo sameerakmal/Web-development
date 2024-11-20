@@ -2258,3 +2258,26 @@ nav bottom {
 
 # Media query :
 * It is associated with making a page as responsive.
+
+# Bootstrap components
+```html
+    <script src="/node_modules/jquery/dist/jquery.js"></script>
+    <script src="/node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+```
+
+## Query Attributes
+* Bootstrap components use jquery attributes to configure and handle functionality.
+* Bootstrap version defines the attributes using "data-bs-{}".
+* Bootstrap upto version 4 defines the attribute using "data-{}". 
+
+* **Bootsrap jQuery attributes are of various types**
+1. data-bs-target
+2. data-bs-toggle
+3. data-bs-dismiss
+4. data-bs-slide
+5. data-bs-ride etc..
+
+* To close any component in bootstrap you can attach the attribute called "data-bs-dismiss" to any clickable element like [button,links].
+```html
+	<button class='btn btn-close'  data-bs-dismiss = "alert">
+```
