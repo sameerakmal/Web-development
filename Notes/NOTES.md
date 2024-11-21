@@ -2281,5 +2281,12 @@ nav bottom {
 ```html
 	<button class='btn btn-close'  data-bs-dismiss = "alert">
 ```
-
-Hii
+## Cards : 
+* **Classes:**
+    * .card
+    * .card-header
+    * .card-body
+    * .card-footer
+    * .card-title
+    * .card-subtitle
+    * .card-img-top
