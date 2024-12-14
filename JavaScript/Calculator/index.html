@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <style type="text/css">
+        .inputs{
+            display: grid;
+            grid-template-columns: 3fr 3fr 3fr 3fr;
+            gap : 10px;
+        }
+        
+
+    </style>
+</head>
+<body style="background-color: lightblue">
+    
+    <div class="d-flex justify-content-center align-items-center vh-100" >
+        <div style="background-color: rgb(6, 6, 90); padding: 10px; border-radius: 10px;">
+            <textarea id="result" style="background-color: #dfd8d8; width: 210px; color: black; border-radius: 10px; resize: none; padding: 5px; font-size: 20px;" ></textarea>
+            <div class="inputs">
+                    <button id="clearEntry" onclick="clearEntry();" class="btn btn-warning">CE</button>
+                    <button id="divide" onclick="appendToRes('/');" class="btn btn-outline-primary">/</button>
+                    <button id="multiply" onclick="appendToRes('*');" class="btn btn-outline-primary"><span class="bi bi-x"></span></button>
+                    <button id="delete" onclick="deleteLast();" class="btn btn-danger"><span class="bi bi-backspace" ></span></button>
+
+                    <button id="seven" onclick="appendToRes('7');" class="btn btn-outline-primary">7</button>
+                    <button id="eight" onclick="appendToRes('8');" class="btn btn-outline-primary">8</button>
+                    <button id="nine" onclick="appendToRes('9');" class="btn btn-outline-primary">9</button>
+                    <button id="add" onclick="appendToRes('+');" class="btn btn-outline-primary">+</button>
+            
+                    <button id="four" onclick="appendToRes('4');" class="btn btn-outline-primary">4</button>
+                    <button id="five" onclick="appendToRes('5');" class="btn btn-outline-primary">5</button>
+                    <button id="six" onclick="appendToRes('6');" class="btn btn-outline-primary">6</button>
+                    <button id="sub" onclick="appendToRes('-');" class="btn btn-outline-primary">-</button>
+            
+                    <button id="one" onclick="appendToRes('1');" class="btn btn-outline-primary">1</button>
+                    <button id="two" onclick="appendToRes('2');" class="btn btn-outline-primary">2</button>
+                    <button id="three" onclick="appendToRes('3');" class="btn btn-outline-primary">3</button>
+                    <button id="add" onclick="cal()" style="grid-row: span 2;" class="btn btn-success">=</button>
+
+            
+                    <button id="zero" onclick="appendToRes('0');" style="grid-column: span 2;" class="btn btn-outline-primary">0</button>
+                    <button id="dot" onclick="appendToRes('.');" class="btn btn-outline-primary">.</button>
+            </div>
+        </div>
+    </div>   
+    
+    <script>
+        function appendToRes(mychar){
+            let curr = document.getElementById("result").innerHTML;
+            let final = curr + mychar;
+            document.getElementById("result").innerHTML = final;
+        }
+        function cal(){
+            let exp = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = eval(exp);
+        }
+
+        function clearEntry(){
+            document.getElementById("result").innerHTML = '';
+        }
+
+        function deleteLast(){
+            let exp = document.getElementById("result").innerHTML;
+            document.getElementById("result").innerHTML = exp.slice(0,-1);
+        }
+        
+    </script>
+
+</body>
+</html>
